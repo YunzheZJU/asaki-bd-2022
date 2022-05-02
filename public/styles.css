@@ -1,0 +1,101 @@
+* {
+  animation-fill-mode: forwards;
+}
+
+#asaki-bd-2022 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /*background: #D9D7F1;*/
+  --dur-line: 0.2s;
+}
+
+.line-1 {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  left: 40px;
+  height: 8px;
+  background: #D9D7F1;
+  overflow: hidden;
+}
+
+.line-2 {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  bottom: 40px;
+  width: 8px;
+  background: #D9D7F1;
+  overflow: hidden;
+}
+
+@keyframes translate-to-left-0p {
+  to {
+    left: 0%;
+  }
+}
+
+.line-1:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  background: white;
+  animation: translate-to-left-0p var(--dur-line) var(--dur-line) linear forwards;
+}
+
+@keyframes translate-to-left-100p {
+  to {
+    left: 100%;
+  }
+}
+
+.line-1:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0%;
+  width: 100%;
+  background: white;
+  animation: translate-to-left-100p var(--dur-line) linear forwards;
+}
+
+@keyframes translate-to-top-0p {
+  to {
+    top: 0%;
+  }
+}
+
+.line-2:before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  right: 0;
+  left: 0;
+  height: 100%;
+  background: white;
+  animation: translate-to-top-0p var(--dur-line) calc(2 * var(--dur-line)) linear forwards;
+}
+
+@keyframes translate-to-top-100p {
+  to {
+    top: 100%;
+  }
+}
+
+.line-2:after {
+  content: '';
+  position: absolute;
+  top: 0%;
+  right: 0;
+  left: 0;
+  height: 100%;
+  background: white;
+  animation: translate-to-top-100p var(--dur-line) var(--dur-line) linear forwards;
+}

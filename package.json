@@ -1,6 +1,12 @@
 {
   "name": "asaki-bd-2022",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT"
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "live-server public"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
 }

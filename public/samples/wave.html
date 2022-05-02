@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello</title>
+</head>
+<body>
+<div id="app">
+  <div class="circle"></div>
+</div>
+<script src="../pre.js"></script>
+<script>
+  const first_begin = 1
+  const dur = 0.2
+  const scale_start = 0.3
+
+  s`#app`.align(LEFT, BOTTOM).size(FULL, FULL)
+  s`#app`.align_children(CENTER, CENTER)
+
+  // s`.circle`.size(400, 400)
+  //           .before.align(TOP, BOTTOM, LEFT, RIGHT).fill('#3da4ab').css([['border-radius', '999px']])
+  //           .after.align(TOP, BOTTOM, LEFT, RIGHT).fill('white').css([['border-radius', '999px']])
+  //
+  // s`.circle`.before.animate({ scale: [[scale_start, scale_start], [1, 1]] }, {
+  //   begin: first_begin, dur, fill: 'both', easing: '>',
+  // }).after.animate({ scale: [[scale_start * 1.05, scale_start * 1.05], [1.05, 1.05]] }, {
+  //   begin: first_begin + dur * 0.04, dur: dur * 1.1, fill: 'both', easing: '>',
+  // })
+  s`.circle`.size(400, 400).css([['border-radius', '999px']]).scale(0, 0)
+    .animate([{ scale: [0.3 , 0.3] }, { stroke: ['#ff5f5f', 8], offset: 0.5 }, { stroke: ['#ff5f5f', 0], scale: [1, 1] }], {
+      begin: first_begin, dur: dur, easing: '>',
+    })
+
+</script>
+<script src="../post.js"></script>
+</body>
+</html>

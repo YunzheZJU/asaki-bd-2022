@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello</title>
+</head>
+<body>
+<div id="app">
+  <div class="line-container">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</div>
+<script src="../pre.js"></script>
+<script>
+  const first_begin = 1
+  const dur_line = 0.2
+
+  s`#app`.align(LEFT, BOTTOM).size(FULL, FULL)
+  s`#app`.align_children(CENTER, CENTER)
+
+  s`.line-container`.size(300, 300)
+  s`.line`[0].align(TOP, LEFT, RIGHT).size({ height: 4 })
+  s`.line`[1].align(TOP, BOTTOM, RIGHT).size({ width: 4 })
+  s`.line`[2].align(BOTTOM, LEFT, RIGHT).size({ height: 4 })
+  s`.line`[3].align(TOP, BOTTOM, LEFT).size({ width: 4 })
+  s`.line`.forEach(ele => {
+    ele.fill('#D9D7F1').css([['overflow', 'hidden']])
+       .before.align(TOP, BOTTOM, LEFT, RIGHT).fill('white')
+       .after.align(TOP, BOTTOM, LEFT, RIGHT).fill('white')
+  })
+  s`.line`[0].before.translate_x('0p').after.translate_x('-100p')
+  s`.line`[1].before.translate_y('0p').after.translate_y('-100p')
+  s`.line`[2].before.translate_x('0p').after.translate_x('-100p')
+  s`.line`[3].before.translate_y('0p').after.translate_y('-100p')
+  s`.line`[0].before.animate([{translate_x: '0p'},{translate_x: '25p'}, {translate_x: '50p'}, {translate_x: '75p', offset: 0.75}, {translate_x: '100p'}], {
+    begin: first_begin, dur: dur_line, keep: dur_line, easing: '-',
+  }, 'line_0_before')
+  s`.line`[0].after.animate({ translate_x: ['-100p','0p'] }, {
+    begin: a.line_0_before.end, dur: dur_line, keep: 0, easing: '>',
+  }, 'line_0_after')
+  s`.line`[1].before.animate('translate_y_from_0p_to_100p', {
+    begin: a.line_0_after.begin + dur_line * 0.5, dur: dur_line, keep: dur_line, easing: '-',
+  }, 'line_1_before')
+  s`.line`[1].after.animate('translate_y_from_-100p_to_0p', {
+    begin: a.line_1_before.end, dur: dur_line, keep: 0, easing: '>',
+  }, 'line_1_after')
+  s`.line`[2].before.animate('translate_x_from_0p_to_-100p', {
+    begin: a.line_1_after.begin + dur_line * 0.5, dur: dur_line, keep: dur_line, easing: '-',
+  }, 'line_2_before')
+  s`.line`[2].after.animate('translate_x_from_100p_to_0p', {
+    begin: a.line_2_before.end, dur: dur_line, keep: 0, easing: '-',
+  }, 'line_2_after')
+  // Alter
+  s`.line`[2].before.animate('translate_x_from_0p_to_-100p', {
+    begin: first_begin, dur: dur_line, keep: dur_line, easing: '-',
+  }, 'line_2_before')
+  s`.line`[2].after.animate('translate_x_from_100p_to_0p', {
+    begin: a.line_2_before.end, dur: dur_line, keep: 0, easing: '>',
+  }, 'line_2_after')
+  s`.line`[3].before.animate('translate_y_from_0p_to_-100p', {
+    begin: a.line_2_after.begin + dur_line * 0.5, dur: dur_line, keep: dur_line, easing: '-',
+  }, 'line_3_before')
+  s`.line`[3].after.animate('translate_y_from_100p_to_0p', {
+    begin: a.line_3_before.end, dur: dur_line, keep: 0, easing: '>',
+  }, 'line_3_after')
+  s`.line`[0].before.animate('translate_x_from_0p_to_100p', {
+    begin: a.line_3_after.begin + dur_line * 0.5, dur: dur_line, keep: dur_line, easing: '-',
+  }, 'line_0_before')
+  s`.line`[0].after.animate('translate_x_from_-100p_to_0p', {
+    begin: a.line_0_before.end, dur: dur_line, keep: 0, easing: '>',
+  }, 'line_0_after')
+</script>
+<script src="../post.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Playground</title>
+</head>
+<body>
+<div id="app">
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+</div>
+<div class="line-container">
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+</div>
+<script src="./pre.js"></script>
+<script>
+  const dur_line = 0.2
+
+  s`#app`.align(LEFT, BOTTOM).size(FULL, FULL)
+  s`#app`.align_children(CENTER, CENTER)
+  s`#app > .box`.size(50, 50).fill('#6666ff').stroke('lightblue')
+  s`#app > .box`.translate((index) => [index * 10])
+  s`#app > .box`.translate((index) => ({ y: 20 * index }))
+  s`#app > .box`.animate((index) => ({
+    name: 'scale_from_0_0_to_1_1',
+    easing: 'ease-out',
+    begin: index * 0.2 + 1,
+    duration: dur_line,
+    iterations: 1,
+    fill: 'both',
+  }))
+
+  s`.line-container`.align(40, 40, 40, 40)
+  s`.line`[0].align(TOP, LEFT, RIGHT).size({ height: 8 })
+             .fill('#D9D7F1').css([['overflow', 'hidden']])
+  s`.line:nth-child(1):before`.align(TOP, BOTTOM, LEFT, RIGHT)
+  s`.line`[0].before.fill('white')
+  s`.line`[0].before.animate({
+    name: 'translate_to_100p',
+    easing: 'ease-out',
+    begin: 1,
+    duration: 0.8,
+    fill: 'both',
+  })
+</script>
+<script src="./post.js"></script>
+</body>
+</html>

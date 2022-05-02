@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello</title>
+</head>
+<body>
+<div id="app">
+  <div class="rect"></div>
+  <div class="rect"></div>
+  <div class="rect"></div>
+  <div class="rect"></div>
+</div>
+<script src="../pre.js"></script>
+<script>
+  const first_begin = 1
+  const dur = 0.5
+
+  s`#app`.align(LEFT, BOTTOM).size(FULL, FULL).css([['overflow', 'hidden']])
+
+  s`.rect`.align(TOP, BOTTOM, LEFT, RIGHT).origin(BOTTOM, RIGHT)
+          .fill(index => ['#eaafaf', '#a2738c', '#645c84', '#ffffff'][index])
+          .animate((index) => (['rotate_from_90deg_to_0', {
+            begin: first_begin + dur * index / 3, dur: dur + dur * index / 5, fill: 'both', easing: '<>',
+          }]))
+
+</script>
+<script src="../post.js"></script>
+</body>
+</html>
