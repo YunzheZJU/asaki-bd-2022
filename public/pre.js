@@ -154,7 +154,8 @@ const regist = (element, pseudo, selector, ...fnParams) => {
     }
     info._css = (declarations) => {
       const output = { declarations: [], extra_styles: [], animations: [], keyframesByName: {} }
-      output.declarations.push(...declarations)
+      const dcl = isArray(declarations) ? declarations : Object.entries(declarations)
+      output.declarations.push(...dcl)
       return output
     }
     info._align = (...params) => {
@@ -261,7 +262,6 @@ const regist = (element, pseudo, selector, ...fnParams) => {
         const sParams = smartParams(params)
         dimensions.forEach(dimension => {
           const value = sParams[dimension]
-          console.log(func, dimension, value)
           isPresent(value) && output.declarations.push([`--${func}-${dimension}`, wrapValue(value, unit)])
         })
         return output
