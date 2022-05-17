@@ -2,10 +2,25 @@ html {
   font-size: 16px;
 }
 
-:root {
+body {
+  font-size: 4rem;
+  line-height: 1;
+  letter-spacing: 0.15rem;
+  font-family: Tsuku, serif;
+}
+
+*, *:before, *:after {
   --red: #ffcbcb;
-  --blue: #ffcbcb;
-  --yellow: #ffcbcb;
-  --green: #ffcbcb;
-  --purple: #ffcbcb;
+  --blue: #7edcf2;
+  --yellow: #eddd6e;
+  --green: #aae995;
+  --purple: #cbb4d8;
+  --white: #ffffff;
+  --black: #000000;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Tsuku';
+  src: url('r/tsuku.woff2') format('woff2');
 }

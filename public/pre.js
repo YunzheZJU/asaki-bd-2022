@@ -30,9 +30,25 @@ const isPlainObject = value => {
   return prototype === null || prototype === Object.prototype
 }
 
-const difference = (array1, array2) => array1.filter(item => !array2.includes(item))
+const isEven = number => number % 2 === 0
 
-const intersection = (array1, array2) => difference(array1, difference(array1, array2))
+const isOdd = number => number % 2 === 1
+
+Array.prototype.difference = function (other) {
+  return this.filter(item => !other.includes(item))
+}
+
+Array.prototype.intersection = function (other) {
+  return this.difference(this.difference(other))
+}
+
+Array.prototype.even = function () {
+  return this.filter((_, index) => index % 2 === 1)
+}
+
+Array.prototype.odd = function () {
+  return this.filter((_, index) => index % 2 === 0)
+}
 
 const num2str = number => number.toPrecision(4).replace(/(\.)([^0]*)0*$/, (_, p1, p2) => p2 ? p1 + p2 : '')
 
@@ -43,7 +59,7 @@ const assert = (trusy, message, ...objs) => {
   }
 }
 
-const wrapValue = (value, unit = 'px') => {
+const wrapValue = (value, unit = 'rem') => {
   if (typeof value === 'number') {
     return value.toString() + unit
   }
@@ -186,11 +202,11 @@ const regist = (element, pseudo, selector, ...fnParams) => {
         if (side === 'left') output.declarations.push(['justify-content', 'flex-start'])
       })
       alignBySideEntries.filter(([side]) => side === CENTER).forEach(() => {
-        if (intersection(sidesSpecified, [TOP, BOTTOM]).length === 0) {
+        if (sidesSpecified.intersection([TOP, BOTTOM]).length === 0) {
           sidesSpecified.push(TOP)
           return output.declarations.push(['align-items', 'center'])
         }
-        if (intersection(sidesSpecified, [LEFT, RIGHT]).length === 0) {
+        if (sidesSpecified.intersection([LEFT, RIGHT]).length === 0) {
           sidesSpecified.push(LEFT)
           return output.declarations.push(['justify-content', 'center'])
         }
@@ -252,7 +268,7 @@ const regist = (element, pseudo, selector, ...fnParams) => {
       return output
     }
     Object.entries({
-      [TRANSLATE]: { dimensions: ['x', 'y', 'z'], unit: 'px' },
+      [TRANSLATE]: { dimensions: ['x', 'y', 'z'], unit: 'rem' },
       [ROTATE]: { dimensions: ['z'], unit: 'deg' },
       [SKEW]: { dimensions: ['x', 'y'], unit: 'px' },
       [SCALE]: { dimensions: ['x', 'y'], unit: '' },
