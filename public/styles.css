@@ -5,6 +5,7 @@ html {
 body {
   font-size: 4rem;
   line-height: 1;
+  font-weight: bold;
   letter-spacing: 0.15rem;
   font-family: Tsuku, serif;
 }
@@ -22,5 +23,27 @@ body {
 
 @font-face {
   font-family: 'Tsuku';
-  src: url('r/tsuku.woff2') format('woff2');
+  font-weight: bold;
+  src: url('r/tsuku_b.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Tsuku';
+  font-weight: normal;
+  src: url('r/tsuku_r.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Tsubame';
+  src: url('r/tsubame.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Lyra';
+  src: url('r/lyra.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Bahnschrift';
+  src: url('r/bahnschrift.woff2') format('woff2');
 }

@@ -127,7 +127,7 @@ const smartParams = (params, value_on_hit_key) => {
 const registry = new Map
 
 const dynamic_methods = [
-  'css', 'align', 'align_children', 'size', 'fill', 'stroke', 'opacity', 'clip', 'origin', 'translate', 'rotate', 'skew', 'scale', 'animate',
+  'css', 'align', 'align_children', 'size', 'fill', 'stroke', 'opacity', 'clip', 'perspective', 'origin', 'translate', 'rotate', 'skew', 'scale', 'animate',
   'translate_x', 'translate_y', 'translate_z', 'rotate_z', 'skew_x', 'skew_y', 'scale_x', 'scale_y',
 ]
 
@@ -249,6 +249,12 @@ const regist = (element, pseudo, selector, ...fnParams) => {
       const output = { declarations: [], extra_styles: [], animations: [], keyframesByName: {} }
       const { clip } = smartParams(params)
       output.declarations.push(['clip-path', clip])
+      return output
+    }
+    info._perspective = (...params) => {
+      const output = { declarations: [], extra_styles: [], animations: [], keyframesByName: {} }
+      const { perspective } = smartParams(params)
+      output.declarations.push(['perspective', wrapValue(perspective)])
       return output
     }
     info._origin = (...params) => {
