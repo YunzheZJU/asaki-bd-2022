@@ -47,3 +47,8 @@ body {
   font-family: 'Bahnschrift';
   src: url('r/bahnschrift.woff2') format('woff2');
 }
+
+@font-face {
+  font-family: 'Yuruka';
+  src: url('r/yuruka.woff2') format('woff2');
+}
