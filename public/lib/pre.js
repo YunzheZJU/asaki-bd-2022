@@ -128,13 +128,13 @@ const registry = new Map
 
 const dynamic_methods = [
   'css', 'align', 'align_children', 'size', 'fill', 'stroke', 'opacity', 'clip', 'perspective', 'origin', 'translate', 'rotate', 'skew', 'scale', 'animate',
-  'translate_x', 'translate_y', 'translate_z', 'rotate_z', 'skew_x', 'skew_y', 'scale_x', 'scale_y',
+  'translate_x', 'translate_y', 'translate_z', 'rotate_z', 'rotate_x', 'rotate_y', 'skew_x', 'skew_y', 'scale_x', 'scale_y',
 ]
 
 const merge_declarations = (declarations) => {
   const valueByProterty = Object.fromEntries(declarations)
   const transform = Array.from([
-    '--translate-x', '--translate-y', '--translate-z', '--rotate-z', '--skew-x', '--skew-y', '--scale-x', '--scale-y',
+    '--translate-x', '--translate-y', '--translate-z', '--rotate-z', '--rotate-x', '--rotate-y', '--skew-x', '--skew-y', '--scale-x', '--scale-y',
   ]).map(property => {
     const func = property.slice(2).replace(/-[xyz]/, str => str.slice(1).toUpperCase())
     const value = valueByProterty[property]
@@ -275,7 +275,7 @@ const regist = (element, pseudo, selector, ...fnParams) => {
     }
     Object.entries({
       [TRANSLATE]: { dimensions: ['x', 'y', 'z'], unit: 'rem' },
-      [ROTATE]: { dimensions: ['z'], unit: 'deg' },
+      [ROTATE]: { dimensions: ['z', 'x', 'y'], unit: 'deg' },
       [SKEW]: { dimensions: ['x', 'y'], unit: 'px' },
       [SCALE]: { dimensions: ['x', 'y'], unit: '' },
     }).map(([func, { dimensions, unit }]) => {
