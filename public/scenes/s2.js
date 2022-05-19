@@ -57,7 +57,7 @@ s`.s2 .bg .frag`.align(index => ([`${20 * index}%`, LEFT, RIGHT])).size('200%', 
 const s2_frame_height = 8
 s`.s2 .frame-top`.align(LEFT, TOP).size(FULL, s2_frame_height).fill(BLACK).animate('opacity_from_0_to_1', { begin: s2_begin, dur: 0, fill: 'both' })
 s`.s2 .frame-bottom`.align(RIGHT, BOTTOM).size(FULL, s2_frame_height).fill(BLACK).animate('opacity_from_0_to_1', { begin: s2_begin, dur: 0, fill: 'both' })
-s`.s2 .text-box`.css({ padding: '2.2rem 1rem', color: WHITE, 'text-shadow': '0 0 5px rgba(255, 255, 255, 0.75)' }).align_children(CENTER, BOTTOM)
+s`.s2 .text-box`.css({ padding: '1.7rem 1rem', color: WHITE, 'text-shadow': '0 0 5px rgba(255, 255, 255, 0.75)' }).align_children(CENTER, BOTTOM)
 s`.s2 .text-box span`.animate(index => ([
   isEven(index) ? [{ opacity: 0, translate_x: -0.5 - index * 0.1, translate_y: -1 + index * 0.1 }, { opacity: 1, translate_y: 0, translate_x: 0 }] : [{ opacity: 0, translate_x: 0.5 + index * 0.1, translate_y: 0.5 }, { opacity: 1, translate_y: 0, translate_x: 0 }],
   { begin: a[`s2_bg_4`].begin + 0.1 + index * 0.05, dur: 1 + index * 0.05, fill: 'both' }, `s2_text_${index}`,

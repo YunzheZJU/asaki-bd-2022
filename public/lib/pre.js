@@ -127,7 +127,7 @@ const smartParams = (params, value_on_hit_key) => {
 const registry = new Map
 
 const dynamic_methods = [
-  'css', 'align', 'align_children', 'size', 'fill', 'stroke', 'opacity', 'clip', 'perspective', 'origin', 'translate', 'rotate', 'skew', 'scale', 'animate',
+  'css', 'align', 'align_children', 'size', 'fill', 'stroke', 'round', 'opacity', 'clip', 'perspective', 'origin', 'translate', 'rotate', 'skew', 'scale', 'animate',
   'translate_x', 'translate_y', 'translate_z', 'rotate_z', 'rotate_x', 'rotate_y', 'skew_x', 'skew_y', 'scale_x', 'scale_y',
 ]
 
@@ -237,6 +237,12 @@ const regist = (element, pseudo, selector, ...fnParams) => {
       const { color, width = 1 } = smartParams(params)
       output.declarations.push(['border', `${wrapValue(width)} ${color} solid`])
       output.declarations.push(['stroke', color], ['stroke-width', wrapValue(width)])
+      return output
+    }
+    info._round = (...params) => {
+      const output = { declarations: [], extra_styles: [], animations: [], keyframesByName: {} }
+      const { radius = FULL } = smartParams(params)
+      output.declarations.push(['border-radius', wrapValue(radius)])
       return output
     }
     info._opacity = (...params) => {
