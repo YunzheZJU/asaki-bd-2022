@@ -241,7 +241,7 @@ const regist = (element, pseudo, selector, ...fnParams) => {
     }
     info._round = (...params) => {
       const output = { declarations: [], extra_styles: [], animations: [], keyframesByName: {} }
-      const { radius = FULL } = smartParams(params)
+      const { radius = '999px' } = smartParams(params)
       output.declarations.push(['border-radius', wrapValue(radius)])
       return output
     }
@@ -373,7 +373,7 @@ const regist = (element, pseudo, selector, ...fnParams) => {
     }
     const proxy = new Proxy(info, {
       get: (target, propKey) => {
-        if (['before', 'after'].includes(propKey)) {
+        if (['before', 'after', 'self'].includes(propKey)) {
           return regist(element, propKey, selector)
         }
         return Reflect.get(target, propKey)

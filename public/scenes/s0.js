@@ -26,7 +26,7 @@ const s0_begin = 0.5 - GLOBAL_BEGIN
 s`body`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER).fill('#666')
 s`#asaki-bd-2022`.css([['overflow', 'hidden']]).fill(WHITE)
 s`.s0 .bg`.align(TOP, LEFT).size('200%', '200%').css({ background: 'url("r/0-1.svg") left top/18rem' })
-          .animate('opacity_from_0_to_1', { begin: s0_begin, dur: 0.5, fill: 'both', easing: '<' })
+          .animate(FADE_IN, { begin: s0_begin, dur: 0.5, fill: 'both', easing: '<' })
           .animate('translate_from_-18rem_0rem_to_0rem_-18rem', { begin: s0_begin, dur: 5, fill: 'both', easing: '-', iterations: 'infinite' })
 s`.s0 .hat-box`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
 s`.s0 .hat-box img`.size({ height: '5rem' }).origin('50%', '90%')

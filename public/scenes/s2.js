@@ -55,8 +55,8 @@ s`.s2 .bg`.align(TOP, LEFT).size(FULL, FULL)
 s`.s2 .bg .frag`.align(index => ([`${20 * index}%`, LEFT, RIGHT])).size('200%', '20%').fill(BLUE).css({ 'border-radius': '999px 0 0 999px' })
                 .animate(index => (['translate_from_50p_to_-50p', { begin: s2_begin + index * 0.15, dur: 0.6, fill: 'both', easing: '<>' }, `s2_bg_${index}`]))
 const s2_frame_height = 8
-s`.s2 .frame-top`.align(LEFT, TOP).size(FULL, s2_frame_height).fill(BLACK).animate('opacity_from_0_to_1', { begin: s2_begin, dur: 0, fill: 'both' })
-s`.s2 .frame-bottom`.align(RIGHT, BOTTOM).size(FULL, s2_frame_height).fill(BLACK).animate('opacity_from_0_to_1', { begin: s2_begin, dur: 0, fill: 'both' })
+s`.s2 .frame-top`.align(LEFT, TOP).size(FULL, s2_frame_height).fill(BLACK).animate(FADE_IN, { begin: s2_begin, dur: 0, fill: 'both' })
+s`.s2 .frame-bottom`.align(RIGHT, BOTTOM).size(FULL, s2_frame_height).fill(BLACK).animate(FADE_IN, { begin: s2_begin, dur: 0, fill: 'both' })
 s`.s2 .text-box`.css({ padding: '1.7rem 1rem', color: WHITE, 'text-shadow': '0 0 5px rgba(255, 255, 255, 0.75)' }).align_children(CENTER, BOTTOM)
 s`.s2 .text-box span`.animate(index => ([
   isEven(index) ? [{ opacity: 0, translate_x: -0.5 - index * 0.1, translate_y: -1 + index * 0.1 }, { opacity: 1, translate_y: 0, translate_x: 0 }] : [{ opacity: 0, translate_x: 0.5 + index * 0.1, translate_y: 0.5 }, { opacity: 1, translate_y: 0, translate_x: 0 }],
@@ -73,9 +73,9 @@ s`.s2 .bg-text .left`.align({ [LEFT]: 0, [TOP]: s2_frame_height }).align_childre
 s`.s2 .bg-text .right`.align({ [RIGHT]: 0, [BOTTOM]: s2_frame_height }).align_children(CENTER, BOTTOM).translate_y(2)
                       .animate([{ opacity: 0, translate_x: -6 }, { opacity: 1, translate_x: 0 }], { begin: a.s2_text_8.begin + 0.4, dur: 1.8, fill: 'both' })
 s`.s2 .bg-shape`.align(LEFT, TOP).size(FULL, FULL)
-s`.s2 .bg-shape .left`.align({ [LEFT]: 0, [BOTTOM]: 0 }).size(35, 35).translate(-6, 2).css({ 'border-radius': '999px' })
+s`.s2 .bg-shape .left`.align({ [LEFT]: 0, [BOTTOM]: 0 }).size(35, 35).round().translate(-6, 2)
                       .animate([{ opacity: 0, stroke: [RED, 5], scale: [0.7, 0.7] }, { opacity: 1, offset: 0.3 }, { stroke: [RED, 0], scale: [1, 1] }], { begin: a.s2_text_8.begin + 1, dur: 0.5, fill: 'both', easing: '>' })
-s`.s2 .bg-shape .right`.align({ [RIGHT]: 0, [TOP]: 0 }).size(40, 40).translate(5, -6).css({ 'border-radius': '999px' })
+s`.s2 .bg-shape .right`.align({ [RIGHT]: 0, [TOP]: 0 }).size(40, 40).round().translate(5, -6)
                        .animate([{ opacity: 0, stroke: [RED, 8], scale: [0.9, 0.9] }, { opacity: 1, offset: 0.5 }, { stroke: [RED, 0], scale: [1.1, 1.1] }], { begin: a.s2_text_9.begin + 1.4, dur: 0.4, fill: 'both', easing: '>' }, 's2_bg_shape_right')
 s`.s2 .text-box, .s2 .bg-text`.animate([{ translate: [0, 0] }, { translate: [-2, 2], opacity: 1, offset: 0.2 }, { translate: [6, -6], opacity: 0 }], { begin: a.s2_bg_shape_right.end - 0.1, dur: 0.4, keep: Infinity }, 's2_out')
 const s2_end = a.s2_out.begin + 0.3

@@ -54,7 +54,7 @@ s`.s1 .bg`.align(TOP, LEFT).size(FULL, FULL)
 s`.s1 .bg .frag`.align(index => ([`${20 * index}%`, LEFT, RIGHT])).size('200%', '20%').fill(RED).css({ 'border-radius': '999px 0 0 999px' })
                 .animate(index => (['translate_from_50p_to_-50p', { begin: s1_begin + index * 0.15, dur: 0.6, fill: 'both', easing: '<>' }, `s1_bg_${index}`]))
 s`.s1 .bg .frag`.even().forEach(ele => {
-  ele.after.align(TOP, BOTTOM, LEFT).size('50%').css({ 'border-radius': '999px' }).fill(BLUE)
+  ele.after.align(TOP, BOTTOM, LEFT).size('50%').round().fill(BLUE)
 })
 const s1_frame_begin = a[`s1_bg_4`].end - 0.2
 const s1_frame_height = 8
