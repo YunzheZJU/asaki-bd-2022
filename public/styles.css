@@ -52,3 +52,7 @@ body {
   font-family: 'Yuruka';
   src: url('r/yuruka.woff2') format('woff2');
 }
+
+.relative {
+  position: relative;
+}

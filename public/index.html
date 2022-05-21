@@ -9,7 +9,7 @@
 <div id="asaki-bd-2022" style="opacity: 0"></div>
 </body>
 <script>
-  const GLOBAL_BEGIN = 16
+  const GLOBAL_BEGIN = 20
   const shouldForceRatio = true
   const shouldDisableRotate = true
   const RED = 'var(--red)'
@@ -40,19 +40,59 @@
     <div style="background: var(--yellow)"></div>
   </div>
   <div class="text-box" style="color: var(--black); writing-mode: vertical-lr; font-weight: normal;">
-    <div class="bottom" style="padding: 4rem 12rem; transform-style: preserve-3d; perspective: 90rem">
-      <span style="position:relative; font-size: 4.5rem">　　君　　　</span>
+    <div class="center" style="padding: 18rem 12rem; font-size: 13rem; color: var(--white); writing-mode: horizontal-tb; font-weight: bold; letter-spacing: 1rem">
+      <span class="relative">涙</span>
+      <span class="relative" style="margin-left: 2.5rem">が</span>
+    </div>
+    <div class="bottom" style="padding: 6rem 12rem; transform-style: preserve-3d; perspective: 90rem">
+      <span class="relative" style="font-size: 4.5rem; position: relative">　　君　　</span>
     </div>
     <div class="left" style="padding: 6rem 12rem;">
-      <span style="position:relative;">君がいたから</span>
+      <span>君</span>
+      <span>が</span>
+      <span>い</span>
+      <span>た</span>
+      <span>か</span>
+      <span>ら</span>
     </div>
     <div class="right" style="padding: 6rem 12rem;">
-      <span style="position:relative;">　嬉しくて　</span>
+      <span>　</span>
+      <span>嬉</span>
+      <span>し</span>
+      <span>く</span>
+      <span>て</span>
+      <span>　</span>
+    </div>
+  </div>
+  <div class="ray">
+    <div class="bottom">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="left">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="right">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </div>
   <div class="frame" style="font-family: Lyra, serif; font-size: 2.25rem; color: var(--white);">
-    <div class="chapter-ja">第１章</div>
-    <div class="chapter-en" style="letter-spacing: 0.5rem">Chapter 1</div>
+    <div class="chapter-ja relative">第１章</div>
+    <div class="chapter-en relative" style="letter-spacing: 0.5rem">Chapter 1</div>
   </div>
   <div class="mask"></div>
 </div>
@@ -73,22 +113,52 @@
                           .before.align(TOP, BOTTOM, LEFT, RIGHT).fill(WHITE).translate_z(-20).scale(1.3, 1.3)
                           .after.align(TOP, BOTTOM, LEFT, RIGHT).fill(YELLOW).origin(RIGHT, CENTER).translate_x('1p').scale(1.02, 1.02)
                           .animate('rotate_y_from_0deg_to_-100deg', { begin: a.s5_text_box_bottom_in.begin, dur: 0.6, fill: 'both', easing: 'cubic-bezier(0, 0.55, 0.45, 1)' }, 's5_text_box_bottom_rotate')
-  // 文字消失时留下放射线
+  s`.s5 .text-box .bottom`.animate(FADE_OUT, { begin: a.s5_text_box_bottom_rotate.end, dur: 0, fill: 'forwards' }, 's5_text_box_bottom_out')
+  s`.s5 .ray`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
+  s`.s5 .ray .bottom`.align().size(25, 25).round().translate_y(14).align_children(CENTER, CENTER)
+  s`.s5 .ray .bottom span`.align().size(0.5, 14).round().origin(CENTER, BOTTOM).translate_y('-50p').rotate(index => index * 60).css({ overflow: 'hidden' })
+                          .animate(FADE_IN, { begin: a.s5_text_box_bottom_out.end, dur: 0, fill: 'both' }, 's5_ray_bottom_in')
+                          .forEach(ele => ele.before.size(1, 3.2).fill(WHITE).animate('translate_y_from_10rem_to_-4rem', { begin: a.s5_ray_bottom_in.end - 0.2, dur: 0.8, fill: 'both', easing: 'ease' }, 's5_ray_bottom_out'))
   s`.s5 .mask`.align(TOP, BOTTOM, LEFT, RIGHT).fill(PURPLE).origin(RIGHT, TOP)
-              .animate('rotate_from_90deg_to_0deg', { begin: a.s5_text_box_bottom_rotate.end, dur: 0.3, fill: 'both', easing: 'cubic-bezier(0, 0.55, 0.45, 1)' }, 's5_mask_rotate_1')
+              .animate('rotate_from_90deg_to_0deg', { begin: a.s5_ray_bottom_out.end - 0.3, dur: 0.3, fill: 'both', easing: 'cubic-bezier(0, 0.55, 0.45, 1)' }, 's5_mask_rotate_1')
               .animate({ origin: [[RIGHT, TOP], [RIGHT, BOTTOM]] }, { begin: a.s5_mask_rotate_1.end, dur: 0, fill: 'forwards' })
               .animate('rotate_from_0deg_to_-90deg', { begin: a.s5_mask_rotate_1.end + 0.2, dur: 0.3, fill: 'forwards', easing: 'cubic-bezier(0.55, 0, 1, 0.45)' }, 's5_mask_rotate_2')
-  s`.s5 .text-box .bottom`.animate(FADE_OUT, { begin: a.s5_mask_rotate_1.end, dur: 0, fill: 'forwards' }, 's5_text_box_bottom_out')
-  s`.s5 .text-box .left`.align(LEFT).css({ overflow: 'hidden' }).fill(WHITE)
-                        .animate(FADE_IN, { begin: a.s5_text_box_bottom_out.begin, dur: 0, fill: 'both' }, 's5_text_box_left_in')
+  s`.s5 .text-box .left`.align(LEFT).fill(WHITE)
+                        .animate(FADE_IN, { begin: a.s5_mask_rotate_1.end, dur: 0, fill: 'both' }, 's5_text_box_left_in')
   s`.s5 .text-box .left span`.animate('translate_y_from_-10p_to_0p', { begin: a.s5_text_box_left_in.begin, dur: 1.2, easing: '>', fill: 'both' })
+  s`.s5 .ray .left`.align().size(25, 25).round().translate(-30, -18).align_children(CENTER, CENTER)
+  s`.s5 .ray .left span`.align().size(0.5, 14).round().origin(CENTER, BOTTOM).translate_y('-50p').rotate(index => index * 60).css({ overflow: 'hidden' })
+                        .animate(FADE_IN, { begin: a.s5_mask_rotate_2.begin + 0.3, dur: 0, fill: 'both' }, 's5_ray_left_in')
+                        .forEach(ele => ele.before.size(1, 4).fill(WHITE).animate('translate_y_from_10rem_to_-5rem', { begin: a.s5_ray_left_in.end - 0.2, dur: 1, fill: 'both', easing: 'ease' }, 's5_ray_left_out'))
   s`.s5 .mask`.animate([{ origin: [RIGHT, BOTTOM] }, { origin: [LEFT, TOP] }], { begin: a.s5_mask_rotate_2.end, dur: 0, fill: 'forwards' })
               .animate('rotate_from_-90deg_to_0deg', { begin: a.s5_mask_rotate_2.end + 0.3, dur: 0.3, fill: 'forwards', easing: 'cubic-bezier(0, 0.55, 0.45, 1)' }, 's5_mask_rotate_3')
               .animate({ origin: [[LEFT, TOP], [LEFT, BOTTOM]] }, { begin: a.s5_mask_rotate_3.end, dur: 0, fill: 'forwards' })
               .animate('rotate_from_0deg_to_90deg', { begin: a.s5_mask_rotate_3.end + 0.2, dur: 0.3, fill: 'forwards', easing: 'cubic-bezier(0.55, 0, 1, 0.45)' }, 's5_mask_rotate_4')
-  s`.s5 .text-box .right`.align(RIGHT).css({ overflow: 'hidden' }).fill(WHITE)
+  s`.s5 .text-box .right`.align(RIGHT).fill(WHITE)
                          .animate(FADE_IN, { begin: a.s5_mask_rotate_3.end, dur: 0, fill: 'both' }, 's5_text_box_right_in')
   s`.s5 .text-box .right span`.animate('translate_y_from_-10p_to_0p', { begin: a.s5_text_box_right_in.begin, dur: 0.8, easing: '>', fill: 'both' })
+  s`.s5 .ray .right`.align().size(25, 25).round().translate(30, 18).align_children(CENTER, CENTER)
+  s`.s5 .ray .right span`.align().size(0.5, 14).round().origin(CENTER, BOTTOM).translate_y('-50p').rotate(index => index * 60).css({ overflow: 'hidden' })
+                         .animate(FADE_IN, { begin: a.s5_mask_rotate_4.begin + 0.3, dur: 0, fill: 'both' }, 's5_ray_right_in')
+                         .forEach(ele => ele.before.size(1, 4).fill(WHITE).animate('translate_y_from_10rem_to_-5rem', { begin: a.s5_ray_right_in.end - 0.2, dur: 1, fill: 'both', easing: 'ease' }, 's5_ray_right_out'))
+  const s5_bg_replace_begin = a.s5_mask_rotate_3.end
+  const s5_text_box_center_scale_begin = a.s5_ray_right_out.end - 0.6
+  s`.s5 .frame`.animate(FADE_OUT, { begin: s5_bg_replace_begin, dur: 0, fill: 'forwards' })
+  s`.s5 .bg div`.animate(FADE_OUT, { begin: s5_bg_replace_begin, dur: 0, fill: 'both' })
+  s`.s5 .bg`.animate({ fill: ['transparent', WHITE] }, { begin: s5_bg_replace_begin, dur: 0, fill: 'both' })
+            .before.align(TOP, LEFT).fill(YELLOW)
+            .animate(FADE_IN, { begin: s5_bg_replace_begin, dur: 0, fill: 'both' })
+            .animate('size_from_100p_15rem_to_100p_8rem', { begin: s5_text_box_center_scale_begin, dur: 0.6, fill: 'both' })
+            .after.align(BOTTOM, LEFT).size({ height: 15 }).fill(YELLOW)
+            .animate(FADE_IN, { begin: s5_bg_replace_begin, dur: 0, fill: 'both' })
+            .animate('size_from_100p_15rem_to_100p_8rem', { begin: s5_text_box_center_scale_begin, dur: 0.6, fill: 'both' })
+  s`.s5 .text-box .center`.animate(FADE_IN, { begin: s5_bg_replace_begin, dur: 0, fill: 'both' })
+                          .before.align(TOP, BOTTOM, LEFT, RIGHT).fill(YELLOW).css({ filter: 'blur(2rem)', 'border-radius': '10rem' })
+                          .animate({ scale: [[1.5, 1.5], [0.9, 0.9]] }, { begin: s5_text_box_center_scale_begin - 0.1, dur: 0.8, fill: 'both' }, 's5_text_box_center_scale')
+  s`.s5 .text-box .left span`.animate(index => ([[{ opacity: 1, translate: [0, 0] }, { opacity: 0, translate: [-3.5 + index * 0.2, -1 + index * 0] }], { begin: s5_text_box_center_scale_begin - 0.1 + index * 0.02, dur: 0.5, fill: 'both', easing: '<' }, 's5_text_box_left_span_out']))
+  s`.s5 .text-box .right span`.animate(index => ([[{ opacity: 1, translate: [0, 0] }, { opacity: 0, translate: [4 - index * 0.3, 1 + index * 0] }], { begin: s5_text_box_center_scale_begin - 0 + index * 0.02, dur: 0.5, fill: 'both', easing: '<' }, 's5_text_box_right_span_out']))
+  s`.s5 .text-box .center span`
+                               .animate(index => [[{ scale: [3, 3], opacity: 0 }, { scale: [1, 1], opacity: 1 }], { begin: a.s5_text_box_center_scale.end - 0.25 + 0.15 * index, dur: 0.3, fill: 'both', easing: 'cubic-bezier(0.33, 1, 0.68, 1)' }])
 </script>
 <script>
   APP.style.opacity = 1
