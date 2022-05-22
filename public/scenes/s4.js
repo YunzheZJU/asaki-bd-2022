@@ -22,10 +22,10 @@ APP.innerHTML += `
       </div>
     </div>
     <div class="frame">
-      <div class="left" style="font-size: 1rem; color: var(--black); font-size: 1.6875rem; writing-mode: vertical-lr;">
+      <div class="left" style="color: var(--black); font-size: 1.6875rem; writing-mode: vertical-lr;">
         <span>ASAKI</span>
       </div>
-      <div class="right" style="font-size: 1rem; color: var(--black); font-size: 1.6875rem;">
+      <div class="right" style="color: var(--black); font-size: 1.6875rem;">
         <span>0604</span>
       </div>
     </div>
