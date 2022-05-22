@@ -339,9 +339,13 @@ const regist = (element, pseudo, selector, ...fnParams) => {
         keyframes = _keyframes
         name = ['keyframes', 'in', 'array', String(counter++)].join('_')
       } else if (isPlainObject(_keyframes)) {
-        assert(Object.keys(_keyframes).length === 1, 'Too many attributes', _keyframes)
-        const attribute = Object.keys(_keyframes)[0]
-        keyframes = Object.values(_keyframes)[0].map(param => ({ [attribute]: param }))
+        Object.entries(_keyframes).forEach(([key, params]) => {
+          assert(params.length === 2, 'Length of params is not wrong', _keyframes, key, params)
+        })
+        keyframes = [
+          Object.fromEntries(Object.keys(_keyframes).map(key => [key, _keyframes[key][0]])),
+          Object.fromEntries(Object.keys(_keyframes).map(key => [key, _keyframes[key][1]])),
+        ]
         name = ['keyframes', 'in', 'object', String(counter++)].join('_')
       }
       keyframes = fillOffset(keyframes)
