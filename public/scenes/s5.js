@@ -107,7 +107,7 @@ APP.innerHTML += `
         <span></span>
       </div>
     </div>
-    <div class="frame" style="font-family: Lyra, serif; font-size: 2.25rem; color: var(--white);">
+    <div class="frame" style="font-family: Lyra, serif, serif; font-size: 2.25rem; color: var(--white);">
       <div class="bottom"></div>
       <div class="text chapter-ja relative" style="letter-spacing: 0.5rem">第１章</div>
       <div class="text chapter-en relative" style="letter-spacing: 0.5rem">Chapter 1</div>

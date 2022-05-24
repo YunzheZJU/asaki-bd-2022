@@ -11,11 +11,11 @@ body {
 }
 
 *, *:before, *:after {
-  --red: #ffcbcb;
-  --blue: #7edcf2;
-  --yellow: #eddd6e;
-  --green: #aae995;
-  --purple: #cbb4d8;
+  --red: #ffd6d7;
+  --blue: #b5dbff;
+  --yellow: #f9e17a;
+  --green: #a5ef95;
+  --purple: #eed0f4;
   --white: #ffffff;
   --black: #000000;
   box-sizing: border-box;
@@ -23,33 +23,39 @@ body {
 
 @font-face {
   font-family: 'Tsuku';
+  font-display: swap;
   font-weight: bold;
   src: url('r/tsuku_b.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Tsuku';
+  font-display: swap;
   font-weight: normal;
   src: url('r/tsuku_r.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Tsubame';
+  font-display: swap;
   src: url('r/tsubame.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Lyra';
+  font-display: swap;
   src: url('r/lyra.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Bahnschrift';
+  font-display: swap;
   src: url('r/bahnschrift.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Yuruka';
+  font-display: swap;
   src: url('r/yuruka.woff2') format('woff2');
 }
 
