@@ -109,3 +109,5 @@ s`.s3 .frame-bottom`.animate('translate_y_from_0p_to_100p', { begin: a.s3_frame_
 s`.s3 .bg .line-box`.animate(FADE_OUT, { begin: a.s3_frame_disappear.begin, dur: 0, fill: 'both' })
 const s3_end = a.s3_frame_disappear.end
 console.log(s3_end)
+
+setTimeout(() => document.querySelector('.s2').style.display = 'none', Math.max(0, Math.ceil(s3_end * 1000)))

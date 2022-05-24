@@ -80,3 +80,5 @@ s`.s2 .bg-shape .right`.align({ [RIGHT]: 0, [TOP]: 0 }).size(40, 40).round().tra
 s`.s2 .text-box, .s2 .bg-text`.animate([{ translate: [0, 0] }, { translate: [-2, 2], opacity: 1, offset: 0.2 }, { translate: [6, -6], opacity: 0 }], { begin: a.s2_bg_shape_right.end - 0.1, dur: 0.4, keep: Infinity }, 's2_out')
 const s2_end = a.s2_out.begin + 0.3
 console.log(s2_end)
+
+setTimeout(() => document.querySelector('.s1').style.display = 'none', Math.max(0, Math.ceil(s2_end * 1000)))

@@ -116,3 +116,5 @@ s`.s6 .text-box .center svg`[16].animate({ opacity: [0, 1], translate: [[2, 3], 
 
 const s6_end = a.s6_text_in.end
 console.log(s6_end)
+
+setTimeout(() => document.querySelector('.s5').style.display = 'none', Math.max(0, Math.ceil(s6_end * 1000)))

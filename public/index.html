@@ -32,97 +32,100 @@
 <script src="scenes/s4.js"></script>
 <script src="scenes/s5.js"></script>
 <script src="scenes/s6.js"></script>
+<script src="scenes/s7.js"></script>
 <script>
   APP.innerHTML += `
-  <div class="s7">
-    <div class="bg-1"></div>
-    <div class="bg-shape-1">
-      <div class="left"></div>
-      <div class="right"></div>
+  <div class="s8">
+    <div class="bg"></div>
+    <div class="calendar-box" style="font-family: Bahnschrift; color: var(--white); --color: var(--white); font-size: 16rem; font-weight: normal; letter-spacing: 0;">
+      <div class="glow" style="flex-direction: column; filter: drop-shadow(0px 0px 0.3rem #fff);">
+        <div class="row">
+          <div style="--color: transparent;">01</div>
+          <div>02</div>
+          <div>03</div>
+          <div>04</div>
+          <div>05</div>
+          <div>06</div>
+          <div>07</div>
+          <div>08</div>
+          <div>09</div>
+          <div>10</div>
+          <div>11</div>
+        </div>
+        <div class="row">
+          <div style="--color: transparent;">12</div>
+          <div>13</div>
+          <div>14</div>
+          <div>15</div>
+          <div>16</div>
+          <div>17</div>
+          <div>18</div>
+          <div>19</div>
+          <div>20</div>
+          <div>21</div>
+          <div>22</div>
+        </div>
+        <div class="row">
+          <div style="--color: transparent;">23</div>
+          <div>24</div>
+          <div>25</div>
+          <div>26</div>
+          <div>27</div>
+          <div>28</div>
+          <div>29</div>
+          <div>30</div>
+          <div>31</div>
+          <div></div>
+        </div>
+      </div>
     </div>
-    <div class="text-box-1" style="letter-spacing: 0; color: var(--white); text-shadow: 0 0 5px rgba(255, 255, 255, 0.75); font-size: 4.5rem">
-      <span>久</span>
-      <span>し</span>
-      <span>ぶ</span>
+    <div class="text-box" style="color: #80af70; writing-mode: vertical-lr; font-size: 3rem; letter-spacing: 1.8rem; align-items: center;">
+      <span>辿</span>
       <span>り</span>
-      <span>に</span>
-      <span>手</span>
-      <span>を</span>
-    </div>
-    <div class="bg-2"></div>
-    <div class="bg-shape-2">
-      <div class="left"></div>
-      <div class="right"></div>
-    </div>
-    <div class="text-box-2" style="letter-spacing: 0; color: var(--white); text-shadow: 0 0 5px rgba(255, 255, 255, 0.75); font-size: 4.5rem">
-      <span>伸</span>
-      <span>ば</span>
-      <span>し</span>
+      <span>着</span>
+      <span>け</span>
+      <span style="color: var(--purple); font-size: 3.5rem">る</span>
+      <span>と</span>
+      <span>信</span>
+      <span>じ</span>
       <span>て</span>
-      <span>い</span>
-      <span>つ</span>
-      <span>か</span>
     </div>
-    <div class="mask-box">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="frame" style="font-family: Lyra, serif; font-size: 2.25rem; color: var(--white);">
-      <div class="text chapter-ja relative">第2章</div>
-      <div class="text chapter-en relative" style="letter-spacing: 0.5rem">Chapter 2</div>
+    <div class="arrows">
+      <div style="color: var(--red)"></div>
+      <div style="color: var(--green)"></div>
+      <div style="color: var(--purple)"></div>
+      <div style="color: var(--yellow)"></div>
     </div>
   </div>
 `
-  const s7_begin = s6_end + 0.2
-  s`.s7 .bg-1`.align(TOP, BOTTOM, LEFT, RIGHT).origin(BOTTOM, CENTER).scale(3, 2).rotate(-45).fill(RED)
-              .animate('translate_from_210p_to_50p', { begin: s7_begin, dur: 0.2, fill: 'both', easing: '<' }, 's7_bg_1_in')
-  s`.s7 .frame`.align(4, 4, 4, 4)
-               .animate(FADE_IN, { begin: a.s7_bg_1_in.end - 0.1, dur: 0.2, fill: 'both' }, 's5_frame_in')
-               .after.align({ [BOTTOM]: -3.2, [RIGHT]: -3.2 }).size(0, 0).stroke('transparent', 3.2).rotate(-45).css({ 'border-top-color': 'var(--white)' })
-  s`.s7 .frame .chapter-ja`.align(LEFT, TOP)
-  s`.s7 .frame .chapter-en`.align(RIGHT, TOP)
-  s`.s7 .mask-box`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
-                  .animate(FADE_IN, { begin: a.s5_frame_in.begin, dur: 0.2, fill: 'both' }, 's7_mask_box_in_1')
-                  .animate(FADE_OUT, { begin: a.s7_mask_box_in_1.begin + 1.0, dur: 0, fill: 'forwards' }, 's7_mask_box_out_1')
-  s`.s7 .mask-box span`.size(4, 4.5).forEach((ele, index) => {
-    index !== 0 && ele.css({ 'margin-left': '5rem' })
-    ele.before.align(LEFT, RIGHT, TOP, BOTTOM).round(1).fill(WHITE)
-       .animate([{ scale: [1, 1] }, { scale: [1, 1.8 + 0.4 * Math.random()] }, { scale: [1, 1] }], { begin: a.s7_mask_box_in_1.begin - 0.1 - 0.1 * index, dur: 0.5, iterations: 'infinite' })
+  const s8_begin = s7_end
+  s`.s8`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
+  s`.s8 .arrows > div`.forEach((ele, index, arr) => {
+    ele.align(TOP, LEFT).size('100p', '200p').origin(TOP, CENTER).translate_y('-100p').scale(1, 0.5)
+       .animate(index => (['translate_y_from_170p_to_0p', { begin: s8_begin + 0.15 * index, dur: 1.2 - index * 0.1, fill: 'both', easing: 'cubic-bezier(0.33, 1, 0.68, 1)' }, `s8_bg_in_${index}`]))
+       .before.align(TOP, BOTTOM, LEFT, RIGHT).round(4).origin(RIGHT, TOP).size('100p', 30).translate('-50p', -60).rotate(-45).scale(1.5, 2).fill('currentColor')
+       .after.align(TOP, BOTTOM, LEFT, RIGHT).round(4).origin(LEFT, TOP).size('100p', 30).translate('50p', -60).rotate(45).scale(1.5, 2).fill('currentColor')
   })
-  s`.s7 .text-box-1`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
-                    .animate(FADE_IN, { begin: a.s7_mask_box_out_1.begin, dur: 0, fill: 'both' }, 's7_text_box_1_in')
-  s`.s7 .text-box-1 span`.size(4, 4.5).forEach((ele, index) => {
-    index !== 0 && ele.css({ 'margin-left': '5rem' })
-    ele.animate(index => ([[{ opacity: 1, translate_x: 1 }, { opacity: 1 - Math.abs(3 - index) * 0.25, translate_x: (3 - index) * -2 }], { begin: a.s7_text_box_1_in.begin, dur: 1.6, fill: 'both', easing: '>' }, 's7_text_box_1_span_in']))
+  s`.s8 .arrows`.align(TOP, BOTTOM, LEFT, RIGHT).animate('translate_y_from_0p_to_-70p', { begin: a.s8_bg_in_2.begin, dur: 1.2, fill: 'both', easing: '<' })
+  const s8_stage_in = a.s8_bg_in_0.begin + 0.75
+  s`.s8 .bg`.align(TOP, BOTTOM, LEFT, RIGHT).fill(WHITE)
+            .animate(FADE_IN, { begin: s8_stage_in, dur: 0.1, fill: 'both' })
+            .before.align(4, 9.5, 4, 4).round(6).fill(GREEN)
+  s`.s8 .calendar-box`.align(4, BOTTOM, LEFT, RIGHT)
+                      .animate(FADE_IN, { begin: s8_stage_in, dur: 0.1, fill: 'both' })
+                      .animate([{ translate_x: 17 * 5 * 1.8 }, { translate_x: -17 * 4.5 * 2.9 }], { begin: s8_begin - 0.1, dur: 3, fill: 'both', easing: '-' }, 's8_calendar_scale')
+  s`.s8 .calendar-box .glow`.align(TOP, BOTTOM, LEFT, RIGHT).origin(LEFT, TOP).scale(2.5, 2.5)
+                            .animate([{ scale: [3.5, 3.5] }, { scale: [1.8, 1.8] }], { begin: a.s8_calendar_scale.begin + 0.4 * a.s8_calendar_scale.dur, dur: 0.6 * a.s8_calendar_scale.dur, fill: 'both', easing: 'cubic-bezier(0.32, 0, 0.67, 0)' })
+  s`.s8 .calendar-box .glow .row`.css({ position: 'relative' }).forEach((ele, index) => {
+    index !== 0 && ele.before.align(-0.4, -70, undefined, -0.1).size({ height: 0.8 }).fill(WHITE)
+    ele.css({ 'justify-items': 'flex-end' })
   })
-  s`.s7 .bg-shape-1`.align(LEFT, TOP).size(FULL, FULL)
-  s`.s7 .bg-shape-1 .left`.align({ [LEFT]: 0, [BOTTOM]: 0 }).size(25, 25).rotate(45).translate(2, 3)
-                          .animate([{ opacity: 0, stroke: [BLUE, 8], scale: [0.9, 0.9] }, { opacity: 1, stroke: [BLUE, 0], scale: [1.1, 1.1] }], { begin: a.s7_text_box_1_in.begin - 0.2, dur: 0.7, fill: 'both', easing: '>' })
-  s`.s7 .bg-shape-1 .right`.align({ [RIGHT]: 0, [TOP]: 0 }).size(30, 30).rotate(45).translate(-4, -4)
-                           .animate([{ opacity: 0, stroke: [BLUE, 6], scale: [0.8, 0.8] }, { opacity: 1, stroke: [BLUE, 0], scale: [1.2, 1.2] }], { begin: a.s7_text_box_1_in.begin + 0.35, dur: 0.6, fill: 'both', easing: '>' }, 's7_bg_shape_1_right')
-  s`.s7 .bg-2`.after.align(TOP, LEFT).size(50, 50).round().translate('-50p', '-50p').fill(BLUE)
-              .animate('scale_from_0_0_to_7_7', { begin: a.s7_text_box_1_in.begin + 1.0, dur: 0.2, fill: 'both', easing: '<' }, 's7_bg_2_in')
-  s`.s7 .mask-box`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
-                  .animate(FADE_IN, { begin: a.s7_bg_2_in.begin + 0.1, dur: 0.2, fill: 'forwards' }, 's7_mask_box_in_2')
-                  .animate(FADE_OUT, { begin: a.s7_mask_box_in_2.begin + 1.0, dur: 0, fill: 'forwards' }, 's7_mask_box_out_2')
-  s`.s7 .text-box-2`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
-                  .animate(FADE_IN, { begin: a.s7_mask_box_out_2.begin, dur: 0, fill: 'both' }, 's7_text_box_2_in')
-  s`.s7 .text-box-2 span`.size(4, 4.5).forEach((ele, index) => {
-    index !== 0 && ele.css({ 'margin-left': '5rem' })
-    ele.animate(index => ([[{ opacity: 1, translate_x: 1 }, { opacity: 1 - Math.abs(3 - index) * 0.25, translate_x: (3 - index) * -2 }], { begin: a.s7_text_box_2_in.begin, dur: 1.6, fill: 'both', easing: '>' }, 's7_text_box_2_span_in']))
-  })
-  s`.s7 .bg-shape-2`.align(LEFT, TOP).size(FULL, FULL)
-  s`.s7 .bg-shape-2 .left`.align({ [LEFT]: 0, [BOTTOM]: 0 }).size(35, 35).round().translate(-6, 2)
-                          .animate([{ opacity: 0, stroke: [RED, 5], scale: [0.9, 0.9] }, { opacity: 1, offset: 0.3 }, { opacity: 1, stroke: [RED, 0], scale: [1.3, 1.3] }], { begin: a.s7_text_box_2_in.begin - 0.2, dur: 0.7, fill: 'both', easing: '>' })
-  s`.s7 .bg-shape-2 .right`.align({ [RIGHT]: 0, [TOP]: 0 }).size(40, 40).round().translate(5, -6)
-                           .animate([{ opacity: 0, stroke: [RED, 8], scale: [0.8, 0.8] }, { opacity: 1, offset: 0.5 }, { opacity: 1, stroke: [RED, 0], scale: [1.2, 1.2] }], { begin: a.s7_text_box_2_in.begin + 0.35, dur: 0.6, fill: 'both', easing: '>' }, 's7_bg_shape_2_right')
-  const s7_end = a.s7_text_box_1_in.begin + 1.0
-  console.log(s7_end)
+  s`.s8 .calendar-box .glow .row div`.css({ position: 'relative', display: 'inline-block', 'text-align': 'center', 'min-width': '17rem', padding: '2rem' })
+                                     .forEach(ele => ele.before.align(-0.1, undefined, -0.1, -0.4).size(0.8).fill('var(--color)'))
+
+  s`.s8 .text-box`.align({ [RIGHT]: 3.25 })
+                  .animate(FADE_IN, { begin: s8_stage_in, dur: 0.1, fill: 'both' })
+  s`.s8 .text-box span`.animate(index => ([{ opacity: [0, 1], translate: [[-3, -2], [0, 0]] }, { begin: s8_stage_in + 0.1 + index * 0.15, dur: 0.8, fill: 'both', easing: '>' }]))
 </script>
 <script>
   APP.style.opacity = 1

@@ -80,3 +80,5 @@ s`.s4 .frame .right`.align(BOTTOM, RIGHT).translate(-6.2, -1.1).css({ overflow: 
 s`.s4 .frame .right span`.animate('translate_y_from_100p_to_0p', { begin: a.s4_frame_in.end - 0.6, dur: 0.8, fill: 'both' })
 const s4_end = a.s4_frame_in.end
 console.log(s4_end)
+
+setTimeout(() => document.querySelector('.s3').style.display = 'none', Math.max(0, Math.ceil(s4_end * 1000)))

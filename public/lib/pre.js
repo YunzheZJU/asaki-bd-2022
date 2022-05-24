@@ -340,7 +340,7 @@ const regist = (element, pseudo, selector, ...fnParams) => {
         name = ['keyframes', 'in', 'array', String(counter++)].join('_')
       } else if (isPlainObject(_keyframes)) {
         Object.entries(_keyframes).forEach(([key, params]) => {
-          assert(params.length === 2, 'Length of params is not wrong', _keyframes, key, params)
+          assert(params.length === 2, 'Length of params is wrong', _keyframes, key, params)
         })
         keyframes = [
           Object.fromEntries(Object.keys(_keyframes).map(key => [key, _keyframes[key][0]])),

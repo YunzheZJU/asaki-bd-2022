@@ -83,3 +83,5 @@ s`.s1 .bg-shape .right`.align({ [RIGHT]: 0, [BOTTOM]: 0 }).size(30, 30).rotate(4
 
 const s1_end = a.s1_bg_shape_right.end - 0.1
 console.log(s1_end)
+
+setTimeout(() => document.querySelector('.s0').style.display = 'none', Math.max(0, Math.ceil(s1_end * 1000)))

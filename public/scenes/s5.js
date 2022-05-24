@@ -109,7 +109,7 @@ APP.innerHTML += `
     </div>
     <div class="frame" style="font-family: Lyra, serif; font-size: 2.25rem; color: var(--white);">
       <div class="bottom"></div>
-      <div class="text chapter-ja relative">第１章</div>
+      <div class="text chapter-ja relative" style="letter-spacing: 0.5rem">第１章</div>
       <div class="text chapter-en relative" style="letter-spacing: 0.5rem">Chapter 1</div>
     </div>
     <div class="mask"></div>
@@ -190,3 +190,5 @@ s`.s5 .text-box .top svg:last-child`.size({ height: 'var(--height)' }).css({ str
 
 const s5_end = a.s5_text_box_top_div_move.end
 console.log(s5_end)
+
+setTimeout(() => document.querySelector('.s4').style.display = 'none', Math.max(0, Math.ceil(s5_end * 1000)))
