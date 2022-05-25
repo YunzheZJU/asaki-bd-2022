@@ -1,4 +1,3 @@
-
 APP.innerHTML += `
   <div class="s7">
     <div class="bg-1"></div>
