@@ -55,7 +55,7 @@
       </svg>
     </div>
     <div class="bg"></div>
-    <div class="text-box-1" style="color: var(--balck);">
+    <div class="text-box-1" style="color: var(--balck); letter-spacing: 1rem;">
       <span>瞼</span>
       <span>を</span>
       <span>閉</span>
@@ -63,7 +63,7 @@
       <span>れ</span>
       <span>ば</span>
     </div>
-    <div class="text-box-2" style="color: var(--balck);">
+    <div class="text-box-2" style="color: var(--balck); letter-spacing: 1rem;">
       <span>耳</span>
       <span>を</span>
       <span>澄</span>
@@ -159,14 +159,16 @@
   s`.s9 .circle-box`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
                     .animate('scale_from_4_4_to_1_1', { begin: a.s9_mask_close_2.begin, dur: 2, fill: 'both', easing: 'cubic-bezier(0, 0.55, 0.45, 1)' })
   s`.s9 .circle-box svg`.align().rotate(-90).scale(2, 2)
-                        .animate(index => [FADE_IN, { begin: a.s9_mask_open_2.end - index * 0.15, dur: 0.1, fill: 'both' }])
-                        .animate(index => [{ css: [{ 'stroke-dasharray': '0 1200' }, { 'stroke-dasharray': `1200 1200` }] }, { begin: a.s9_mask_open_2.end - index * 0.15, dur: 4 - index * 0.4, fill: 'both', easing: 'cubic-bezier(0.22, 1, 0.36, 1)' }, `s9_circle_in_${index}`])
+                        .animate(index => [FADE_IN, { begin: a.s9_mask_open_2.end - 0.1 - index * 0.15, dur: 0.1, fill: 'both' }])
+                        .animate(index => [{ css: [{ 'stroke-dasharray': '0 1200' }, { 'stroke-dasharray': `1200 1200` }] }, { begin: a.s9_mask_open_2.end - 0.1 - index * 0.15, dur: 4 - index * 0.4, fill: 'both', easing: 'cubic-bezier(0.22, 1, 0.36, 1)' }, `s9_circle_in_${index}`])
                         .animate(index => [{ scale: [[2, 2], [3, 3]], opacity: [1, 0] }, { begin: a[`s9_circle_in_${index}`].begin + 0.9 + index * 0.05, dur: 0.4, fill: 'forwards' }, `s9_circle_out_${index}`])
-  s`.s9 .bg`.align().size(180, 180).round().fill(RED)
-            .animate('scale_from_0_0_to_1_1', { begin: a.s9_circle_in_4.end - 1.5, dur: 1.4, fill: 'both', easing: '<' })
+  s`.s9 .bg`.align().round().stroke(GREEN, 0.3).css({ background: 'url("r/9-0.svg") left top/4.6875rem 8.125rem fixed' })
+            .animate(FADE_IN, { begin: a.s9_circle_in_4.end - 1.5, dur: 0.2, fill: 'both' })
+            .animate({ size: [[0, 0], [180, 180]] }, { begin: a.s9_circle_in_4.end - 1.5, dur: 1.4, fill: 'both', easing: '<' }, 's9_bg_scale')
   s`.s9 .text-box-2`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER).opacity(0)
-  //                   .animate(FADE_IN, { begin: a.s9_mask_close_2.end, dur: 0, fill: 'both' })
-  // 第二句出现时文字渐入
+                    .animate(FADE_IN, { begin: a.s9_bg_scale.begin + 0.5, dur: 0, fill: 'both' }, 's9_text_box_2_in')
+  s`.s9 .text-box-2 span`.animate(index => [{ translate_y: [8, 0] }, { begin: a.s9_text_box_2_in.end + index * 0.02, dur: 0.4, fill: 'both', easing: '>' }, `s9_text_box_2_move_${index}`])
+                         .animate(index => [{ clip: ['polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'] }, { begin: a[`s9_text_box_2_move_${index}`].begin, dur: a[`s9_text_box_2_move_${index}`].dur, fill: 'both', easing: '-' }])
 </script>
 <script>
   APP.style.opacity = 1
