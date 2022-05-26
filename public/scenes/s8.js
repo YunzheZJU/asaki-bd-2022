@@ -2,7 +2,7 @@ APP.innerHTML += `
   <div class="s8">
     <div class="bg"></div>
     <div class="calendar-box" style="font-family: Bahnschrift, sans-serif; color: var(--white); --color: var(--white); font-size: 16rem; font-weight: normal; letter-spacing: 0;">
-      <div class="glow" style="flex-direction: column; filter: drop-shadow(0px 0px 0.3rem #fff);">
+      <div class="glow" style="flex-direction: column;;">
         <div class="row">
           <div>01</div>
           <div>02</div>
@@ -89,7 +89,7 @@ s`.s8 .text-box > span`.css({ position: 'relative' }).forEach((ele, index) => {
   ele.before.align(TOP, LEFT).size(0.5, '15p').round().fill(GREEN).origin(TOP, CENTER).rotate(-45)
      .animate([{ opacity: 0, translate: [-2, -2] }, { opacity: 1, offset: 0.7 }, { opacity: 1, translate: [3, 3] }], { begin: s8_stage_in + 0.1 + index * 0.05, dur: 1, fill: 'both', easing: '>' }, `s8_text_before_in_${index}`)
      .animate([{ opacity: 1, translate: [3, 3] }, { opacity: 1, offset: 0.3 }, { opacity: 0, translate: [5, 5] }], { begin: a[`s8_text_before_in_${index}`].end, dur: 0.8, fill: 'forwards', easing: '<' }, `s8_text_before_out_${index}`)
-  ele.after.align(TOP, LEFT).size(0.5, '80p').round().fill(GREEN).origin(TOP, CENTER).rotate(-45)
+  ele.after.align(TOP, LEFT).size(0.5, '80p').round().fill('linear-gradient(to bottom, transparent, var(--green))').origin(TOP, CENTER).rotate(-45)
      .animate([{ opacity: 0, translate: [-5.5, -5.5] }, { opacity: 1, offset: 0.7 }, { opacity: 1, translate: [-0.5, -0.5] }], { begin: a[`s8_text_before_in_${index}`].begin, dur: 1, fill: 'both', easing: '>' }, `s8_text_after_in_${index}`)
      .animate([{ opacity: 1, translate: [-0.5, -0.5] }, { opacity: 1, offset: 0.3 }, { opacity: 0, translate: [1.5, 1.5] }], { begin: a[`s8_text_after_in_${index}`].end, dur: 0.8, fill: 'forwards', easing: '<' }, 's8_text_after_out')
 })
