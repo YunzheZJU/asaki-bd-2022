@@ -2,7 +2,9 @@ APP.innerHTML += `
   <div class="s0">
     <div class="bg"></div>
     <div class="text-box" style="font-family: Yuruka, sans-serif; font-size: 5rem; color: var(--red); letter-spacing: 1.2rem;">
-      <img src="r/0-2.svg" style="margin-right: 5.53rem; height: 3.65rem;" />
+      <svg viewBox="0 0 58.54 58.54" style="margin-right: 5.53rem; height: 3.65rem; width: 3.65rem; fill: var(--red);">
+        <circle cx="29.27" cy="29.27" r="29.27"/>
+      </svg>
       <span>L</span>
       <span>O</span>
       <span>A</span>
@@ -10,12 +12,14 @@ APP.innerHTML += `
       <span>I</span>
       <span>N</span>
       <span>G</span>
-      <img src="r/0-2.svg" style="margin-left: 5.53rem; height: 3.65rem;" />
+      <svg viewBox="0 0 58.54 58.54" style="margin-left: 5.53rem; height: 3.65rem; width: 3.65rem; fill: var(--red);">
+        <circle cx="29.27" cy="29.27" r="29.27"/>
+      </svg>
     </div>
     <div class="hat-box">
-      <img src="r/0-3.svg" />
-      <img src="r/0-3.svg" style="margin-left: 3rem" />
-      <img src="r/0-3.svg" style="margin-left: 3rem" />
+      <img src="r/0-2.svg" />
+      <img src="r/0-2.svg" style="margin-left: 3rem" />
+      <img src="r/0-2.svg" style="margin-left: 3rem" />
     </div>
     <div class="frame-top"></div>
     <div class="frame-bottom"></div>
@@ -37,7 +41,7 @@ s`.s0 .hat-box img`[2].animate(
 )
 s`.s0 .hat-box img`.animate((index) => ([[{ opacity: 1, translate_y: '0rem' }, { opacity: 0, translate_y: '-5rem' }], { begin: a.s0_hat_2_drop.end + 0 + index * 0.1, dur: 0.2, fill: 'forwards', easing: '>' }, `s0_hat_${index}_disappear`]))
 s`.s0 .text-box`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
-s`.s0 .text-box *`.animate((index) => ([[{ opacity: 0, translate_y: '5rem' }, { translate_y: '-2rem', offset: 0.4 }, { opacity: 1, translate_y: '0rem' }], { begin: a.s0_hat_2_drop.end - 0.1 + index * 0.07, dur: 0.8, fill: 'both', easing: '>' }, `s0_text_${index}_appear`]))
+s`.s0 .text-box > *`.animate((index) => ([[{ opacity: 0, translate_y: '5rem' }, { translate_y: '-2rem', offset: 0.4 }, { opacity: 1, translate_y: '0rem' }], { begin: a.s0_hat_2_drop.end - 0.1 + index * 0.07, dur: 0.8, fill: 'both', easing: '>' }, `s0_text_${index}_appear`]))
 s`.s0 .frame-top`.align(LEFT, TOP).size('200%', '5rem')
                  .animate([{ translate_y: '-5rem' }, { translate_y: '0rem', offset: 0.7 }, { translate_y: '-0.3rem' }], { begin: s0_begin, dur: 0.3, fill: 'both', easing: '<>' }, 's0_frame_top_y')
                  .after.align(TOP, BOTTOM, LEFT, RIGHT).css({ background: 'url("r/0-0.svg")' })
