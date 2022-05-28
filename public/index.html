@@ -9,7 +9,7 @@
 <div id="asaki-bd-2022" style="opacity: 0"></div>
 </body>
 <script>
-  const GLOBAL_BEGIN = 45
+  const GLOBAL_BEGIN = 50
   const shouldForceRatio = true
   const shouldDisableRotate = true
   const RED = 'var(--red)'
@@ -36,197 +36,104 @@
 <script src="scenes/s8.js"></script>
 <script src="scenes/s9.js"></script>
 <script src="scenes/s10.js"></script>
+<script src="scenes/s11.js"></script>
 <script>
   APP.innerHTML += `
-  <div class="s11">
-    <div class="bg">
-      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+  <div class="s12">
+    <div class="bg"></div>
+    <div class="mask">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
-    <div class="shape">
-      <div class="left">
-        <div class="x">
-          <div class="y">
-            <svg viewBox="0 0 58.54 58.54" style="fill: var(--red)">
-              <circle cx="29.27" cy="29.27" r="29.27"/>
-            </svg>
-            <svg viewBox="0 0 103.923 90" style="fill: var(--red); transform: translateY(-1.2rem);">
-              <polygon points="51.962 0 0 90 103.923 90 51.962 0"/>
-            </svg>
-            <svg viewBox="0 0 90 90" style="fill: var(--red)">
-              <rect width="90" height="90"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div class="center">
-        <div class="x">
-          <div class="y">
-            <svg viewBox="0 0 58.54 58.54" style="fill: var(--red)">
-              <circle cx="29.27" cy="29.27" r="29.27"/>
-            </svg>
-            <svg viewBox="0 0 103.923 90" style="fill: var(--red); transform: translateY(-1.2rem);">
-              <polygon points="51.962 0 0 90 103.923 90 51.962 0"/>
-            </svg>
-            <svg viewBox="0 0 90 90" style="fill: var(--red)">
-              <rect width="90" height="90"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div class="right">
-        <div class="x">
-          <div class="y">
-            <svg viewBox="0 0 58.54 58.54" style="fill: var(--red)">
-              <circle cx="29.27" cy="29.27" r="29.27"/>
-            </svg>
-            <svg viewBox="0 0 103.923 90" style="fill: var(--red); transform: translateY(-1.2rem);">
-              <polygon points="51.962 0 0 90 103.923 90 51.962 0"/>
-            </svg>
-            <svg viewBox="0 0 90 90" style="fill: var(--red)">
-              <rect width="90" height="90"/>
-            </svg>
-          </div>
-        </div>
-      </div>
+    <div class="line-box" style="color: var(--white);">
+      <svg viewBox="0 0 1920 1080" style="position: absolute; right: 0; width: 120rem; fill: var(--white);">
+        <rect id="s12_rect" width="100" height="100" fill="none" />
+        <path id="s12_path" style="fill: none; stroke: var(--white); stroke-width: 4px;" d="M1913.85,571.3c-94.468,48.519-253.924,84.958-484.759,71.284C1177.848,627.7,970.244,520.367,750.8,473.118,516.219,422.61,169.792,513.1,1.5,568.986" pathLength="1000"/>
+        <path transform="translate(0, -70)" d="M56.7,36.35c-.192,2.559-.512,9.023-.512,9.407,0,1.727.576,2.111,1.088,2.367A3.034,3.034,0,0,1,59.26,50.94c0,2.688-1.856,5.568-15.487,5.568-5.632,0-12.031-.256-12.031-8.192v-.128l.128-23.23h-5.7c-.256,18.942-6.4,28.094-24.958,33.086a1.268,1.268,0,0,1-.448.063C.256,58.107,0,57.852,0,57.6a.725.725,0,0,1,.576-.64c14.911-6.208,18.559-17.6,18.559-31.614v-.384h-1.92c-3.264,0-12.415,0-14.911.32a4.8,4.8,0,0,1-1.28-2.752c2.368.256,12.543.577,17.535.577h6.975V9.023A70.9,70.9,0,0,0,24.958,0a56.318,56.318,0,0,1,8.448.7C34.558.96,35.2,1.536,35.2,2.176c0,.767-.767,1.471-2.687,1.792-.128.9-.128,2.687-.128,19.135H45.629c.7-1.025,4.351-6.464,5.247-6.464,1.344,0,7.68,6.08,7.68,7.359,0,.576-.512.96-1.216.96H38.525C38.461,28.605,38.4,46.4,38.4,46.4c0,3.584,2.368,3.776,6.016,3.776a20.135,20.135,0,0,0,4.48-.447c2.367-.449,4.287-1.281,6.527-13.568a.677.677,0,0,1,.64-.639.719.719,0,0,1,.64.767Zm-43-18.3c-.9-3.456-2.048-8.064-6.336-12.48A.759.759,0,0,1,7.1,5.056a.517.517,0,0,1,.575-.449c.193,0,13.119,4.736,13.119,11.776a4.284,4.284,0,0,1-3.967,4.607C15.487,20.99,14.207,20.1,13.7,18.047Zm22.142,4.224c-.191,0-.319-.065-.319-.256a1.192,1.192,0,0,1,.255-.7c4.16-6.4,5.76-13.759,6.464-17.919,1.536.383,9.471,3.007,9.471,4.927,0,.64-.768,1.153-2.112,1.153a4.776,4.776,0,0,1-.96-.065C44.349,16.062,36.669,22.271,35.837,22.271Z">
+          <animateMotion id="s12_line_box_text_in_1" dur="5s" begin="s12_rect.click" repeatCount="1" rotate="auto-reverse">
+            <mpath xlink:href="#s12_path"></mpath>
+          </animateMotion>
+        </path>
+        <path transform="translate(5, -65)" d="M7.1,47.1a5.312,5.312,0,0,1-4.16,2.624C.512,49.725.32,45.629.32,44.8a3.261,3.261,0,0,1,.832-2.3c2.752-2.752,8.831-9.663,14.271-23.1-1.6.767-3.648,1.983-4.224,2.3a7.349,7.349,0,0,1-3.9,1.344C3.968,23.038,0,19.711,0,17.663c0-.192.256-1.6.832-1.6a1.929,1.929,0,0,1,.9.449A8.56,8.56,0,0,0,6.016,17.6c2.3,0,8.9-1.728,10.943-2.3,1.472-4.416,2.5-8.447,2.5-10.111,0-2.048-1.152-2.88-1.984-3.008-.9-.128-1.216-.384-1.216-.64,0-.192.96-1.536,3.2-1.536,3.007,0,6.975,2.815,6.975,4.607,0,1.088-1.088,1.985-1.728,3.456-.832,1.792-1.792,4.1-2.752,6.272a22.145,22.145,0,0,1,2.752-.192c6.848,0,8.064,6.656,8.064,11.775,0,21.694-11.84,22.4-13.5,22.4-2.3,0-4.16-1.023-4.672-3.328a29.3,29.3,0,0,0-2.816-6.207,6.208,6.208,0,0,1-.448-1.024C8.959,42.94,7.3,46.652,7.1,47.1Zm4.607-10.175a4.1,4.1,0,0,1,.9.767c2.432,2.5,4.736,3.776,6.848,3.776,6.463,0,8.639-10.751,8.639-17.855,0-5.632-1.216-6.719-3.264-6.719a12.449,12.449,0,0,0-4.479,1.024C17.471,24.446,14.655,30.462,11.711,36.926Zm34.366-4.864a32.756,32.756,0,0,0-7.616-1.409c-.96-.128-1.472-.319-1.472-.511,0-.256.512-.512,1.6-.768,5.376-1.152,7.935-1.728,7.935-4.032,0-3.264-4.927-8.255-10.3-8.831-.831-.064-1.152-.256-1.152-.449,0-.575,1.792-.959,2.752-.959,8.384,0,16.063,7.551,16.063,13.951,0,2.368-1.28,4.992-3.9,4.992C48.316,34.046,47.356,32.638,46.077,32.062Zm.192-19.391a15.917,15.917,0,0,0-6.848-4.928q-1.152-.384-1.152-.767c0-.7,1.792-.7,2.432-.7.576,0,9.6.193,9.6,5.056,0,1.408-.768,2.624-1.92,2.624A2.956,2.956,0,0,1,46.269,12.671Zm5.119-5.184a16.338,16.338,0,0,0-7.1-4.672c-.832-.319-1.152-.575-1.152-.832,0-.575,1.28-.639,2.56-.639,1.984,0,9.6.128,9.6,4.8,0,1.343-.7,2.559-1.856,2.559A3.081,3.081,0,0,1,51.388,7.487Z">
+          <animateMotion id="s12_line_box_text_in_2" dur="5s" begin="s12_line_box_text_in_1.begin + 0.25" repeatCount="1" rotate="auto-reverse">
+            <mpath xlink:href="#s12_path"></mpath>
+          </animateMotion>
+        </path>
+        <path transform="translate(0, -70)" d="M51.388,55.163c0,1.857-2.944,2.24-4.415,2.24-1.92,0-2.816-.639-2.816-1.6v-.065c0-.256.064-1.983.064-2.943H23.23c0,.64.064,2.5.064,3.2,0,1.408-2.367,1.984-4.287,1.984-1.6,0-2.752-.576-2.752-1.6v-.128c.448-5.248.576-7.488.576-9.216l.128-7.615C11.263,45.309,1.792,50.428.512,50.428c-.32,0-.512-.192-.512-.384s.192-.384.512-.64A46.818,46.818,0,0,0,18.687,27.325c-3.84.065-9.6.257-11.264.513a5.168,5.168,0,0,1-1.215-2.752c1.536.191,8.959.384,13.183.447a62.2,62.2,0,0,0,2.56-9.471H20.415c-2.624,0-15.551.192-18.431.577A5.866,5.866,0,0,1,.7,13.694c3.136.321,16.831.641,21.311.641h.256a86.367,86.367,0,0,0,1.023-9.408H21.5c-3.135,0-11.71.192-13.822.512A5.686,5.686,0,0,1,6.463,2.688c2.048.255,14.207.511,16.063.511H41.277C42.941,1.023,44.285,0,44.669,0c.192,0,6.4,2.56,6.4,4.671,0,.7-.64,1.408-2.367,1.92-.128,1.664-.128,5.055-.128,7.744h1.471c.768-1.856,3.264-6.144,3.84-6.144s5.7,5.184,5.7,6.784a1.025,1.025,0,0,1-1.152,1.087H48.637v2.176c0,4.864.256,10.688.256,10.688v.191c0,.384-.128,2.112-4.48,2.112-1.856,0-2.624-.448-2.624-1.536v-.128c0-.448.064-1.343.128-2.24H25.15A43.666,43.666,0,0,1,20.542,35.2a24.073,24.073,0,0,1,3.648,1.856H43.709c1.92-2.3,3.008-3.072,3.328-3.072.512,0,6.4,2.944,6.4,4.992,0,.7-.7,1.343-2.3,1.792C51,41.916,51,43.708,51,44.988V46.4c0,.833.128,4.352.192,5.631,0,.96.128,2.5.192,3.073ZM23.422,38.78c-.064,2.817-.064,8.9-.064,8.9,0,.832-.064,2.3-.064,3.391H44.221c0-1.279.064-2.943.064-3.775,0,0,.064-6.079.064-8.512ZM42.109,16.062H28.734a53.471,53.471,0,0,1-2.88,9.536H41.981c.064-1.728.128-5.888.128-6.72Zm0-11.135H30.334a81.837,81.837,0,0,1-1.216,9.408H42.109Z">
+          <animateMotion id="s12_line_box_text_in_3" dur="5s" begin="s12_line_box_text_in_2.begin + 0.25" repeatCount="1" rotate="auto-reverse">
+            <mpath xlink:href="#s12_path"></mpath>
+          </animateMotion>
+        </path>
+        <path transform="translate(5, -65)" d="M20.926,30.205c-.064-3.455-1.343-6.079-3.712-6.079-1.791,0-5.247,1.023-10.3,9.855-.9,1.408-2.368,2.751-3.968,2.751-.96,0-2.239-.319-2.239-3.327a6.336,6.336,0,0,1,.768-3.391c.7-1.088,2.111-1.409,3.776-3.2,4.223-4.479,6.335-7.167,8.767-11.71-4.544.959-5.312,1.087-6.4,1.087C2.688,16.19,0,12.03,0,10.3,0,9.215.64,8.575.9,8.575c.192,0,.384.192.768.576a8.81,8.81,0,0,0,6.4,2.368A33.078,33.078,0,0,0,15.935,10.3a19.266,19.266,0,0,0,.832-4.352c0-1.664-.832-3.136-2.816-3.136h-.832c-.448,0-.64-.127-.64-.383A3.222,3.222,0,0,1,15.743,0c2.175,0,6.783,1.983,6.783,4.863a6.411,6.411,0,0,1-.9,2.624l-.7,1.408a5.436,5.436,0,0,0,1.216-.576,7.166,7.166,0,0,1,4.736-1.344c4.288,0,4.415,1.728,4.415,2.368,0,2.112-1.983,2.559-7.871,3.647-1.472.257-3.328.641-5.184,1.088-.831,1.6-1.984,3.456-6.143,10.111a11.98,11.98,0,0,1,6.528-2.111,7.108,7.108,0,0,1,7.039,5.951c3.328-2.048,8.319-4.927,11.583-6.719.512-.256.96-.64.96-.96,0-.064,0-.959-2.752-.959h-.576c-.9,0-1.28-.257-1.28-.577,0-1.28,3.648-1.28,3.9-1.28,3.712,0,8.9,1.536,8.9,5.7,0,2.369-2.431,2.433-4.351,2.625-2.624.255-11.775,3.839-16.063,5.952v1.023c0,7.1-.512,11.455-3.584,11.455-2.048,0-2.5-2.815-2.5-4.544v-.319a15.748,15.748,0,0,1,.64-2.624c.128-.832.192-1.664.256-2.5-5.695,3.391-8.767,6.336-8.767,9.664,0,5.055,7.743,5.439,10.559,5.439.7,0,1.408,0,2.048-.064,3.456-.256,4.672-1.856,6.719-2.111a11.664,11.664,0,0,1,1.473-.065c3.455,0,4.8,1.792,4.8,3.136,0,3.391-5.887,4.992-12.863,4.992H24.51c-8.256,0-15.359-4.032-15.359-10.239,0-4.992,5.952-10.176,11.775-14.272Z">
+          <animateMotion id="s12_line_box_text_in_4" dur="5s" begin="s12_line_box_text_in_3.begin + 0.25" repeatCount="1" rotate="auto-reverse">
+            <mpath xlink:href="#s12_path"></mpath>
+          </animateMotion>
+        </path>
+        <path transform="translate(0, -70)" d="M35.454,34.686c0,.96-1.6,1.983-4.032,1.983-1.792,0-2.688-.64-2.688-1.6v-.064a18.081,18.081,0,0,0,.128-1.856H17.087c-.064,3.264-.128,14.719-.128,14.719,0,2.944.96,4.224,13.759,4.224a116.04,116.04,0,0,0,13.183-.7c5.247-.576,6.528-2.3,9.151-12.223.128-.512.385-.768.576-.768.256,0,.448.256.448.7,0,.192-.064,2.688-.256,7.488v.191a2.426,2.426,0,0,0,1.344,2.3,3.229,3.229,0,0,1,1.984,2.944c0,3.327-3.136,6.079-25.47,6.079-4.032,0-8.128-.191-12.223-.511-5.12-.449-9.023-1.857-9.023-8.575v-.193s.064-9.087.064-11.839a60.089,60.089,0,0,0-.513-8.7,34.732,34.732,0,0,1,7.68,2.943h11.2c0-1.343.064-3.071.064-3.9V20.67H23.1c-1.984,0-7.424.064-10.688.448a4.383,4.383,0,0,1-.832-1.28C6.271,25.342.832,28.861.192,28.861A.169.169,0,0,1,0,28.67a2,2,0,0,1,.512-.96C8.319,19.135,14.335,8.127,15.359,0c1.6.319,9.472,2.239,9.472,4.224,0,.639-.7,1.151-2.048,1.151a3.993,3.993,0,0,1-.832-.063c-.64,1.343-1.409,2.559-2.112,3.775H44.157c.512-.7,2.752-3.071,3.328-3.071s6.143,3.135,6.143,4.735c0,.7-.64,1.28-2.175,1.664v1.728c0,7.168-.385,18.111-1.664,22.846-2.176,7.808-10.368,8.32-10.944,8.32a1.15,1.15,0,0,1-1.216-.768c-1.151-2.88-3.135-3.968-7.167-5.5-.384-.192-.64-.448-.64-.64q0-.384.576-.384h.32a45.043,45.043,0,0,0,6.656.832c6.655,0,7.487-5.056,7.487-28.03H18.815A57.837,57.837,0,0,1,12.8,18.559c2.752.191,6.847.383,10.943.383H28.35c2.5-2.687,2.88-2.88,3.072-2.88a.924.924,0,0,1,.384.128c1.088.384,5.44,2.56,5.44,4.161,0,.7-.577,1.343-2.048,1.727a14.512,14.512,0,0,0-.064,1.792c0,1.472.064,3.008.064,3.008,0,1.088.064,3.647.128,4.928.064,1.088.128,2.175.128,2.815Z">
+          <animateMotion id="s12_line_box_text_in_5" dur="5s" begin="s12_line_box_text_in_4.begin + 1.25" repeatCount="1" rotate="auto-reverse">
+            <mpath xlink:href="#s12_path"></mpath>
+          </animateMotion>
+        </path>
+        <path transform="translate(5, -65)" d="M23.742,40.573c0-1.536.256-4.159.32-5.951v-.576c0-3.071-1.536-4.416-3.52-4.416-3.52,0-8.9,5.12-11.263,12.351-1.792,5.376-2.112,6.207-4.031,7.488a4.915,4.915,0,0,1-2.5.832C.32,50.3,0,46.653,0,46.4a2.9,2.9,0,0,1,.192-1.024c.7-1.92,2.432-3.9,2.944-4.928.832-1.6,1.727-3.391,2.687-5.311,4.608-9.28,10.5-18.047,15.871-27.071a6.77,6.77,0,0,0,1.152-3.455A3.071,3.071,0,0,0,21.054,1.6c-.384-.128-.639-.321-.639-.577C20.415.641,21.5,0,22.782,0c3.584,0,7.168,5.12,7.168,6.976,0,1.343-1.024,2.431-2.624,3.9-5.312,4.8-16.063,21.055-16.063,22.142a.063.063,0,0,0,.064.064,1.146,1.146,0,0,0,.448-.32c3.712-3.9,6.784-5.759,10.239-5.759,3.584,0,6.912,2.176,7.04,7.295.064,1.471,0,3.775.192,5.183.384,3.008,2.047,3.84,4.48,3.84,8.767,0,15.742-11.263,17.662-17.791.384-1.279.7-1.855.9-1.855.256,0,.384.576.384,1.6,0,8.832-7.359,24.575-19.391,24.575C27.838,49.853,23.742,47.229,23.742,40.573Z">
+          <animateMotion id="s12_line_box_text_in_6" dur="5s" begin="s12_line_box_text_in_5.begin + 0.25" repeatCount="1" rotate="auto-reverse">
+            <mpath xlink:href="#s12_path"></mpath>
+          </animateMotion>
+        </path>
+        <path transform="translate(5, -65)" d="M27.9,7.3c-1.28,0-7.936,3.137-13.631,6.272C12.287,14.591,11.135,15.1,9.6,15.1,5.312,15.1,0,11.583,0,9.151,0,8.512.512,7.3,1.024,7.3c.256,0,.576.257,1.216.768A7.328,7.328,0,0,0,6.655,9.344a20.57,20.57,0,0,0,6.208-1.217A169.315,169.315,0,0,1,35.9,1.664a9.953,9.953,0,0,0,2.112-.9A5.239,5.239,0,0,1,40.637,0h.128c.9,0,8.895,1.344,8.895,4.479,0,1.216-1.344,2.113-3.455,2.113h-.321c-1.088-.065-2.431-.128-3.711-.128-11.327,0-21.823,10.239-21.823,19.9,0,5.76,3.712,10.879,12.287,12.543,1.6.32,2.112.064,3.712.32,1.92.32,5.952,1.856,5.952,4.416,0,2.816-3.392,3.584-5.312,3.584-6.656,0-19.582-5.184-19.582-19.263,0-7.1,3.519-14.591,9.855-19.839q.768-.576.768-.768A.223.223,0,0,0,27.9,7.3Zm16,13.951a16.311,16.311,0,0,0-5.119-7.1c-.576-.448-.832-.832-.832-1.088s.256-.384.768-.384c2.56,0,9.791,3.519,9.791,7.424,0,1.727-1.216,3.135-2.431,3.135C45.245,23.23,44.477,22.654,43.9,21.246Zm7.04-3.071a17.261,17.261,0,0,0-5.376-6.912c-.576-.448-.832-.831-.832-1.088s.321-.384.768-.384c.9,0,9.92,2.3,9.92,7.168,0,1.664-1.152,3.136-2.368,3.136C52.284,20.1,51.516,19.519,50.94,18.175Z">
+          <animateMotion id="s12_line_box_text_in_7" dur="5s" begin="s12_line_box_text_in_6.begin + 0.25" repeatCount="1" rotate="auto-reverse">
+            <mpath xlink:href="#s12_path"></mpath>
+          </animateMotion>
+        </path>
+        <path transform="translate(10, -65)" d="M17.6,51.964c-2.816-7.936-9.28-15.231-15.231-21.118A7.326,7.326,0,0,1,0,25.726a6.7,6.7,0,0,1,1.344-3.9c2.944-4.032,7.231-7.551,10.5-11.327a10.45,10.45,0,0,0,2.816-6.336A3.378,3.378,0,0,0,13.5,1.6c-.256-.256-.7-.512-.7-.832,0-.256.32-.768,1.728-.768,2.431,0,8,4.352,8,7.231a5.165,5.165,0,0,1-1.92,3.648C15.3,15.742,8.063,19.006,4.479,23.55a3.372,3.372,0,0,0-.768,1.92,4.035,4.035,0,0,0,1.6,2.815c5.439,4.8,11.838,9.472,16.254,15.295,1.472,1.92,2.56,3.776,2.56,6.208,0,2.3-.9,5.312-3.392,5.312C19.583,55.1,18.431,54.268,17.6,51.964Z">
+          <animateMotion id="s12_line_box_text_in_8" dur="5s" begin="s12_line_box_text_in_7.begin + 0.25" repeatCount="1" rotate="auto-reverse">
+            <mpath xlink:href="#s12_path"></mpath>
+          </animateMotion>
+        </path>
+        <path transform="translate(5, -65)" d="M3.968,47.869A6.382,6.382,0,0,1,2.944,48C.448,48,0,45.245,0,45.245a2.379,2.379,0,0,1,1.088-1.792A33.808,33.808,0,0,0,5.76,39.037c3.327-4.479,7.3-9.6,9.919-14.91.128-1.345.192-2.752.32-4.1a19.845,19.845,0,0,0-2.56,2.623C12.159,24.19,11.2,24.9,9.855,24.9c-2.367,0-6.591-2.369-6.591-4.672,0-1.409.512-1.409.512-1.409.192,0,.512.257.9.577a3.243,3.243,0,0,0,2.112.7c1.664,0,3.648-1.024,6.143-2.624a27.4,27.4,0,0,1,3.584-2.048c.128-1.279.256-2.495.448-3.648a33.833,33.833,0,0,0,.512-5.055c0-2.368-.576-4.288-2.688-4.672-.768-.128-1.152-.447-1.152-.768A2.516,2.516,0,0,1,16.063,0c2.048,0,6.463,2.176,6.463,5.5a30.325,30.325,0,0,1-1.471,7.935,15.761,15.761,0,0,0-.512,1.856c1.088.32,2.3.9,2.3,2.112,0,.576-.128.96-2.432,4.608C30.4,11.775,35.454,10.88,37.95,10.88c4.223,0,7.359,3.839,7.359,8.319a8.538,8.538,0,0,1-.192,1.792C44.285,25.6,42.109,31.87,42.109,36.6c0,1.281,0,5.76,5.056,5.76,2.815,0,6.911-1.471,9.535-3.072a5.238,5.238,0,0,1,1.92-.9c.128,0,.192.065.192.128,0,1.409-6.527,8.7-14.015,8.7-4.16,0-8.319-2.5-8.319-9.919,0-6.144,2.431-13.7,2.879-19.2,0-.384.064-.768.064-1.088,0-2.56-.9-4.16-2.752-4.16-1.6,0-3.9,1.153-6.975,3.648C27.518,18.3,25.022,21.055,18.751,28.99c-.064,1.152-.064,2.368-.064,3.456a34.422,34.422,0,0,0,1.152,10.24,11.037,11.037,0,0,1,.448,1.983,11.83,11.83,0,0,1,.064,1.472c0,4.416-1.472,6.975-3.52,6.975-2.176,0-2.368-2.5-3.2-4.672A34.056,34.056,0,0,0,10.5,41.533C9.28,44.413,8.191,46.845,3.968,47.869Zm7.3-8.128c.9.832,1.855,1.92,2.751,2.688a1.194,1.194,0,0,0,.64.32c.256,0,.384-.191.384-.768V39.869c0-2.239.064-5.119.192-8.191C13.7,34.494,12.352,37.374,11.264,39.741Z">
+          <animateMotion id="s12_line_box_text_in_9" dur="5s" begin="s12_line_box_text_in_8.begin + 0.2" repeatCount="1" rotate="auto-reverse">
+            <mpath xlink:href="#s12_path"></mpath>
+          </animateMotion>
+        </path>
+        <path transform="translate(5, -65)" d="M36.414,31.807a8.981,8.981,0,0,0-9.408-8.7c-6.591,0-12.927,4.095-17.214,8.832-1.537,1.727-2.3,3.263-4.544,3.711a9.6,9.6,0,0,1-1.792.192C.256,35.838,0,33.406,0,33.022a2.612,2.612,0,0,1,1.152-1.984C4.928,28.223,9.279,24.831,10.111,24,17.343,16.575,25.406,6.016,25.406,5.376a.619.619,0,0,0-.575-.576.387.387,0,0,0-.257.064c-1.535.7-4.543,2.816-6.015,3.648a8.951,8.951,0,0,1-4.352,1.536c-3.2,0-7.1-2.944-7.1-5.312,0-.832.448-1.471.768-1.471.128,0,.191,0,.255.063A6.088,6.088,0,0,0,12.1,4.672c3.392,0,10.367-2.816,11.455-3.264C24.574.96,25.15,0,26.494,0c1.728,0,7.423,2.944,7.423,4.992,0,1.664-2.943,2.688-4.223,3.84-7.039,6.207-14.847,14.526-14.847,14.847,0,.064,0,.064.064.064a1.665,1.665,0,0,0,.448-.192,31.9,31.9,0,0,1,11.967-2.624c8.96,0,15.679,5.12,15.679,11.775,0,9.791-11.2,16.511-22.014,16.511-8.575,0-13.7-4.031-13.7-8.064,0-3.775,4.161-5.631,8.384-5.631,5.248,0,10.175,2.944,10.367,8.191C30.91,42.237,36.414,37.886,36.414,31.807ZM14.207,38.4c-.64,0-4.224.128-4.224,2.5,0,2.175,3.456,3.839,8.256,3.967a21.063,21.063,0,0,0,2.88-.192C21.119,40.7,17.919,38.4,14.207,38.4Z">
+          <animateMotion id="s12_line_box_text_in_10" dur="5s" begin="s12_line_box_text_in_9.begin + 0.25" repeatCount="1" rotate="auto-reverse">
+            <mpath xlink:href="#s12_path"></mpath>
+          </animateMotion>
+        </path>
+        <path transform="translate(5, -65)" d="M7.1,47.1a5.312,5.312,0,0,1-4.16,2.624C.512,49.725.32,45.629.32,44.8a3.261,3.261,0,0,1,.832-2.3c2.752-2.752,8.831-9.663,14.271-23.1-1.6.767-3.648,1.983-4.224,2.3a7.349,7.349,0,0,1-3.9,1.344C3.968,23.038,0,19.711,0,17.663c0-.192.256-1.6.832-1.6a1.929,1.929,0,0,1,.9.449A8.56,8.56,0,0,0,6.016,17.6c2.3,0,8.9-1.728,10.943-2.3,1.472-4.416,2.5-8.447,2.5-10.111,0-2.048-1.152-2.88-1.984-3.008-.9-.128-1.216-.384-1.216-.64,0-.192.96-1.536,3.2-1.536,3.007,0,6.975,2.815,6.975,4.607,0,1.088-1.088,1.985-1.728,3.456-.832,1.792-1.792,4.1-2.752,6.272a22.145,22.145,0,0,1,2.752-.192c6.848,0,8.064,6.656,8.064,11.775,0,21.694-11.84,22.4-13.5,22.4-2.3,0-4.16-1.023-4.672-3.328a29.3,29.3,0,0,0-2.816-6.207,6.208,6.208,0,0,1-.448-1.024C8.959,42.94,7.3,46.652,7.1,47.1Zm4.607-10.175a4.1,4.1,0,0,1,.9.767c2.432,2.5,4.736,3.776,6.848,3.776,6.463,0,8.639-10.751,8.639-17.855,0-5.632-1.216-6.719-3.264-6.719a12.449,12.449,0,0,0-4.479,1.024C17.471,24.446,14.655,30.462,11.711,36.926Zm34.366-4.864a32.756,32.756,0,0,0-7.616-1.409c-.96-.128-1.472-.319-1.472-.511,0-.256.512-.512,1.6-.768,5.376-1.152,7.935-1.728,7.935-4.032,0-3.264-4.927-8.255-10.3-8.831-.831-.064-1.152-.256-1.152-.449,0-.575,1.792-.959,2.752-.959,8.384,0,16.063,7.551,16.063,13.951,0,2.368-1.28,4.992-3.9,4.992C48.316,34.046,47.356,32.638,46.077,32.062Z">
+          <animateMotion id="s12_line_box_text_in_11" dur="5s" begin="s12_line_box_text_in_10.begin + 0.25" repeatCount="1" rotate="auto-reverse">
+            <mpath xlink:href="#s12_path"></mpath>
+          </animateMotion>
+        </path>
+        <path transform="translate(5, -65)" d="M22.271,8.319v.128c0,.9-.705,2.3-3.072,2.3a6.582,6.582,0,0,1-1.088-.064,46.23,46.23,0,0,0-5.312-.7c-.7,0-5.887.128-5.887,4.224a5.992,5.992,0,0,0,.128,1.473,19.765,19.765,0,0,1,.448,3.775A7.988,7.988,0,0,1,7.36,20.8a57.261,57.261,0,0,0-1.344,9.855c0,.321.064.64.064.96,0,.193.064.256.191.256a.493.493,0,0,0,.257-.063c2.88-1.409,6.143-3.265,9.6-4.737a24.658,24.658,0,0,1,9.855-2.3c7.424,0,13.887,4.351,13.887,10.3,0,6.591-7.551,16.767-30.91,16.767-3.135,0-4.863-.192-4.863-.7,0-.256.9-.576,2.816-.7,10.3-.832,25.726-6.848,25.726-16.447,0-4.864-4.416-6.528-8.128-6.528a10.387,10.387,0,0,0-5.183,1.28A35.3,35.3,0,0,0,8.832,38.205c-.96,1.344-1.792,2.5-3.776,2.5C2.3,40.7,0,38.4,0,36.989a3.731,3.731,0,0,1,.256-1.152,16.057,16.057,0,0,0,.64-3.9,162.059,162.059,0,0,1,2.816-16.64c.7-3.327,3.776-5.951,6.207-7.935.128-.128.256-.256.256-.384a.352.352,0,0,0-.192-.32C5.952,3.711,5.7.959,5.7.447,5.7.128,5.824,0,6.016,0A4.075,4.075,0,0,1,7.552.959C10.239,3.136,15.359,3.9,15.935,3.9c.384,0,.768-.064,1.152-.064,1.792,0,5.247,1.536,5.247,3.456,0,.384-.063.7-.063.96Z">
+          <animateMotion id="s12_line_box_text_in_12" dur="5s" begin="s12_line_box_text_in_11.begin + 0.25" repeatCount="1" rotate="auto-reverse">
+            <mpath xlink:href="#s12_path"></mpath>
+          </animateMotion>
+        </path>
+      </svg>
     </div>
-    <div class="text-box-1" style="font-size: 3.5rem; letter-spacing: 3rem; color: var(--red);">
-      <span>巡</span>
-      <span style="color: var(--blue);">る</span>
-      <span>季</span>
-      <span>節</span>
-      <span>の</span>
-    </div>
-    <div class="text-box-2" style="font-size: 3.5rem; letter-spacing: 2rem; color: var(--red);">
-      <span>隙</span>
-      <span>間</span>
-      <span>か</span>
-      <span>ら</span>
-    </div>
-    <div class="frame">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="border-x"></div>
-      <div class="border-y"></div>
-    </div>
+    <div class="text-box"></div>
   </div>
 `
-  const s11_begin = s10_end + 0.4
-  s`.s11`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
-  s`.s11 .bg`.align(TOP, BOTTOM, LEFT, RIGHT)
-  s`.s11 .bg div`.align(index => ({ [TOP]: 0, [LEFT]: index * 6 })).size(6.1, '100p').fill(WHITE)
-                 .animate(index => ['scale_from_1_0_to_1_1', { begin: s11_begin + 0.05 * index, dur: 0.6, fill: 'both', easing: 'cubic-bezier(0.39, 2, 0.41, 0.39)' }, 's11_bg_in'])
-  const s11_frame_line_dur = 0.4
-  s`.s11 .frame`.align(4, 4, 4, 4).animate(FADE_IN, { begin: a.s11_bg_in.end - 0.4, dur: 0, fill: 'both' }, 's11_frame_in')
-  s`.s11 .frame .line`[0].align(TOP, LEFT, RIGHT).size({ height: '4px' })
-  s`.s11 .frame .line`[1].align(TOP, BOTTOM, RIGHT).size({ width: '4px' })
-  s`.s11 .frame .line`[2].align(BOTTOM, LEFT, RIGHT).size({ height: '4px' })
-  s`.s11 .frame .line`[3].align(TOP, BOTTOM, LEFT).size({ width: '4px' })
-  s`.s11 .frame .line`.forEach(ele => {
-    ele.fill(RED).css([['overflow', 'hidden']])
-       .before.align(TOP, BOTTOM, LEFT, RIGHT).fill(WHITE)
-       .after.align(TOP, BOTTOM, LEFT, RIGHT).fill(WHITE)
-  })
-  s`.s11 .frame .line`[0].before.translate_x('0p').after.translate_x('-100p')
-  s`.s11 .frame .line`[1].before.translate_y('0p').after.translate_y('-100p')
-  s`.s11 .frame .line`[2].before.translate_x('0p').after.translate_x('-100p')
-  s`.s11 .frame .line`[3].before.translate_y('0p').after.translate_y('-100p')
-  s`.s11 .frame .line`[0].before.animate([{ translate_x: '0p' }, { translate_x: '25p' }, { translate_x: '50p' }, { translate_x: '75p', offset: 0.75 }, { translate_x: '100p' }], {
-    begin: a.s11_frame_in.begin, dur: s11_frame_line_dur, keep: s11_frame_line_dur, easing: '-',
-  }, 's11_frame_line_0_before')
-  s`.s11 .frame .line`[0].after.animate({ translate_x: ['-100p', '0p'] }, {
-    begin: a.s11_frame_line_0_before.end, dur: s11_frame_line_dur, keep: 0, easing: '>',
-  }, 's11_frame_line_0_after')
-  s`.s11 .frame .line`[1].before.animate('translate_y_from_0p_to_100p', {
-    begin: a.s11_frame_line_0_after.begin + s11_frame_line_dur * 0.5, dur: s11_frame_line_dur, keep: s11_frame_line_dur, easing: '-',
-  }, 's11_frame_line_1_before')
-  s`.s11 .frame .line`[1].after.animate('translate_y_from_-100p_to_0p', {
-    begin: a.s11_frame_line_1_before.end, dur: s11_frame_line_dur, keep: 0, easing: '>',
-  }, 's11_frame_line_1_after')
-  s`.s11 .frame .line`[2].before.animate('translate_x_from_0p_to_-100p', {
-    begin: a.s11_frame_line_1_after.begin + s11_frame_line_dur * 0.5, dur: s11_frame_line_dur, keep: s11_frame_line_dur, easing: '-',
-  }, 's11_frame_line_2_before')
-  s`.s11 .frame .line`[2].after.animate('translate_x_from_100p_to_0p', {
-    begin: a.s11_frame_line_2_before.end, dur: s11_frame_line_dur, keep: 0, easing: '-',
-  }, 's11_frame_line_2_after')
-  // Alter
-  s`.s11 .frame .line`[2].before.animate('translate_x_from_0p_to_-100p', {
-    begin: a.s11_frame_in.begin, dur: s11_frame_line_dur, keep: s11_frame_line_dur, easing: '-',
-  }, 's11_frame_line_2_before')
-  s`.s11 .frame .line`[2].after.animate('translate_x_from_100p_to_0p', {
-    begin: a.s11_frame_line_2_before.end, dur: s11_frame_line_dur, keep: 0, easing: '>',
-  }, 's11_frame_line_2_after')
-  s`.s11 .frame .line`[3].before.animate('translate_y_from_0p_to_-100p', {
-    begin: a.s11_frame_line_2_after.begin + s11_frame_line_dur * 0.5, dur: s11_frame_line_dur, keep: s11_frame_line_dur, easing: '-',
-  }, 's11_frame_line_3_before')
-  s`.s11 .frame .line`[3].after.animate('translate_y_from_100p_to_0p', {
-    begin: a.s11_frame_line_3_before.end, dur: s11_frame_line_dur, keep: 0, easing: '>',
-  }, 's11_frame_line_3_after')
-  s`.s11 .frame .line`[0].before.animate('translate_x_from_0p_to_100p', {
-    begin: a.s11_frame_line_3_after.begin + s11_frame_line_dur * 0.5, dur: s11_frame_line_dur, keep: s11_frame_line_dur, easing: '-',
-  }, 's11_frame_line_0_before')
-  s`.s11 .frame .line`[0].after.animate('translate_x_from_-100p_to_0p', {
-    begin: a.s11_frame_line_0_before.end, dur: s11_frame_line_dur, keep: 0, easing: '>',
-  }, 's11_frame_line_0_after')
-  s`.s11 .frame .border-x`.align(TOP, BOTTOM, LEFT, RIGHT)
-                          .before.align(LEFT, TOP).size(0.25, '100p').fill(RED).origin(LEFT, TOP)
-                          .animate('scale_from_1_0_to_1_1', { begin: a.s11_frame_line_0_after.end + 0.2, dur: 1.6, fill: 'both' }, 's11_frame_border_in')
-                          .after.align(RIGHT, BOTTOM).size(0.25, '100p').fill(RED).origin(RIGHT, BOTTOM)
-                          .animate('scale_from_1_0_to_1_1', { begin: a.s11_frame_border_in.begin, dur: a.s11_frame_border_in.dur, fill: 'both' })
-  s`.s11 .frame .border-y`.align(TOP, BOTTOM, LEFT, RIGHT)
-                          .before.align(LEFT, TOP).size('100p', 0.25).fill(RED).origin(LEFT, TOP)
-                          .animate('scale_from_0_1_to_1_1', { begin: a.s11_frame_border_in.begin, dur: a.s11_frame_border_in.dur, fill: 'both' })
-                          .after.align(RIGHT, BOTTOM).size('100p', 0.25).fill(RED).origin(RIGHT, BOTTOM)
-                          .animate('scale_from_0_1_to_1_1', { begin: a.s11_frame_border_in.begin, dur: a.s11_frame_border_in.dur, fill: 'both' })
-  s`.s11 .frame`.after.align({ [BOTTOM]: -2, [RIGHT]: -2 }).size(0, 0).stroke('transparent', 3.2).rotate(-45).css({ 'border-top-color': 'var(--red)' })
-                .animate({ clip: ['polygon(100% 50%, 0% 50%, 100% 50%, 0% 50%)', 'polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%)'] }, { begin: a.s11_frame_border_in.begin, dur: 0.6, fill: 'both' })
-  s`.s11 .shape`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
-                .animate(FADE_IN, { begin: a.s11_frame_in.begin - 0.1, dur: 0.5, fill: 'both' }, 's11_shape_in')
-                .before.align(BOTTOM).size(7.5, 29).fill(RED).css({ filter: 'drop-shadow(0px -3px 3px rgba(0, 0, 0, 0.08))' })
-                .after.align(BOTTOM).size('100p', 29).fill(WHITE)
-  s`.s11 .shape .y`.align_children(CENTER, CENTER)
-  s`.s11 .shape .y svg`.align().size({ height: 6 })
-  s`.s11 .shape .left .x`.animate('translate_x_from_0_to_-30rem', { begin: a.s11_shape_in.end, dur: 0.5, fill: 'both', easing: '-' }, 's11_shape_left_in')
-  s`.s11 .shape .left .y`.animate('translate_y_from_8rem_to_-4rem', { begin: a.s11_shape_left_in.begin, dur: a.s11_shape_left_in.dur, fill: 'both', easing: 'cubic-bezier(0.23, 1.52, 0.79, 1.78)' })
-  s`.s11 .shape .left`.align()
-                      .animate('translate_y_from_0_to_-3rem', { begin: a.s11_shape_left_in.end + 0.4, dur: 1.0, fill: 'both', easing: 'cubic-bezier(0.33,-0.75, 0.11, 1)' }, 's11_shape_left_move_1')
-                      .animate('translate_y_from_-3_to_3rem', { begin: a.s11_shape_left_move_1.end, dur: a.s11_shape_left_move_1.dur, fill: 'forwards', easing: 'cubic-bezier(0.33,-0.75, 0.11, 1)' }, 's11_shape_left_move_2')
-                      .animate('translate_y_from_3_to_-3rem', { begin: a.s11_shape_left_move_2.end, dur: a.s11_shape_left_move_2.dur, fill: 'forwards', easing: 'cubic-bezier(0.33,-0.75, 0.11, 1)' }, 's11_shape_left_move_3')
-  s`.s11 .shape .left .y svg`[0].animate(FADE_OUT, { begin: a.s11_shape_left_move_2.begin + a.s11_shape_left_move_2.dur * 0.4, dur: 0, fill: 'both' })
-  s`.s11 .shape .left .y svg`[1].animate(FADE_IN, { begin: a.s11_shape_left_move_2.begin + a.s11_shape_left_move_2.dur * 0.4, dur: 0, fill: 'both' })
-  s`.s11 .shape .left .y svg`[1].animate(FADE_OUT, { begin: a.s11_shape_left_move_3.begin + a.s11_shape_left_move_3.dur * 0.4, dur: 0, fill: 'forwards' })
-  s`.s11 .shape .left .y svg`[2].animate(FADE_IN, { begin: a.s11_shape_left_move_3.begin + a.s11_shape_left_move_3.dur * 0.4, dur: 0, fill: 'both' })
-  s`.s11 .shape .center .x`.animate('translate_x_from_0_to_0rem', { begin: a.s11_shape_left_in.begin + 0.1, dur: a.s11_shape_left_in.dur, fill: 'both', easing: '-' }, 's11_shape_center_in')
-  s`.s11 .shape .center .y`.animate('translate_y_from_8rem_to_-4rem', { begin: a.s11_shape_center_in.begin, dur: a.s11_shape_center_in.dur, fill: 'both', easing: 'cubic-bezier(0.23, 1.52, 0.79, 1.78)' })
-  s`.s11 .shape .center`.align()
-                        .animate('translate_y_from_0_to_-1rem', { begin: a.s11_shape_left_move_1.begin + 0.07, dur: a.s11_shape_left_move_1.dur, fill: 'both', easing: 'cubic-bezier(0.33,-0.75, 0.11, 1)' }, 's11_shape_center_move_1')
-                        .animate('translate_y_from_-1_to_1rem', { begin: a.s11_shape_center_move_1.end, dur: a.s11_shape_center_move_1.dur, fill: 'forwards', easing: 'cubic-bezier(0.33,-0.75, 0.11, 1)' }, 's11_shape_center_move_2')
-                        .animate('translate_y_from_1_to_-1rem', { begin: a.s11_shape_center_move_2.end, dur: a.s11_shape_center_move_2.dur, fill: 'forwards', easing: 'cubic-bezier(0.33,-0.75, 0.11, 1)' }, 's11_shape_center_move_3')
-  s`.s11 .shape .center .y svg`[0].animate(FADE_OUT, { begin: a.s11_shape_left_move_2.begin + a.s11_shape_left_move_2.dur * 0.4, dur: 0, fill: 'both' })
-  s`.s11 .shape .center .y svg`[1].animate(FADE_IN, { begin: a.s11_shape_left_move_2.begin + a.s11_shape_left_move_2.dur * 0.4, dur: 0, fill: 'both' })
-  s`.s11 .shape .center .y svg`[1].animate(FADE_OUT, { begin: a.s11_shape_left_move_3.begin + a.s11_shape_left_move_3.dur * 0.4, dur: 0, fill: 'forwards' })
-  s`.s11 .shape .center .y svg`[2].animate(FADE_IN, { begin: a.s11_shape_left_move_3.begin + a.s11_shape_left_move_3.dur * 0.4, dur: 0, fill: 'both' })
-  s`.s11 .shape .right .x`.animate('translate_x_from_0_to_30rem', { begin: a.s11_shape_center_in.begin + 0.1, dur: a.s11_shape_center_in.dur, fill: 'both', easing: '-' }, 's11_shape_right_in')
-  s`.s11 .shape .right .y`.animate('translate_y_from_8rem_to_-4rem', { begin: a.s11_shape_right_in.begin, dur: a.s11_shape_right_in.dur, fill: 'both', easing: 'cubic-bezier(0.23, 1.52, 0.79, 1.78)' })
-  s`.s11 .shape .right`.align()
-                       .animate('translate_y_from_0_to_1rem', { begin: a.s11_shape_left_move_1.begin + 0.14, dur: a.s11_shape_left_move_1.dur, fill: 'both', easing: 'cubic-bezier(0.33,-0.75, 0.11, 1)' }, 's11_shape_right_move_1')
-                       .animate('translate_y_from_1_to_-1rem', { begin: a.s11_shape_right_move_1.end, dur: a.s11_shape_right_move_1.dur, fill: 'forwards', easing: 'cubic-bezier(0.33,-0.75, 0.11, 1)' }, 's11_shape_right_move_2')
-                       .animate('translate_y_from_-1_to_1rem', { begin: a.s11_shape_right_move_2.end, dur: a.s11_shape_right_move_2.dur, fill: 'forwards', easing: 'cubic-bezier(0.33,-0.75, 0.11, 1)' }, 's11_shape_right_move_3')
-  s`.s11 .shape .right .y svg`[0].animate(FADE_OUT, { begin: a.s11_shape_left_move_2.begin + a.s11_shape_left_move_2.dur * 0.4, dur: 0, fill: 'both' })
-  s`.s11 .shape .right .y svg`[1].animate(FADE_IN, { begin: a.s11_shape_left_move_2.begin + a.s11_shape_left_move_2.dur * 0.4, dur: 0, fill: 'both' })
-  s`.s11 .shape .right .y svg`[1].animate(FADE_OUT, { begin: a.s11_shape_left_move_3.begin + a.s11_shape_left_move_3.dur * 0.4, dur: 0, fill: 'forwards' })
-  s`.s11 .shape .right .y svg`[2].animate(FADE_IN, { begin: a.s11_shape_left_move_3.begin + a.s11_shape_left_move_3.dur * 0.4, dur: 0, fill: 'both' })
-  s`.s11 .shape`.before.animate(FADE_OUT, { begin: a.s11_shape_right_in.begin, dur: 0.5, fill: 'forwards' })
-  s`.s11 .text-box-1`.align(undefined, 0, 12.25, 0).align_children(CENTER, CENTER)
-  s`.s11 .text-box-1 span`.animate(index => [{ translate_y: [6, -6] }, { begin: a.s11_shape_in.begin + 0.3 + index * 0.1, dur: 2.0, fill: 'both', easing: 'cubic-bezier(0, 0.8, 1, 0.2)' }, `s11_text_box_1_span_in_${index}`])
-                          .animate(index => [[{ opacity: 0 }, { opacity: 1, offset: 0.3 }, { opacity: 1, offset: 0.7 }, { opacity: 0 }], { begin: a[`s11_text_box_1_span_in_${index}`].begin, dur: a[`s11_text_box_1_span_in_${index}`].dur, fill: 'both', easing: 'ease' }])
-  s`.s11 .text-box-2`.align(undefined, 0, 12.25, 0).align_children(CENTER, CENTER)
-  s`.s11 .text-box-2 span`.animate(index => [{ translate_y: [6, -6] }, { begin: a.s11_text_box_1_span_in_0.end - 0.2 + index * 0.1, dur: 2.0, fill: 'both', easing: 'cubic-bezier(0, 0.8, 1, 0.2)' }, `s11_text_box_2_span_in_${index}`])
-                          .animate(index => [[{ opacity: 0 }, { opacity: 1, offset: 0.3 }, { opacity: 1, offset: 0.7 }, { opacity: 0 }], { begin: a[`s11_text_box_2_span_in_${index}`].begin, dur: a[`s11_text_box_2_span_in_${index}`].dur, fill: 'both', easing: 'ease' }])
-  const s11_end = a.s11_text_box_2_span_in_0.begin + a.s11_text_box_2_span_in_0.dur * 0.5
-  console.log(s11_end)
+  const s12_begin = s11_end + 0.5
+  s`.s12 .mask div`.align(index => ({ [TOP]: `${index * 12.5}p`, [LEFT]: 0 })).size('100p', '12.7p').css({ background: 'url("r/12-0.svg") left 2rem/57.8125rem 56.25rem fixed, var(--blue)' }).origin(RIGHT, CENTER)
+                   .animate(index => [{ clip: ['polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)', 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'] }, { begin: s12_begin + index * 0.05, dur: 0.6, fill: 'both', easing: 'cubic-bezier(0.33, 1, 0.68, 1)' }, `s12_mask_div_in_${index}`])
+                   .animate(index => [{ clip: ['polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', 'polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)'] }, { begin: a[`s12_mask_div_in_${7 - index}`].end + 0.3, dur: a[`s12_mask_div_in_${index}`].dur, fill: 'forwards', easing: 'cubic-bezier(0.33, 1, 0.68, 1)' }, `s12_mask_div_out_${index}`])
+  s`.s12 .bg`.align(TOP, BOTTOM, LEFT, RIGHT).fill(WHITE).animate(FADE_IN, { begin: a.s12_mask_div_in_7.end, dur: 0, fill: 'both' }, 's12_bg_in')
+  s`.s12 .bg`.before.align(8, 0, 8, 0).fill(RED).animate(FADE_IN, { begin: a.s12_bg_in.begin, dur: 0, fill: 'both' })
+             .after.align(8, 0, 8, 0).css({ background: 'linear-gradient(to right, hsla(0, 100%, 100%, 0.33), hsla(0, 100%, 100%, 0))' })
+             .animate('translate_x_from_-50p_to_0p', { begin: a.s12_bg_in.begin, dur: 4, fill: 'both' })
+  s`.s12 .line-box`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
+                   .animate([{ css: { 'stroke-dasharray': '0 0 0 0 0 1000' } }, { css: { 'stroke-dasharray': '0 0 0 0 700 1000' } }, { css: { 'stroke-dasharray': '0 0 0 700 700 1000' } }, { css: { 'stroke-dasharray': '0 0 700 700 700 1000' } }, { css: { 'stroke-dasharray': '0 700 700 700 700 1000' } }, { css: { 'stroke-dasharray': '700 700 700 700 700 1000' } }],
+                     { begin: a.s12_mask_div_out_0.end - 0.2, dur: 6.5, fill: 'both', easing: '-' }, 's12_line_box_in')
+  const s12_line_box_text_begin = a.s12_line_box_in.begin + 0.4
+  setTimeout(() => document.querySelector('#s12_rect').dispatchEvent(new Event('click')), Math.floor(s12_line_box_text_begin * 1000))
+  // 气泡
 </script>
 <script>
   APP.style.opacity = 1

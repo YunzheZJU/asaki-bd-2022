@@ -131,7 +131,7 @@ s`.s9 .bg`.align().round().stroke(GREEN, 0.3).css({ background: 'url("r/9-0.svg"
 s`.s9 .text-box-2`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER).opacity(0)
                   .animate(FADE_IN, { begin: a.s9_bg_scale.begin + 0.5, dur: 0, fill: 'both' }, 's9_text_box_2_in')
 s`.s9 .text-box-2 span`.animate(index => [{ translate_y: [10, 0] }, { begin: a.s9_text_box_2_in.end + index * 0.02, dur: 0.6, fill: 'both', easing: '>' }, `s9_text_box_2_span_in_${index}`])
-                       .animate(index => [{ translate_y: [0, -8] }, { begin: a[`s9_text_box_2_span_in_${index}`].end + 0.1 + index * 0.04, dur: 1.6, fill: 'forwards', easing: '<' }, `s9_text_box_2_span_out_${index}`])
+                       .animate(index => [{ translate_y: [0, -8] }, { begin: a[`s9_text_box_2_span_in_${index}`].end + 0.1 + index * 0.04, dur: 1.2, fill: 'forwards', easing: '<' }, `s9_text_box_2_span_out_${index}`])
                        .animate(index => [{ clip: ['polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'] }, { begin: a[`s9_text_box_2_span_in_${index}`].begin, dur: a[`s9_text_box_2_span_in_${index}`].dur, fill: 'both', easing: '>' }])
 const s9_end = a.s9_text_box_2_span_in_5.end
 console.log(s9_end)

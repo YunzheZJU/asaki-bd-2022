@@ -1,4 +1,3 @@
-
 APP.innerHTML += `
   <div class="s10">
     <div class="bg"></div>
@@ -70,7 +69,7 @@ s`.s10 .sakura img`.animate(index => [{ translate_y: [0, 80 + Math.random() * 9]
 s`.s10 .bg`.align(TOP, BOTTOM, LEFT, RIGHT).fill(WHITE).animate(FADE_IN, { begin: s10_begin + 0.5, dur: 1, fill: 'both' }, 's10_bg_in')
 s`.s10 .bg-shape`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
 s`.s10 .bg-shape .left`.align({ [LEFT]: -18 }).size(75, 75).round(8).origin(LEFT, BOTTOM).translate_y('-50p')
-                       .animate('rotate_from_-90deg_to_180deg', { begin: a.s10_bg_in.end - 0.4, dur: 1.6, fill: 'both' }, 's10_bg_shape_left_in')
+                       .animate('rotate_from_-90deg_to_180deg', { begin: a.s10_bg_in.end - 0.4, dur: 1.2, fill: 'both' }, 's10_bg_shape_left_in')
 s`.s10 .bg-shape .right`.align({ [RIGHT]: -18 }).size(75, 75).round(8).origin(RIGHT, BOTTOM).translate_y('-50p')
                         .animate('rotate_from_-180deg_to_90deg', { begin: a.s10_bg_shape_left_in.begin + 0.2, dur: a.s10_bg_shape_left_in.dur, fill: 'both' })
 s`.s10 .bg-shape .center`.align().size(75, 75).round(8).fill(RED).align_children(CENTER, CENTER)
