@@ -94,7 +94,7 @@ s`.s7 .bg-shape-1 .left`.align({ [LEFT]: 0, [BOTTOM]: 0 }).size(25, 25).rotate(4
 s`.s7 .bg-shape-1 .right`.align({ [RIGHT]: 0, [TOP]: 0 }).size(30, 30).rotate(45).translate(-4, -4)
                          .animate([{ opacity: 0, stroke: [BLUE, 6], scale: [0.8, 0.8] }, { opacity: 1, stroke: [BLUE, 0], scale: [1.2, 1.2] }], { begin: a.s7_text_box_1_in.begin + 0.35, dur: 0.6, fill: 'both', easing: '>' }, 's7_bg_shape_1_right')
 s`.s7 .bg-2`.after.align(TOP, LEFT).size(50, 50).round().translate('-50p', '-50p').fill(BLUE)
-            .animate('scale_from_0_0_to_7_7', { begin: a.s7_text_box_1_in.begin + 1.1, dur: 0.2, fill: 'both', easing: '<' }, 's7_bg_2_in')
+            .animate('scale_from_0_0_to_7_7', { begin: a.s7_text_box_1_in.begin + 0.8, dur: 0.2, fill: 'both', easing: '<' }, 's7_bg_2_in')
 s`.s7 .mask-box`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
                 .animate(FADE_IN, { begin: a.s7_bg_2_in.begin + 0.1, dur: 0.2, fill: 'forwards' }, 's7_mask_box_in_2')
                 .animate(FADE_OUT, { begin: a.s7_mask_box_in_2.begin + 1.0, dur: 0, fill: 'forwards' }, 's7_mask_box_out_2')

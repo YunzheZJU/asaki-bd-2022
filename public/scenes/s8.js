@@ -57,7 +57,7 @@ appendScene(APP, 's8', `
   </div>
 `)
 
-const s8_begin = s7_end
+const s8_begin = s7_end - 0.3
 s`.s8`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
 s`.s8 .arrows > div`.forEach((ele, index, arr) => {
   ele.align(TOP, LEFT).size('100p', '200p').origin(TOP, CENTER).translate_y('-100p').scale(1, 0.5)

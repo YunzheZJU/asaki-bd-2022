@@ -62,3 +62,7 @@ body {
 .relative {
   position: relative;
 }
+
+.cur-p {
+  cursor: pointer;
+}

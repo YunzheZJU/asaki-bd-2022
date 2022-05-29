@@ -343,10 +343,6 @@ const regist = (element, pseudo, selector, ...fnParams) => {
           assert(params.length === arr[0][1].length, 'Length of params do not match', _keyframes, key, params)
         })
         keyframes = Object.entries(_keyframes)[0][1].map((_, index) => Object.fromEntries(Object.keys(_keyframes).map(key => [key, _keyframes[key][index]])))
-        // keyframes = [
-        //   Object.fromEntries(Object.keys(_keyframes).map(key => [key, _keyframes[key][0]])),
-        //   Object.fromEntries(Object.keys(_keyframes).map(key => [key, _keyframes[key][1]])),
-        // ]
         name = ['keyframes', 'in', 'object', String(counter++)].join('_')
       }
       keyframes = fillOffset(keyframes)
