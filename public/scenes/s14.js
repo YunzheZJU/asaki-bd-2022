@@ -51,7 +51,7 @@ s`.s14 .text-box-2`.animate(FADE_OUT, { begin: a.s14_hat_in_2.end - 0.85, dur: 0
 s`.s14 .text-box-3`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER).translate_x(30)
 s`.s14 .text-box-3 span`.animate(index => [{ translate_x: [-4, 0], opacity: [0, 1] }, { begin: a.s14_hat_in_2.begin + 0.1 + index * 0.06, dur: 0.6, fill: 'both', easing: '>' }, 's14_text_box_3_in'])
 s`.s14 .bg div`[3].before.align(TOP, BOTTOM, LEFT, RIGHT).fill(BLUE).animate('translate_x_from_100p_to_0p', {begin: a.s14_hat_in_2.begin, dur: a.s14_hat_in_2.dur, fill: 'both', easing: a.s14_hat_in_2.easing})
-// const s14_end = a.s14_text_box_1_in.end
-// console.log(s14_end)
-//
-// setTimeout(() => document.querySelector('.s13').style.display = 'none', Math.max(0, Math.ceil(s14_end * 1000)))
+const s14_end = a.s14_text_box_3_in.end
+console.log(s14_end)
+
+setTimeout(() => document.querySelector('.s13').style.display = 'none', Math.max(0, Math.ceil(s14_end * 1000)))

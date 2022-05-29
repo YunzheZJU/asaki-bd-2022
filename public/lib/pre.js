@@ -339,13 +339,14 @@ const regist = (element, pseudo, selector, ...fnParams) => {
         keyframes = _keyframes
         name = ['keyframes', 'in', 'array', String(counter++)].join('_')
       } else if (isPlainObject(_keyframes)) {
-        Object.entries(_keyframes).forEach(([key, params]) => {
-          assert(params.length === 2, 'Length of params is wrong', _keyframes, key, params)
+        Object.entries(_keyframes).forEach(([key, params], _, arr) => {
+          assert(params.length === arr[0][1].length, 'Length of params do not match', _keyframes, key, params)
         })
-        keyframes = [
-          Object.fromEntries(Object.keys(_keyframes).map(key => [key, _keyframes[key][0]])),
-          Object.fromEntries(Object.keys(_keyframes).map(key => [key, _keyframes[key][1]])),
-        ]
+        keyframes = Object.entries(_keyframes)[0][1].map((_, index) => Object.fromEntries(Object.keys(_keyframes).map(key => [key, _keyframes[key][index]])))
+        // keyframes = [
+        //   Object.fromEntries(Object.keys(_keyframes).map(key => [key, _keyframes[key][0]])),
+        //   Object.fromEntries(Object.keys(_keyframes).map(key => [key, _keyframes[key][1]])),
+        // ]
         name = ['keyframes', 'in', 'object', String(counter++)].join('_')
       }
       keyframes = fillOffset(keyframes)
