@@ -1,63 +1,62 @@
-APP.innerHTML += `
-  <div class="s8">
-    <div class="bg"></div>
-    <div class="calendar-box" style="font-family: Bahnschrift, sans-serif; color: var(--white); --color: var(--white); font-size: 16rem; font-weight: normal; letter-spacing: 0;">
-      <div class="glow" style="flex-direction: column;;">
-        <div class="row">
-          <div>01</div>
-          <div>02</div>
-          <div>03</div>
-          <div>04</div>
-          <div>05</div>
-          <div>06</div>
-          <div>07</div>
-          <div>08</div>
-          <div>09</div>
-          <div>10</div>
-          <div>11</div>
-          <div>12</div>
-          <div>13</div>
-          <div>14</div>
-          <div>15</div>
-        </div>
-        <div class="row">
-          <div>16</div>
-          <div>17</div>
-          <div>18</div>
-          <div>19</div>
-          <div>20</div>
-          <div>21</div>
-          <div>22</div>
-          <div>23</div>
-          <div>24</div>
-          <div>25</div>
-          <div>26</div>
-          <div>27</div>
-          <div>28</div>
-          <div>29</div>
-          <div>30</div>
-        </div>
+appendScene(APP, 's8', `
+  <div class="bg"></div>
+  <div class="calendar-box" style="font-family: Bahnschrift, sans-serif; color: var(--white); --color: var(--white); font-size: 16rem; font-weight: normal; letter-spacing: 0;">
+    <div class="glow" style="flex-direction: column;;">
+      <div class="row">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+        <div>06</div>
+        <div>07</div>
+        <div>08</div>
+        <div>09</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+      </div>
+      <div class="row">
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+        <div>19</div>
+        <div>20</div>
+        <div>21</div>
+        <div>22</div>
+        <div>23</div>
+        <div>24</div>
+        <div>25</div>
+        <div>26</div>
+        <div>27</div>
+        <div>28</div>
+        <div>29</div>
+        <div>30</div>
       </div>
     </div>
-    <div class="text-box" style="color: #80af70; writing-mode: vertical-lr; font-size: 3rem; letter-spacing: 1.8rem; align-items: center;">
-      <span><span>辿</span></span>
-      <span><span>り</span></span>
-      <span><span>着</span></span>
-      <span><span>け</span></span>
-      <span style="color: var(--purple);"><span>る</span></span>
-      <span><span>と</span></span>
-      <span><span>信</span></span>
-      <span><span>じ</span></span>
-      <span><span>て</span></span>
-    </div>
-    <div class="arrows">
-      <div style="color: var(--red)"></div>
-      <div style="color: var(--green)"></div>
-      <div style="color: var(--purple)"></div>
-      <div style="color: var(--yellow)"></div>
-    </div>
   </div>
-`
+  <div class="text-box" style="color: #80af70; writing-mode: vertical-lr; font-size: 3rem; letter-spacing: 1.8rem; align-items: center;">
+    <span><span>辿</span></span>
+    <span><span>り</span></span>
+    <span><span>着</span></span>
+    <span><span>け</span></span>
+    <span style="color: var(--purple);"><span>る</span></span>
+    <span><span>と</span></span>
+    <span><span>信</span></span>
+    <span><span>じ</span></span>
+    <span><span>て</span></span>
+  </div>
+  <div class="arrows">
+    <div style="color: var(--red)"></div>
+    <div style="color: var(--green)"></div>
+    <div style="color: var(--purple)"></div>
+    <div style="color: var(--yellow)"></div>
+  </div>
+`)
+
 const s8_begin = s7_end
 s`.s8`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
 s`.s8 .arrows > div`.forEach((ele, index, arr) => {

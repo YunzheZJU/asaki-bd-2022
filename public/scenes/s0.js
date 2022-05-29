@@ -1,30 +1,28 @@
-APP.innerHTML += `
-  <div class="s0">
-    <div class="bg"></div>
-    <div class="text-box" style="font-family: Yuruka, sans-serif; font-size: 5rem; color: var(--red); letter-spacing: 1.2rem;">
-      <svg viewBox="0 0 58.54 58.54" style="margin-right: 5.53rem; height: 3.65rem; width: 3.65rem; fill: var(--red);">
-        <circle cx="29.27" cy="29.27" r="29.27"/>
-      </svg>
-      <span>L</span>
-      <span>O</span>
-      <span>A</span>
-      <span>D</span>
-      <span>I</span>
-      <span>N</span>
-      <span>G</span>
-      <svg viewBox="0 0 58.54 58.54" style="margin-left: 5.53rem; height: 3.65rem; width: 3.65rem; fill: var(--red);">
-        <circle cx="29.27" cy="29.27" r="29.27"/>
-      </svg>
-    </div>
-    <div class="hat-box">
-      <img src="r/0-2.svg" />
-      <img src="r/0-2.svg" style="margin-left: 3rem" />
-      <img src="r/0-2.svg" style="margin-left: 3rem" />
-    </div>
-    <div class="frame-top"></div>
-    <div class="frame-bottom"></div>
+appendScene(APP, 's0', `
+  <div class="bg"></div>
+  <div class="text-box" style="font-family: Yuruka, sans-serif; font-size: 5rem; color: var(--red); letter-spacing: 1.2rem;">
+    <svg viewBox="0 0 58.54 58.54" style="margin-right: 5.53rem; height: 3.65rem; width: 3.65rem; fill: var(--red);">
+      <circle cx="29.27" cy="29.27" r="29.27"/>
+    </svg>
+    <span>L</span>
+    <span>O</span>
+    <span>A</span>
+    <span>D</span>
+    <span>I</span>
+    <span>N</span>
+    <span>G</span>
+    <svg viewBox="0 0 58.54 58.54" style="margin-left: 5.53rem; height: 3.65rem; width: 3.65rem; fill: var(--red);">
+      <circle cx="29.27" cy="29.27" r="29.27"/>
+    </svg>
   </div>
-`
+  <div class="hat-box">
+    <img src="r/0-2.svg" />
+    <img src="r/0-2.svg" style="margin-left: 3rem" />
+    <img src="r/0-2.svg" style="margin-left: 3rem" />
+  </div>
+  <div class="frame-top"></div>
+  <div class="frame-bottom"></div>
+`)
 
 const s0_begin = 0.5 - GLOBAL_BEGIN
 s`body`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER).fill('#666')

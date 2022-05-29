@@ -1,101 +1,100 @@
-APP.innerHTML += `
-  <div class="s9">
-    <div class="circle-box">
-      <svg viewBox="-1 0 4 4" style="width: 50rem; height: 50rem; fill: none; stroke: var(--green); stroke-width: 0.05; stroke-linecap: round; stroke-dasharray: 500 1000;">
-        <path d="M2 2A1 1 0 0 1 0 2A1 1 0 0 1 2 2Z" pathLength="1000"></path>
-      </svg>
-      <svg viewBox="-1 0 4 4" style="width: 40rem; height: 40rem; fill: none; stroke: var(--purple); stroke-width: 0.0625; stroke-linecap: round; stroke-dasharray: 400 1000;">
-        <path d="M2 2A1 1 0 0 1 0 2A1 1 0 0 1 2 2Z" pathLength="1000"></path>
-      </svg>
-      <svg viewBox="-1 0 4 4" style="width: 30rem; height: 30rem; fill: none; stroke: var(--yellow); stroke-width: 0.08333; stroke-linecap: round; stroke-dasharray: 300 1000;">
-        <path d="M2 2A1 1 0 0 1 0 2A1 1 0 0 1 2 2Z" pathLength="1000"></path>
-      </svg>
-      <svg viewBox="-1 0 4 4" style="width: 20rem; height: 20rem; fill: none; stroke: var(--blue); stroke-width: 0.125; stroke-linecap: round; stroke-dasharray: 200 1000;">
-        <path d="M2 2A1 1 0 0 1 0 2A1 1 0 0 1 2 2Z" pathLength="1000"></path>
-      </svg>
-      <svg viewBox="-1 0 4 4" style="width: 10rem; height: 10rem; fill: none; stroke: var(--red); stroke-width: 0.25; stroke-linecap: round; stroke-dasharray: 100 1000;">
-        <path d="M2 2A1 1 0 0 1 0 2A1 1 0 0 1 2 2Z" pathLength="1000"></path>
-      </svg>
-    </div>
-    <div class="bg"></div>
-    <div class="text-box-1" style="color: var(--balck); letter-spacing: 1rem;">
-      <span>瞼</span>
-      <span>を</span>
-      <span>閉</span>
-      <span>じ</span>
-      <span>れ</span>
-      <span>ば</span>
-    </div>
-    <div class="text-box-2" style="color: var(--balck); letter-spacing: 1rem;">
-      <span>耳</span>
-      <span>を</span>
-      <span>澄</span>
-      <span>ま</span>
-      <span>せ</span>
-      <span>ば</span>
-    </div>
-    <div class="mask">
-      <div>
-        <div class="line-box">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
+appendScene(APP, 's9', `
+  <div class="circle-box">
+    <svg viewBox="-1 0 4 4" style="width: 50rem; height: 50rem; fill: none; stroke: var(--green); stroke-width: 0.05; stroke-linecap: round; stroke-dasharray: 500 1000;">
+      <path d="M2 2A1 1 0 0 1 0 2A1 1 0 0 1 2 2Z" pathLength="1000"></path>
+    </svg>
+    <svg viewBox="-1 0 4 4" style="width: 40rem; height: 40rem; fill: none; stroke: var(--purple); stroke-width: 0.0625; stroke-linecap: round; stroke-dasharray: 400 1000;">
+      <path d="M2 2A1 1 0 0 1 0 2A1 1 0 0 1 2 2Z" pathLength="1000"></path>
+    </svg>
+    <svg viewBox="-1 0 4 4" style="width: 30rem; height: 30rem; fill: none; stroke: var(--yellow); stroke-width: 0.08333; stroke-linecap: round; stroke-dasharray: 300 1000;">
+      <path d="M2 2A1 1 0 0 1 0 2A1 1 0 0 1 2 2Z" pathLength="1000"></path>
+    </svg>
+    <svg viewBox="-1 0 4 4" style="width: 20rem; height: 20rem; fill: none; stroke: var(--blue); stroke-width: 0.125; stroke-linecap: round; stroke-dasharray: 200 1000;">
+      <path d="M2 2A1 1 0 0 1 0 2A1 1 0 0 1 2 2Z" pathLength="1000"></path>
+    </svg>
+    <svg viewBox="-1 0 4 4" style="width: 10rem; height: 10rem; fill: none; stroke: var(--red); stroke-width: 0.25; stroke-linecap: round; stroke-dasharray: 100 1000;">
+      <path d="M2 2A1 1 0 0 1 0 2A1 1 0 0 1 2 2Z" pathLength="1000"></path>
+    </svg>
+  </div>
+  <div class="bg"></div>
+  <div class="text-box-1" style="color: var(--balck); letter-spacing: 1rem;">
+    <span>瞼</span>
+    <span>を</span>
+    <span>閉</span>
+    <span>じ</span>
+    <span>れ</span>
+    <span>ば</span>
+  </div>
+  <div class="text-box-2" style="color: var(--balck); letter-spacing: 1rem;">
+    <span>耳</span>
+    <span>を</span>
+    <span>澄</span>
+    <span>ま</span>
+    <span>せ</span>
+    <span>ば</span>
+  </div>
+  <div class="mask">
+    <div>
+      <div class="line-box">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
       </div>
-      <div>
-        <div class="line-box">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
+    </div>
+    <div>
+      <div class="line-box">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
       </div>
     </div>
   </div>
-`
+`)
+
 const s9_begin = s8_end
 s`.s9 .mask`.align(TOP, BOTTOM, LEFT, RIGHT)
 const s9_mask_easing_open = 'cubic-bezier(0.61, 1, 0.88, 1)'

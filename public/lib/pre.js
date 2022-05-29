@@ -428,3 +428,10 @@ const s = (frags, ...values) => {
     return proxy
   }
 }
+
+const appendScene = (parent, name, content) => {
+  const scene = document.createElement('div')
+  scene.className = name
+  scene.innerHTML = content
+  parent.appendChild(scene)
+}

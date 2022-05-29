@@ -1,66 +1,65 @@
-APP.innerHTML += `
-  <div class="s7">
-    <div class="bg-1"></div>
-    <div class="bg-shape-1">
-      <div class="left"></div>
-      <div class="right"></div>
-    </div>
-    <div class="text-box-1" style="letter-spacing: 0; color: var(--white); text-shadow: 0 0 5px rgba(255, 255, 255, 0.75); font-size: 4.5rem">
-      <span>久</span>
-      <span>し</span>
-      <span>ぶ</span>
-      <span>り</span>
-      <span>に</span>
-      <span>手</span>
-      <span>を</span>
-    </div>
-    <div class="text-box-1-rfl" style="letter-spacing: 0; color: var(--white); text-shadow: 0 0 5px rgba(255, 255, 255, 0.75); font-size: 4.5rem">
-      <span>久</span>
-      <span>し</span>
-      <span>ぶ</span>
-      <span>り</span>
-      <span>に</span>
-      <span>手</span>
-      <span>を</span>
-    </div>
-    <div class="bg-2"></div>
-    <div class="bg-shape-2">
-      <div class="left"></div>
-      <div class="right"></div>
-    </div>
-    <div class="text-box-2" style="letter-spacing: 0; color: var(--white); text-shadow: 0 0 5px rgba(255, 255, 255, 0.75); font-size: 4.5rem">
-      <span>伸</span>
-      <span>ば</span>
-      <span>し</span>
-      <span>て</span>
-      <span>い</span>
-      <span>つ</span>
-      <span>か</span>
-    </div>
-    <div class="text-box-2-rfl" style="letter-spacing: 0; color: var(--white); text-shadow: 0 0 5px rgba(255, 255, 255, 0.75); font-size: 4.5rem">
-      <span>伸</span>
-      <span>ば</span>
-      <span>し</span>
-      <span>て</span>
-      <span>い</span>
-      <span>つ</span>
-      <span>か</span>
-    </div>
-    <div class="mask-box">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="frame" style="font-family: Lyra, serif; font-size: 2.25rem; color: var(--white);">
-      <div class="text chapter-ja relative" style="letter-spacing: 0.5rem">第2章</div>
-      <div class="text chapter-en relative" style="letter-spacing: 0.5rem">Chapter 2</div>
-    </div>
+appendScene(APP, 's7', `
+  <div class="bg-1"></div>
+  <div class="bg-shape-1">
+    <div class="left"></div>
+    <div class="right"></div>
   </div>
-`
+  <div class="text-box-1" style="letter-spacing: 0; color: var(--white); text-shadow: 0 0 5px rgba(255, 255, 255, 0.75); font-size: 4.5rem">
+    <span>久</span>
+    <span>し</span>
+    <span>ぶ</span>
+    <span>り</span>
+    <span>に</span>
+    <span>手</span>
+    <span>を</span>
+  </div>
+  <div class="text-box-1-rfl" style="letter-spacing: 0; color: var(--white); text-shadow: 0 0 5px rgba(255, 255, 255, 0.75); font-size: 4.5rem">
+    <span>久</span>
+    <span>し</span>
+    <span>ぶ</span>
+    <span>り</span>
+    <span>に</span>
+    <span>手</span>
+    <span>を</span>
+  </div>
+  <div class="bg-2"></div>
+  <div class="bg-shape-2">
+    <div class="left"></div>
+    <div class="right"></div>
+  </div>
+  <div class="text-box-2" style="letter-spacing: 0; color: var(--white); text-shadow: 0 0 5px rgba(255, 255, 255, 0.75); font-size: 4.5rem">
+    <span>伸</span>
+    <span>ば</span>
+    <span>し</span>
+    <span>て</span>
+    <span>い</span>
+    <span>つ</span>
+    <span>か</span>
+  </div>
+  <div class="text-box-2-rfl" style="letter-spacing: 0; color: var(--white); text-shadow: 0 0 5px rgba(255, 255, 255, 0.75); font-size: 4.5rem">
+    <span>伸</span>
+    <span>ば</span>
+    <span>し</span>
+    <span>て</span>
+    <span>い</span>
+    <span>つ</span>
+    <span>か</span>
+  </div>
+  <div class="mask-box">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="frame" style="font-family: Lyra, serif; font-size: 2.25rem; color: var(--white);">
+    <div class="text chapter-ja relative" style="letter-spacing: 0.5rem">第2章</div>
+    <div class="text chapter-en relative" style="letter-spacing: 0.5rem">Chapter 2</div>
+  </div>
+`)
+
 const s7_begin = s6_end + 0.2
 s`.s7 .bg-1`.align(TOP, BOTTOM, LEFT, RIGHT).origin(BOTTOM, CENTER).scale(3, 2).rotate(-45).fill(RED)
             .animate('translate_from_210p_to_50p', { begin: s7_begin, dur: 0.2, fill: 'both', easing: '<' }, 's7_bg_1_in')

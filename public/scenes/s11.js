@@ -1,79 +1,78 @@
-APP.innerHTML += `
-  <div class="s11">
-    <div class="bg">
-      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-    </div>
-    <div class="shape">
-      <div class="left">
-        <div class="x">
-          <div class="y">
-            <svg viewBox="0 0 58.54 58.54" style="fill: var(--red)">
-              <circle cx="29.27" cy="29.27" r="29.27"/>
-            </svg>
-            <svg viewBox="0 0 103.923 90" style="fill: var(--red); transform: translateY(-1.2rem);">
-              <polygon points="51.962 0 0 90 103.923 90 51.962 0"/>
-            </svg>
-            <svg viewBox="0 0 90 90" style="fill: var(--red)">
-              <rect width="90" height="90"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div class="center">
-        <div class="x">
-          <div class="y">
-            <svg viewBox="0 0 58.54 58.54" style="fill: var(--red)">
-              <circle cx="29.27" cy="29.27" r="29.27"/>
-            </svg>
-            <svg viewBox="0 0 103.923 90" style="fill: var(--red); transform: translateY(-1.2rem);">
-              <polygon points="51.962 0 0 90 103.923 90 51.962 0"/>
-            </svg>
-            <svg viewBox="0 0 90 90" style="fill: var(--red)">
-              <rect width="90" height="90"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div class="right">
-        <div class="x">
-          <div class="y">
-            <svg viewBox="0 0 58.54 58.54" style="fill: var(--red)">
-              <circle cx="29.27" cy="29.27" r="29.27"/>
-            </svg>
-            <svg viewBox="0 0 103.923 90" style="fill: var(--red); transform: translateY(-1.2rem);">
-              <polygon points="51.962 0 0 90 103.923 90 51.962 0"/>
-            </svg>
-            <svg viewBox="0 0 90 90" style="fill: var(--red)">
-              <rect width="90" height="90"/>
-            </svg>
-          </div>
+appendScene(APP, 's11', `
+  <div class="bg">
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+  </div>
+  <div class="shape">
+    <div class="left">
+      <div class="x">
+        <div class="y">
+          <svg viewBox="0 0 58.54 58.54" style="fill: var(--red)">
+            <circle cx="29.27" cy="29.27" r="29.27"/>
+          </svg>
+          <svg viewBox="0 0 103.923 90" style="fill: var(--red); transform: translateY(-1.2rem);">
+            <polygon points="51.962 0 0 90 103.923 90 51.962 0"/>
+          </svg>
+          <svg viewBox="0 0 90 90" style="fill: var(--red)">
+            <rect width="90" height="90"/>
+          </svg>
         </div>
       </div>
     </div>
-    <div class="text-box-1" style="font-size: 3.5rem; letter-spacing: 3rem; color: var(--red);">
-      <span>巡</span>
-      <span style="color: var(--blue);">る</span>
-      <span>季</span>
-      <span>節</span>
-      <span>の</span>
+    <div class="center">
+      <div class="x">
+        <div class="y">
+          <svg viewBox="0 0 58.54 58.54" style="fill: var(--red)">
+            <circle cx="29.27" cy="29.27" r="29.27"/>
+          </svg>
+          <svg viewBox="0 0 103.923 90" style="fill: var(--red); transform: translateY(-1.2rem);">
+            <polygon points="51.962 0 0 90 103.923 90 51.962 0"/>
+          </svg>
+          <svg viewBox="0 0 90 90" style="fill: var(--red)">
+            <rect width="90" height="90"/>
+          </svg>
+        </div>
+      </div>
     </div>
-    <div class="text-box-2" style="font-size: 3.5rem; letter-spacing: 2rem; color: var(--red);">
-      <span>隙</span>
-      <span>間</span>
-      <span>か</span>
-      <span>ら</span>
-    </div>
-    <div class="frame">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="border-x"></div>
-      <div class="border-y"></div>
+    <div class="right">
+      <div class="x">
+        <div class="y">
+          <svg viewBox="0 0 58.54 58.54" style="fill: var(--red)">
+            <circle cx="29.27" cy="29.27" r="29.27"/>
+          </svg>
+          <svg viewBox="0 0 103.923 90" style="fill: var(--red); transform: translateY(-1.2rem);">
+            <polygon points="51.962 0 0 90 103.923 90 51.962 0"/>
+          </svg>
+          <svg viewBox="0 0 90 90" style="fill: var(--red)">
+            <rect width="90" height="90"/>
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
-`
+  <div class="text-box-1" style="font-size: 3.5rem; letter-spacing: 3rem; color: var(--red);">
+    <span>巡</span>
+    <span style="color: var(--blue);">る</span>
+    <span>季</span>
+    <span>節</span>
+    <span>の</span>
+  </div>
+  <div class="text-box-2" style="font-size: 3.5rem; letter-spacing: 2rem; color: var(--red);">
+    <span>隙</span>
+    <span>間</span>
+    <span>か</span>
+    <span>ら</span>
+  </div>
+  <div class="frame">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="border-x"></div>
+    <div class="border-y"></div>
+  </div>
+`)
+
 const s11_begin = s10_end + 0.4
 s`.s11`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
 s`.s11 .bg`.align(TOP, BOTTOM, LEFT, RIGHT)

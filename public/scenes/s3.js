@@ -1,56 +1,54 @@
-APP.innerHTML += `
-  <div class="s3">
-    <div class="bg">
-      <div class="line-box" style="transform-style: preserve-3d;">
-        <div class="far" style="transform: translateZ(-16rem);">
-          <div style="background: var(--green)"></div>
-          <div style="background: var(--yellow)"></div>
-          <div style="background: var(--red)"></div>
-          <div style="background: var(--yellow)"></div>
-          <div style="background: var(--green)"></div>
-          <div style="background: var(--yellow)"></div>
-        </div>
-        <div class="middle" style="transform: translateZ(-4rem);">
-          <div style="background: var(--yellow)"></div>
-          <div style="background: var(--red)"></div>
-          <div style="background: var(--blue)"></div>
-          <div style="background: var(--red)"></div>
-          <div style="background: var(--blue)"></div>
-          <div style="background: var(--purple)"></div>
-        </div>
-        <div class="near">
-          <div style="background: var(--purple)"></div>
-        </div>
+appendScene(APP, 's3', `
+  <div class="bg">
+    <div class="line-box" style="transform-style: preserve-3d;">
+      <div class="far" style="transform: translateZ(-16rem);">
+        <div style="background: var(--green)"></div>
+        <div style="background: var(--yellow)"></div>
+        <div style="background: var(--red)"></div>
+        <div style="background: var(--yellow)"></div>
+        <div style="background: var(--green)"></div>
+        <div style="background: var(--yellow)"></div>
       </div>
-      <div class="lazer-box">
-        <div style="color: var(--red)"></div>
-        <div style="color: var(--yellow)"></div>
-        <div style="color: var(--green)"></div>
-        <div style="color: var(--blue)"></div>
-        <div style="color: var(--purple)"></div>
-        <div style="color: var(--red)"></div>
-        <div style="color: var(--green)"></div>
-        <div style="color: var(--yellow)"></div>
-        <div style="color: var(--blue)"></div>
-        <div style="color: var(--purple)"></div>
+      <div class="middle" style="transform: translateZ(-4rem);">
+        <div style="background: var(--yellow)"></div>
+        <div style="background: var(--red)"></div>
+        <div style="background: var(--blue)"></div>
+        <div style="background: var(--red)"></div>
+        <div style="background: var(--blue)"></div>
+        <div style="background: var(--purple)"></div>
+      </div>
+      <div class="near">
+        <div style="background: var(--purple)"></div>
       </div>
     </div>
-    <div class="text-box" style="font-size: 4rem; font-weight: normal;">
-      <span style="font-size: 4rem">優</span>
-      <span>し</span>
-      <span>い</span>
-      <span style="font-size: 4rem">言</span>
-      <span style="font-size: 4rem">葉</span>
-      <span>に</span>
-      <span style="font-size: 4rem">包</span>
-      <span>ま</span>
-      <span>れ</span>
-      <span>て</span>
+    <div class="lazer-box">
+      <div style="color: var(--red)"></div>
+      <div style="color: var(--yellow)"></div>
+      <div style="color: var(--green)"></div>
+      <div style="color: var(--blue)"></div>
+      <div style="color: var(--purple)"></div>
+      <div style="color: var(--red)"></div>
+      <div style="color: var(--green)"></div>
+      <div style="color: var(--yellow)"></div>
+      <div style="color: var(--blue)"></div>
+      <div style="color: var(--purple)"></div>
     </div>
-    <div class="frame-top"></div>
-    <div class="frame-bottom"></div>
   </div>
-`
+  <div class="text-box" style="font-size: 4rem; font-weight: normal;">
+    <span style="font-size: 4rem">優</span>
+    <span>し</span>
+    <span>い</span>
+    <span style="font-size: 4rem">言</span>
+    <span style="font-size: 4rem">葉</span>
+    <span>に</span>
+    <span style="font-size: 4rem">包</span>
+    <span>ま</span>
+    <span>れ</span>
+    <span>て</span>
+  </div>
+  <div class="frame-top"></div>
+  <div class="frame-bottom"></div>
+`)
 
 const s3_begin = s2_end
 s`.s3`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)

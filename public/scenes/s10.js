@@ -1,64 +1,63 @@
-APP.innerHTML += `
-  <div class="s10">
-    <div class="bg"></div>
-    <div class="sakura">
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
-      <div><img src="r/10-0.svg" /></div>
+appendScene(APP, 's10', `
+  <div class="bg"></div>
+  <div class="sakura">
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+    <div><img src="r/10-0.svg" /></div>
+  </div>
+  <div class="bg-shape">
+    <div class="left"><img src="r/10-0.svg" /></div>
+    <div class="right"><img src="r/10-0.svg" /></div>
+    <div class="center"></div>
+  </div>
+  <div class="text-box" style="color: var(--black); writing-mode: vertical-lr;">
+    <div class="top">
+      <span>聴</span>
+      <span>こ</span>
+      <span>え</span>
+      <span>る</span>
     </div>
-    <div class="bg-shape">
-      <div class="left"><img src="r/10-0.svg" /></div>
-      <div class="right"><img src="r/10-0.svg" /></div>
-      <div class="center"></div>
-    </div>
-    <div class="text-box" style="color: var(--black); writing-mode: vertical-lr;">
-      <div class="top">
-        <span>聴</span>
-        <span>こ</span>
-        <span>え</span>
-        <span>る</span>
-      </div>
-      <div class="bottom">
-        <span>の</span>
-        <span>だ</span>
-        <span>ろ</span>
-        <span>う</span>
-      </div>
-    </div>
-    <div class="frame">
-      <div class="border-x"></div>
-      <div class="border-y"></div>
-      <div class="left" style="color: var(--black); font-size: 1.6875rem; writing-mode: vertical-lr;">
-        <span>ASAKI</span>
-      </div>
-      <div class="right" style="color: var(--black); font-size: 1.6875rem;">
-        <span>0604</span>
-      </div>
+    <div class="bottom">
+      <span>の</span>
+      <span>だ</span>
+      <span>ろ</span>
+      <span>う</span>
     </div>
   </div>
-`
+  <div class="frame">
+    <div class="border-x"></div>
+    <div class="border-y"></div>
+    <div class="left" style="color: var(--black); font-size: 1.6875rem; writing-mode: vertical-lr;">
+      <span>ASAKI</span>
+    </div>
+    <div class="right" style="color: var(--black); font-size: 1.6875rem;">
+      <span>0604</span>
+    </div>
+  </div>
+`)
+
 const s10_begin = s9_end - 0.3
 s`.s10`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
 s`.s10 .sakura`.align(TOP, BOTTOM, LEFT, RIGHT)

@@ -1,36 +1,34 @@
-APP.innerHTML += `
-  <div class="s4">
-    <div class="bg">
-      <div class="red" style="color: var(--red)"></div>
-      <div class="blue" style="color: var(--blue)"></div>
-      <div class="left" style="color: var(--red)"></div>
-      <div class="right" style="color: var(--blue)"></div>
+appendScene(APP, 's4', `
+  <div class="bg">
+    <div class="red" style="color: var(--red)"></div>
+    <div class="blue" style="color: var(--blue)"></div>
+    <div class="left" style="color: var(--red)"></div>
+    <div class="right" style="color: var(--blue)"></div>
+  </div>
+  <div class="text-box" style="color: var(--black); writing-mode: vertical-lr;">
+    <div class="top">
+      <span>夢</span>
+      <span>中</span>
+      <span>に</span>
     </div>
-    <div class="text-box" style="color: var(--black); writing-mode: vertical-lr;">
-      <div class="top">
-        <span>夢</span>
-        <span>中</span>
-        <span>に</span>
-      </div>
-      <div class="bottom">
-        <span>な</span>
-        <span>っ</span>
-        <span>て</span>
-        <span>い</span>
-        <span>た</span>
-        <span>よ</span>
-      </div>
-    </div>
-    <div class="frame">
-      <div class="left" style="color: var(--black); font-size: 1.6875rem; writing-mode: vertical-lr;">
-        <span>ASAKI</span>
-      </div>
-      <div class="right" style="color: var(--black); font-size: 1.6875rem;">
-        <span>0604</span>
-      </div>
+    <div class="bottom">
+      <span>な</span>
+      <span>っ</span>
+      <span>て</span>
+      <span>い</span>
+      <span>た</span>
+      <span>よ</span>
     </div>
   </div>
-`
+  <div class="frame">
+    <div class="left" style="color: var(--black); font-size: 1.6875rem; writing-mode: vertical-lr;">
+      <span>ASAKI</span>
+    </div>
+    <div class="right" style="color: var(--black); font-size: 1.6875rem;">
+      <span>0604</span>
+    </div>
+  </div>
+`)
 
 const s4_begin = s3_end
 s`.s4`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
