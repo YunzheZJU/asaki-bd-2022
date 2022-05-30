@@ -50,7 +50,7 @@ appendScene(APP, 's2', `
 const s2_begin = s1_end
 s`.s2`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
 s`.s2 .bg`.align(TOP, LEFT).size(FULL, FULL)
-s`.s2 .bg .frag`.align(index => ([`${20 * index}%`, LEFT, RIGHT])).size('200%', '20%').fill(BLUE).css({ 'border-radius': '999px 0 0 999px' })
+s`.s2 .bg .frag`.align(index => ([`${20 * index}%`, LEFT, RIGHT])).size('200%', '20%').fill(BLUE).css({ 'border-radius': '9999px 0 0 9999px' })
                 .animate(index => (['translate_from_50p_to_-50p', { begin: s2_begin + index * 0.15, dur: 0.6, fill: 'both', easing: '<>' }, `s2_bg_${index}`]))
 const s2_frame_height = 8
 s`.s2 .frame-top`.align(LEFT, TOP).size(FULL, s2_frame_height).fill(BLACK).animate(FADE_IN, { begin: s2_begin, dur: 0, fill: 'both' })

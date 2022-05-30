@@ -1,7 +1,7 @@
 appendScene(APP, 's8', `
   <div class="bg"></div>
   <div class="calendar-box" style="font-family: Bahnschrift, sans-serif; color: var(--white); --color: var(--white); font-size: 16rem; font-weight: normal; letter-spacing: 0;">
-    <div class="glow" style="flex-direction: column;;">
+    <div class="glow" style="flex-direction: column;">
       <div class="row">
         <div>01</div>
         <div>02</div>
@@ -72,14 +72,14 @@ s`.s8 .bg`.align(TOP, BOTTOM, LEFT, RIGHT).fill(WHITE)
           .before.align(4, 9.5, 4, 4).round(6).fill(GREEN)
 s`.s8 .calendar-box`.align(4, BOTTOM, LEFT, RIGHT)
                     .animate(FADE_IN, { begin: s8_stage_in, dur: 0.1, fill: 'both' })
-                    .animate([{ translate_x: 17 * 5 * 2.3 }, { translate_x: -17 * 4.5 * 3.55 }], { begin: s8_begin - 0.1, dur: 5, fill: 'both', easing: '-' }, 's8_calendar_scale')
+                    .animate([{ translate_x: 17 * 5 * 2.3 }, { translate_x: -17 * 4.5 * 3.7 }], { begin: s8_begin - 0.1, dur: 5, fill: 'both', easing: '-' }, 's8_calendar_scale')
 s`.s8 .calendar-box .glow`.align(TOP, BOTTOM, LEFT, RIGHT).origin(LEFT, TOP).scale(2.5, 2.5)
                           .animate([{ scale: [3, 3] }, { scale: [1.5, 1.5] }], { begin: a.s8_calendar_scale.begin + 0.4 * a.s8_calendar_scale.dur, dur: 0.6 * a.s8_calendar_scale.dur, fill: 'both', easing: 'cubic-bezier(0.32, 0, 0.67, 0)' })
-s`.s8 .calendar-box .glow .row`.css({ position: 'relative' }).forEach((ele, index) => {
-  index !== 0 && ele.before.align(-0.4, -170, undefined, -0.1).size({ height: 0.8 }).fill(WHITE)
+s`.s8 .calendar-box .glow .row`.css({ position: 'relative', 'flex-wrap': 'nowrap' }).forEach((ele, index) => {
+  ele.before.align(undefined, -170, -0.4, -0.1).size({ height: 0.8 }).fill(WHITE)
   ele.css({ 'justify-items': 'flex-end' })
 })
-s`.s8 .calendar-box .glow .row div`.css({ position: 'relative', display: 'inline-block', 'text-align': 'center', 'min-width': '17rem', padding: '2rem' })
+s`.s8 .calendar-box .glow .row div`.css({ position: 'relative', display: 'inline-block', 'text-align': 'center', 'min-width': '17.5rem', padding: '2rem' })
                                    .forEach(ele => ele.before.align(-0.1, undefined, -0.1, -0.4).size(0.8).fill('var(--color)'))
 
 s`.s8 .text-box`.align({ [RIGHT]: 3.25 })

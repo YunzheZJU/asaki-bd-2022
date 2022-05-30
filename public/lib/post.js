@@ -1,12 +1,6 @@
 style = document.createElement('style')
 style.type = 'text/css'
 style.appendChild(document.createTextNode(`
-  body, body > div, body > div * {
-    display: flex;
-  }
-  body {
-    margin: 0;
-  }
   ${Array.from(registry.values()).map(map => Array.from(map.entries())).flat().map(([pseudo, {
       selector,
       declarations,

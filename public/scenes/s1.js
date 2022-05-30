@@ -49,7 +49,7 @@ appendScene(APP, 's1', `
 const s1_begin = s0_end
 s`.s1`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
 s`.s1 .bg`.align(TOP, LEFT).size(FULL, FULL)
-s`.s1 .bg .frag`.align(index => ([`${20 * index}%`, LEFT, RIGHT])).size('200%', '20%').fill(RED).css({ 'border-radius': '999px 0 0 999px' })
+s`.s1 .bg .frag`.align(index => ([`${20 * index}%`, LEFT, RIGHT])).size('200%', '20%').fill(RED).css({ 'border-radius': '9999px 0 0 9999px' })
                 .animate(index => (['translate_from_50p_to_-50p', { begin: s1_begin + index * 0.15, dur: 0.6, fill: 'both', easing: '<>' }, `s1_bg_${index}`]))
 s`.s1 .bg .frag`.even().forEach(ele => {
   ele.after.align(TOP, BOTTOM, LEFT).size('50%').round().fill(BLUE)

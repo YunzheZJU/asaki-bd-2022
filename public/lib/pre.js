@@ -241,7 +241,7 @@ const regist = (element, pseudo, selector, ...fnParams) => {
     }
     info._round = (...params) => {
       const output = { declarations: [], extra_styles: [], animations: [], keyframesByName: {} }
-      const { radius = '999px' } = smartParams(params)
+      const { radius = '9999px' } = smartParams(params)
       output.declarations.push(['border-radius', wrapValue(radius)])
       return output
     }

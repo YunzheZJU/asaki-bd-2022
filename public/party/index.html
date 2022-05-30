@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>あさき生誕祭2022</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<div id="asaki-bd-2022">
+  <div class="left">
+    <img class="cover" src="stroke-1.png" />
+    <span class="id">ASAKI-0604</span>
+  </div>
+  <div class="right">ABC</div>
+</div>
+</body>
+<script>
+  const APP = document.querySelector('#asaki-bd-2022')
+  // const forceHorizontal = true
+  const forceHorizontal = false
+  const forceRatio = () => {
+    let { innerWidth: width, innerHeight: height } = window
+    const isHorizontal = forceHorizontal || innerWidth - innerHeight > 0.6 * innerHeight
+    APP.classList.add(isHorizontal ? 'horizontal' : 'vertical')
+    APP.classList.remove(isHorizontal ? 'vertical' : 'horizontal')
+    APP.style.setProperty('--cover-size', `${isHorizontal ? innerHeight : innerWidth}px`)
+  }
+  forceRatio()
+  window.addEventListener('resize', forceRatio)
+</script>
+<script src="../lib/pre.js"></script>
+<script>
+</script>
+<script src="../lib/post.js"></script>
+</html>
