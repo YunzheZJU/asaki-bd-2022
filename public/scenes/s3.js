@@ -1,5 +1,5 @@
 appendScene(APP, 's3', `
-  <div class="bg">
+  <div class="bg" style="flex-wrap: nowrap">
     <div class="line-box" style="transform-style: preserve-3d;">
       <div class="far" style="transform: translateZ(-16rem);">
         <div style="background: var(--green)"></div>
