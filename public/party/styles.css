@@ -2,9 +2,11 @@ body {
     margin: 0;
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
+
 html {
     scrollbar-width: none;
 }
+
 body::-webkit-scrollbar {
     display: none;
 }
@@ -14,7 +16,7 @@ body::-webkit-scrollbar {
     width: 100vw;
     height: 100vh;
     min-width: 360px;
-    min-height: 500px;
+    /*min-height: 500px;*/
     display: block;
 }
 
@@ -25,9 +27,9 @@ body::-webkit-scrollbar {
 .left {
     width: var(--cover-size);
     height: var(--cover-size);
-    --min-size: 360px;
-    min-width: var(--min-size);
-    min-height: var(--min-size);
+    /*--min-size: 360px;*/
+    /*min-width: var(--min-size);*/
+    /*min-height: var(--min-size);*/
     background-image: url("./spots.svg"), url("./bg.jpg");
     background-position: 20px 20px, left top;
     background-size: 41px 81px, auto 100%;
@@ -35,6 +37,13 @@ body::-webkit-scrollbar {
     align-items: center;
     justify-content: center;
     position: relative;
+}
+
+.horizontal .left {
+    /*--min-size: 500px;*/
+    width: unset;
+    max-width: var(--cover-size);
+    flex: 1;
 }
 
 .cover {
@@ -51,22 +60,18 @@ body::-webkit-scrollbar {
     bottom: 2rem;
     left: 1rem;
     color: white;
-    max-width: 33%;
+    width: 18.87%;
+    min-width: 120px;
 }
 
 .horizontal .id {
     bottom: 1rem;
 }
 
-.horizontal .left {
-    --min-size: 500px;
-}
-
 .right {
     position: relative;
     flex: 1;
     filter: drop-shadow(0px -12px 4px rgba(91, 110, 128, 0.1));
-    text-align: center;
 }
 
 .horizontal .right {
@@ -114,20 +119,178 @@ body::-webkit-scrollbar {
     -webkit-mask-size: 100% 32px;
 }
 
-.right .contents {
+.right .scroll-box {
     position: relative;
-    padding: 48px 36px;
+    padding: 48px 5.88% 72px;
+    text-align: center;
 }
 
-.horizontal .right .contents {
+.horizontal .right .scroll-box {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    overflow: auto;
+    overflow: hidden auto;
+}
+
+.right .contents {
+    display: inline-block;
+    width: 100%;
+    max-width: var(--cover-size);
 }
 
 .right .contents img {
-    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.track-list {
+    width: 64.71%;
+}
+
+.track-list-ja {
+    width: 28.24%;
+    margin-top: -3px;
+    /* Tested in horizontal when height is 500px */
+    min-width: 125px;
+    filter: drop-shadow(0 0 2px white) drop-shadow(0 0 4px white) drop-shadow(0 0 5px white);
+}
+
+.m1, .m2, .m3, .m4 {
+    width: 100%;
+    margin-top: calc(var(--cover-size) * 0.05);
+}
+
+.time, .place {
+    width: 56.47%;
+    margin-top: calc(var(--cover-size) * 0.04);
+    min-width: 250px;
+}
+
+.place {
+    margin-top: calc(var(--cover-size) * 0.03);
+}
+
+.fiction {
+    width: 74.11%;
+    margin-top: calc(var(--cover-size) * 0.04);
+    min-width: 250px;
+}
+
+.link-box {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: calc(var(--cover-size) * 0.05);
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: calc(var(--cover-size) * 0.04) calc(var(--cover-size) * 0.06);
+}
+
+.link {
+    font-size: 0;
+}
+
+.link + .link {
+    /*margin-left: calc(var(--cover-size) * 0.09);*/
+}
+
+.link .thumbnail {
+    position: relative;
+}
+
+.link .thumbnail .shadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    transform: translate(3px, 3px);
+    background: radial-gradient(circle farthest-corner at top, white 50%, transparent 50%) no-repeat top;
+    background-size: 0% 0%;
+    transition: background-size 0.3s;
+}
+
+.link:hover .thumbnail .shadow {
+    background-size: 200% 200%;
+}
+
+.link .thumbnail img {
+    border-radius: 12px;
+    overflow: hidden;
+    height: calc(var(--cover-size) * 0.18);
+    transform: translate(-3px, -3px);
+}
+
+.link .label {
+    display: inline-block;
+    position: relative;
+    margin-top: calc(var(--cover-size) * 0.025);
+    padding-bottom: 4px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -1 20 6'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='2.4' d='M0 3.5c5 0 5-3 10-3s5 3 10 3 5-3 10-3 5 3 10 3'/%3E%3C/svg%3E") repeat-x 0;
+    background-size: 12px auto;
+    background-position-y: 120%;
+    animation: waveMove 1s infinite linear;
+    transition: background-position-y 0.3s ease-out;
+}
+
+@keyframes waveMove {
+    from {
+        background-position-x: 0;
+    }
+    to {
+        background-position-x: -12px;
+    }
+}
+
+.link:hover .label {
+    background-position-y: 100%;
+    transition-timing-function: ease-in;
+}
+
+.link .label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    transform: translateX(calc(-100% - 6px));
+    background: url("./drum.svg") no-repeat right top/auto 65%;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.link:hover .label:before {
+    opacity: 1;
+    transition-timing-function: ease-in;
+}
+
+.link .label:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    transform: translateX(calc(100% + 6px));
+    background: url("./drum.svg") no-repeat left top/auto 65%;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.link:hover .label:after {
+    opacity: 1;
+    transition-timing-function: ease-in;
+}
+
+.link .label img {
+    height: calc(var(--cover-size) * 0.03);
+    min-height: 20px;
 }
