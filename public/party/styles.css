@@ -28,9 +28,9 @@ body::-webkit-scrollbar {
     --min-size: 360px;
     min-width: var(--min-size);
     min-height: var(--min-size);
-    background-image: url("./bg.jpg");
-    background-position: left top;
-    background-size: auto 100%;
+    background-image: url("./spots.svg"), url("./bg.jpg");
+    background-position: 20px 20px, left top;
+    background-size: 41px 81px, auto 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,13 +39,23 @@ body::-webkit-scrollbar {
 
 .cover {
     width: 80%;
+    transform: translateY(-8px);
+}
+
+.horizontal .cover {
+    transform: translateX(-8px);
 }
 
 .id {
     position: absolute;
-    bottom: 1rem;
+    bottom: 2rem;
     left: 1rem;
     color: white;
+    max-width: 33%;
+}
+
+.horizontal .id {
+    bottom: 1rem;
 }
 
 .horizontal .left {
@@ -53,6 +63,71 @@ body::-webkit-scrollbar {
 }
 
 .right {
+    position: relative;
     flex: 1;
+    filter: drop-shadow(0px -12px 4px rgba(91, 110, 128, 0.1));
+    text-align: center;
+}
+
+.horizontal .right {
+    filter: drop-shadow(-12px 0px 4px rgba(91, 110, 128, 0.1));
+}
+
+.right:before {
+    content: '';
+    position: absolute;
+    top: -18px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, transparent 18px, white 18px), radial-gradient(circle at 16px 18px, white 17px, transparent 18px);
+    background-size: 32px 100%;
+}
+
+.horizontal .right:before {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -18px;
+    background: linear-gradient(to right, transparent 18px, white 18px), radial-gradient(circle at 18px 16px, white 17px, transparent 18px);
+    background-size: 100% 32px;
+}
+
+.right .bg {
+    position: absolute;
+    top: -16px;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background: repeating-linear-gradient(60deg, #b5dbff, #b5dbff 25px, #c8e4ff 25px, #c8e4ff 50px);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 16px, white 16px), radial-gradient(circle at 16px 16px, white 15px, transparent 16px);
+    -webkit-mask-size: 32px 100%;
+}
+
+.horizontal .right .bg {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -16px;
+    background: repeating-linear-gradient(60deg, #b5dbff, #b5dbff 25px, #c8e4ff 25px, #c8e4ff 50px);
+    -webkit-mask-image: linear-gradient(to right, transparent 16px, white 16px), radial-gradient(circle at 16px 16px, white 15px, transparent 16px);
+    -webkit-mask-size: 100% 32px;
+}
+
+.right .contents {
+    position: relative;
+    padding: 48px 36px;
+}
+
+.horizontal .right .contents {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+}
+
+.right .contents img {
+    max-width: 100%;
 }
