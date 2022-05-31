@@ -140,6 +140,7 @@ s`.s12 .bg-shape div`[4].align({ [LEFT]: 106, [TOP]: 52 }).size(2, 2).round().st
 s`.s12`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
 s`.s12 .text-box`.size(50).css({ background: 'linear-gradient(to right, var(--red) 20%, var(--blue) 40% 60%, var(--red) 80%)' })
                  .animate([{ opacity: 0, scale: [0.6, 1] }, { opacity: 1, offset: 0.7 }, { opacity: 1, scale: [1, 1] }], { begin: a.s12_line_box_out.begin + 0.1, dur: 1.4, fill: 'both', easing: 'cubic-bezier(0.22, 1, 0.36, 1)' }, 's12_text_box_in')
+s`.s12 .text-box svg`.size(FULL, FULL)
 s`.s12 .bg-text`.align(TOP, BOTTOM, LEFT, RIGHT)
                 .animate(FADE_IN, { begin: a.s12_text_box_in.begin + 0.2, dur: 0.6, fill: 'both', easing: '>' }, 's12_bg_text_in')
 s`.s12 .bg-text svg`[0].align({ [LEFT]: -2, [TOP]: 17 }).animate('translate_x_from_30p_to_0p', { begin: a.s12_bg_text_in.begin, dur: 1.8, fill: 'both', easing: '>' })

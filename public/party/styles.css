@@ -191,6 +191,10 @@ body::-webkit-scrollbar {
     gap: calc(var(--cover-size) * 0.04) calc(var(--cover-size) * 0.06);
 }
 
+.no-flex-gap .link-box .link + .link {
+    margin-left: calc(var(--cover-size) * 0.06);
+}
+
 .link {
     font-size: 0;
 }

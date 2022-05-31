@@ -69,10 +69,10 @@ appendScene(APP, 's15', `
       </g>
     </svg>
   </div>
-  <div class="text-box" style="font-family: Tsubame; font-size: 2.5rem; color: var(--purple); font-weight: normal; letter-spacing: 0.25rem; filter: drop-shadow(0px 0px 4px rgba(234, 150, 218, 0.22));">
+  <div class="text-box" style="font-family: Tsubame, serif; font-size: 2.5rem; color: var(--purple); font-weight: normal; letter-spacing: 0.25rem; filter: drop-shadow(0px 0px 4px rgba(234, 150, 218, 0.22));">
     HAPPY BIRTHDAY, ASAKI
   </div>
-  <div class="continue" style="font-family: Tsubame; font-size: 4rem; color: var(--white); font-weight: normal; letter-spacing: 0.25rem;">
+  <div class="continue" style="font-family: Tsubame, serif; font-size: 4rem; color: var(--white); font-weight: normal; letter-spacing: 0.25rem; transform-style: preserve-3d;">
     <span>CONTINUE</span>
   </div>
   <div class="mask"></div>
@@ -92,12 +92,13 @@ s`.s15 .shape div`[2].align().size(50, 50).round().fill('linear-gradient(to righ
 s`.s15 .shape div`[3].align().size(40, 40).round().fill('linear-gradient(to right bottom, white 20%, var(--green) 80%)').css({ filter: 'blur(2rem)' })
                      .animate({ translate: [[80, -37, -4], [80, -33, -4], [80, -37, -4]] }, { begin: s15_begin - 1, dur: 9, fill: 'both', iterations: 'infinite' })
 s`.s15 .banner`.size(43.675).translate_y(-2).animate(FADE_IN, { begin: a.s15_in.end - 0.2, dur: 0, fill: 'both' }, 's15_banner_in')
+s`.s15 .banner svg`.size(FULL, FULL)
 s`.s15 .banner svg > g`.animate(index => [{ css: [{ 'stroke-dasharray': '0 1000' }, { 'stroke-dasharray': '1000 1000' }] }, { begin: a.s15_banner_in.begin + index * 0.2 + (index >= 4 ? 0.3 : 0), dur: 0.8, fill: 'both', easing: '>' }, `s15_banner_g_in_${index}`])
 s`.s15 .banner svg > g g`.animate(index => [{ translate_y: ['1p', '-1p', '1p'] }, { begin: a.s15_banner_in.begin - (index + 1) * 2 + Math.random() - 0.5, dur: 4, fill: 'both', easing: 'ease', iterations: 'infinite' }])
 s`.s15 .mask`.align(1, 2, 1, 2).fill('url("r/15-1.png") center center/100% 100%').css({ 'mix-blend-mode': 'soft-light' })
 s`.s15 .text-box`.align().animate({ clip: ['polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)', 'polygon(0% 0%, 60% 0%, 40% 100%, 0% 100%)', 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'], translate_y: [12, 12.5, 13] }, { begin: a.s15_banner_g_in_7.end - 0.5, dur: 1.2, fill: 'both', easing: '-' }, 's15_text_box_in')
-s`.s15 .continue span`.animate({ opacity: [0, 1], translate_y: [-2, 0] }, { begin: a.s15_text_box_in.end + 1, dur: 2, fill: 'both' }, 's15_continue_span_in')
-s`.s15 .continue`.align(undefined, 4, 4, undefined).css({ 'padding-bottom': '1rem' })
+s`.s15 .continue span`.translate_z(-1).animate({ opacity: [0, 1], translate_y: [-2, 0] }, { begin: a.s15_text_box_in.end + 1, dur: 2, fill: 'both' }, 's15_continue_span_in')
+s`.s15 .continue`.align(undefined, 4, 4, undefined).css({ 'padding-bottom': '1rem', 'z-index': '10' })
                  .after.align(LEFT, BOTTOM).size('100p', '2px').fill(WHITE)
                  .animate({ clip: ['polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)', 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', 'polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)'] }, { begin: a.s15_continue_span_in.end + 0.2, dur: 2, fill: 'both', easing: 'ease', iterations: 'infinite' })
 const s15_end = a.s15_text_box_in.end

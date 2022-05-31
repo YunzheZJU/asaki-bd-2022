@@ -82,7 +82,7 @@ s`.s8 .calendar-box .glow .row`.css({ position: 'relative', 'flex-wrap': 'nowrap
 s`.s8 .calendar-box .glow .row div`.css({ position: 'relative', display: 'inline-block', 'text-align': 'center', 'min-width': '17.5rem', padding: '2rem' })
                                    .forEach(ele => ele.before.align(-0.1, undefined, -0.1, -0.4).size(0.8).fill('var(--color)'))
 
-s`.s8 .text-box`.align({ [RIGHT]: 3.25 })
+s`.s8 .text-box`.align('50%', 3.25).translate_y('-50%').css({ 'flex-wrap': 'nowrap' })
                 .animate(FADE_IN, { begin: s8_stage_in, dur: 0.1, fill: 'both' })
 s`.s8 .text-box > span`.css({ position: 'relative' }).forEach((ele, index) => {
   ele.before.align(TOP, LEFT).size(0.5, '15p').round().fill(GREEN).origin(TOP, CENTER).rotate(-45)
