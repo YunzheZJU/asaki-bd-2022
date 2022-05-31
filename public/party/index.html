@@ -8,78 +8,78 @@
 <body>
 <div id="asaki-bd-2022">
   <div class="left">
-    <img class="cover" src="stroke-1.png" />
-    <img class="id" src="id.svg" />
+    <img class="cover" src="stroke-1.png" alt="あさき生誕祭2022" />
+    <img class="id" src="id.svg" alt="ID" />
   </div>
   <div class="right">
     <div class="bg"></div>
     <div class="scroll-box">
       <div class="contents">
-        <img class="track-list" src="track-list.svg" />
-        <img class="track-list-ja" src="track-list-ja.svg" />
-        <img class="m1" src="m1.svg" />
-        <img class="time" src="time.svg" />
-        <img class="place" src="place.svg" />
-        <img class="m2" src="m2.svg" />
+        <img class="track-list" src="track-list.svg" alt="Track List" />
+        <img class="track-list-ja" src="track-list-ja.svg" alt="トラックリスト" />
+        <img class="m1" src="m1.svg" alt="M1. Information/インフォメーション" />
+        <img class="time" src="time.svg" alt="2022.06.04 0:00~  RELEASE" />
+        <img class="place" src="place.svg" alt="発売記念イベント　東京都内某所" />
+        <img class="m2" src="m2.svg" alt="M2. Animation/アニメーション" />
         <div class="link-box">
           <a class="link" href="/">
             <div class="thumbnail">
               <div class="shadow">
                 <svg viewBox="0 0 16 9" fill="none" stroke="white" stroke-width="0.228" stroke-dasharray="0.96 0.82">
-                  <rect class="cls-1" x="0.114" y="0.114" width="15.772" height="8.772" rx="0.797"/>
+                  <rect class="cls-1" x="0.114" y="0.114" width="15.772" height="8.772" rx="0.797" />
                 </svg>
               </div>
-              <img src="thumbnail-tmp.png">
+              <img src="thumbnail-tmp.png" alt="Thumbnail" />
             </div>
             <div class="label">
-              <img src="replay.svg">
+              <img src="replay.svg" alt="Replay/再生" />
             </div>
           </a>
           <a class="link" href="#">
             <div class="thumbnail">
               <div class="shadow">
                 <svg viewBox="0 0 16 9" fill="none" stroke="white" stroke-width="0.228" stroke-dasharray="0.9 0.97">
-                  <rect class="cls-1" x="0.114" y="0.114" width="15.772" height="8.772" rx="0.797"/>
+                  <rect class="cls-1" x="0.114" y="0.114" width="15.772" height="8.772" rx="0.797" />
                 </svg>
               </div>
-              <img src="thumbnail-tmp.png">
+              <img src="thumbnail-tmp.png" alt="Thumbnail" />
             </div>
             <div class="label">
-              <img src="youtube.svg">
+              <img src="youtube.svg" alt="Youtubeで見る" />
             </div>
           </a>
         </div>
-        <img class="m3" src="m3.svg" />
+        <img class="m3" src="m3.svg" alt="M3. Goods/グッズ（作曲：Yunzhe  編曲：Yunzhe）" />
         <div class="link-box">
           <a class="link" href="https://github.com/YunzheZJU/asaki-bd-2022/tree/master/design">
             <div class="thumbnail">
               <div class="shadow">
                 <svg viewBox="0 0 16 9" fill="none" stroke="white" stroke-width="0.228" stroke-dasharray="0.96 0.82">
-                  <rect class="cls-1" x="0.114" y="0.114" width="15.772" height="8.772" rx="0.797"/>
+                  <rect class="cls-1" x="0.114" y="0.114" width="15.772" height="8.772" rx="0.797" />
                 </svg>
               </div>
-              <img src="thumbnail-tmp.png">
+              <img src="thumbnail-tmp.png" alt="Thumbnail" />
             </div>
             <div class="label">
-              <img src="design.svg">
+              <img src="design.svg" alt="Design/設計図" />
             </div>
           </a>
-          <a class="link" href="#">
+          <a class="link" href="https://yunzhe.booth.pm/items/3907483">
             <div class="thumbnail">
               <div class="shadow">
                 <svg viewBox="0 0 16 9" fill="none" stroke="white" stroke-width="0.228" stroke-dasharray="0.9 0.97">
-                  <rect class="cls-1" x="0.114" y="0.114" width="15.772" height="8.772" rx="0.797"/>
+                  <rect class="cls-1" x="0.114" y="0.114" width="15.772" height="8.772" rx="0.797" />
                 </svg>
               </div>
-              <img src="thumbnail-tmp.png">
+              <img src="thumbnail-tmp.png" alt="Thumbnail" />
             </div>
             <div class="label">
-              <img src="booth.svg">
+              <img src="booth.svg" alt="Boothで買う" />
             </div>
           </a>
         </div>
-        <img class="m4" src="m4.svg" />
-        <img class="fiction" src="fiction.svg" />
+        <img class="m4" src="m4.svg" alt="M4. Attention/イベントに関して" />
+        <img class="fiction" src="fiction.svg" alt="発売記念イベントはフィクションのでご了承ください。" />
       </div>
     </div>
   </div>
@@ -91,10 +91,10 @@
   const forceHorizontal = false
   const forceRatio = () => {
     let { innerWidth: width, innerHeight: height } = window
-    const isHorizontal = forceHorizontal || innerWidth - innerHeight > 0.6 * innerHeight
+    const isHorizontal = forceHorizontal || width - height > 0.6 * height
     APP.classList.add(isHorizontal ? 'horizontal' : 'vertical')
     APP.classList.remove(isHorizontal ? 'vertical' : 'horizontal')
-    APP.style.setProperty('--cover-size', `${isHorizontal ? innerHeight : innerWidth}px`)
+    APP.style.setProperty('--cover-size', `${isHorizontal ? height : width}px`)
   }
   forceRatio()
   window.addEventListener('resize', forceRatio)
