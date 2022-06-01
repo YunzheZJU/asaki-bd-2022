@@ -7,6 +7,10 @@ html {
     scrollbar-width: none;
 }
 
+svg {
+    overflow: visible;
+}
+
 body::-webkit-scrollbar {
     display: none;
 }
@@ -53,10 +57,6 @@ body::-webkit-scrollbar {
 .cover {
     width: 80%;
     transform: translateY(-8px);
-    opacity: 0;
-}
-
-.cover svg {
     opacity: 0;
 }
 
