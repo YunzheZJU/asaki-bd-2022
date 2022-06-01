@@ -14,14 +14,21 @@ body::-webkit-scrollbar {
 #asaki-bd-2022 {
     --cover-size: 0px;
     width: 100vw;
-    height: 100vh;
     min-width: 360px;
     /*min-height: 500px;*/
     display: block;
+    filter: brightness(2);
+    background-image: url("./spots.svg"), url("./bg_v.jpg");
+    background-position: 20px 20px, left top;
+    background-size: 41px 81px, cover;
 }
 
 #asaki-bd-2022.horizontal {
     display: flex;
+    height: 100vh;
+    background-image: url("./spots.svg"), url("./bg.jpg");
+    background-position: 20px 20px, left top;
+    background-size: 41px 81px, cover;
 }
 
 .left {
@@ -30,9 +37,6 @@ body::-webkit-scrollbar {
     /*--min-size: 360px;*/
     /*min-width: var(--min-size);*/
     /*min-height: var(--min-size);*/
-    background-image: url("./spots.svg"), url("./bg.jpg");
-    background-position: 20px 20px, left top;
-    background-size: 41px 81px, auto 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,6 +53,11 @@ body::-webkit-scrollbar {
 .cover {
     width: 80%;
     transform: translateY(-8px);
+    opacity: 0;
+}
+
+.cover svg {
+    opacity: 0;
 }
 
 .horizontal .cover {
@@ -62,6 +71,7 @@ body::-webkit-scrollbar {
     color: white;
     width: 18.87%;
     min-width: 120px;
+    opacity: 0;
 }
 
 .horizontal .id {
@@ -98,6 +108,10 @@ body::-webkit-scrollbar {
     background-size: 100% 32px;
 }
 
+.right {
+    opacity: 0;
+}
+
 .right .bg {
     position: absolute;
     top: -16px;
@@ -123,6 +137,7 @@ body::-webkit-scrollbar {
     position: relative;
     padding: 48px 5.88% 72px;
     text-align: center;
+    overflow: hidden;
 }
 
 .horizontal .right .scroll-box {
@@ -144,6 +159,12 @@ body::-webkit-scrollbar {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.right .contents > * {
+    transform: translateY(80px);
+    opacity: 0;
+    transition: all 1s ease-out;
 }
 
 .track-list {

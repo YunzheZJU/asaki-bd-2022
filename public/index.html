@@ -60,7 +60,11 @@
     const s15 = document.querySelector('.s15')
     s15.style.cursor = 'pointer'
     s15.addEventListener('click', () => {
-      location.href = '/party'
+      document.body.style.background = '#fff'
+      document.body.style.filter = 'brightness(2)'
+      setTimeout(() => {
+        location.href = '/party'
+      }, 1200)
     })
   }, Math.floor(s15_begin * 1000))
 </script>
