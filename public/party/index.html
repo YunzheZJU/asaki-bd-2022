@@ -125,13 +125,13 @@
               fill: #fff;
           }</style>
           <mask id="mask_text_4" fill="white">
-            <circle r="0" cx="0" cy="50">
+            <circle r="250" cx="0" cy="50">
               <animate attributeName="r" from="0" to="250" begin="text-4-btn.click+0s" dur="0.7s" repeatCount="1" fill="freeze" />
             </circle>
-            <circle r="0" cx="431" cy="0">
+            <circle r="400" cx="431" cy="0">
               <animate attributeName="r" from="0" to="400" begin="text-4-btn.click+0.2s" dur="0.8s" repeatCount="1" fill="freeze" />
             </circle>
-            <circle r="0" cx="350" cy="477">
+            <circle r="500" cx="350" cy="477">
               <animate attributeName="r" from="0" to="500" begin="text-4-btn.click+0.35s" dur="0.8s" repeatCount="1" fill="freeze" />
             </circle>
           </mask>
@@ -648,9 +648,9 @@
   s`#text-1-g`.animate({ opacity: [0, 1], translate_y: ['30px', 0] }, { begin: a.cover_stroke_in.end - 0.4, dur: 0.8, easing: '>', fill: 'both' }, 'text_1_in')
   s`#text-2-g`.animate({ opacity: [0, 1], translate_y: ['30px', 0] }, { begin: a.text_1_in.begin + 0.15, dur: 0.8, easing: '>', fill: 'both' }, 'text_2_in')
   s`#text-3-g`.animate({ opacity: [0, 1], translate_y: ['30px', 0] }, { begin: a.text_2_in.begin + 0.3, dur: 0.8, easing: '>', fill: 'both' }, 'text_3_in')
-  s`#text-4-g`.animate({ opacity: [0, 1] }, { begin: a.text_3_in.begin + 0.2, dur: 0.8, easing: '<>', fill: 'both' }, 'text_4_in')
+  s`#text-4-g`.animate({ opacity: [0, 1] }, { begin: a.text_3_in.begin - 0.1, dur: 2, easing: '<>', fill: 'both' }, 'text_4_in')
   setTimeout(() => document.querySelector('#text-4-btn').dispatchEvent(new Event('click')), Math.floor(a.text_4_in.begin * 1000))
-  s`#drum-g`.animate({ opacity: [0, 1], translate_y: ['-10px', 0] }, { begin: a.text_4_in.begin + 0.2, dur: 0.8, easing: '<>', fill: 'both' }, 'drum_in')
+  s`#drum-g`.animate({ opacity: [0, 1], translate_y: ['-10px', 0] }, { begin: a.text_4_in.begin + 0.4, dur: 0.8, easing: '<>', fill: 'both' }, 'drum_in')
   s`#sakura-g`.animate({ opacity: [0, 1] }, { begin: a.text_4_in.begin + 0.5, dur: 0.2, easing: '<>', fill: 'both' }, 'sakura_in')
   s`#info-g`.animate({ opacity: [0, 1], translate_y: ['-10px', 0] }, { begin: a.drum_in.begin + 0.3, dur: 0.8, easing: '<>', fill: 'both' }, 'info_in')
   s`#star-g`.animate({ opacity: [0, 1] }, { begin: a.info_in.begin + 0.2, dur: 1.0, easing: '<>', fill: 'both' }, 'star_in')
