@@ -140,7 +140,8 @@ const merge_declarations = (declarations) => {
     const value = valueByProterty[property]
     return value ? `${func}(${value})` : ''
   }).join(' ')
-  return [...declarations, ['transform', transform]].map(([property, value]) => `${property}: ${value};`).join('\n')
+  const isEmpty = /^\s+$/.test(transform)
+  return [...declarations, [isEmpty ? 'transform-empty' : 'transform', transform]].map(([property, value]) => `${property}: ${value};`).join('\n')
 }
 
 const regist = (element, pseudo, selector, ...fnParams) => {
