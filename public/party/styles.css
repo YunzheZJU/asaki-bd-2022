@@ -17,6 +17,9 @@ body::-webkit-scrollbar {
 
 #asaki-bd-2022 {
     --cover-size: 0px;
+}
+
+.stage {
     width: 100vw;
     min-width: 360px;
     /*min-height: 500px;*/
@@ -27,7 +30,7 @@ body::-webkit-scrollbar {
     background-size: 41px 81px, cover;
 }
 
-#asaki-bd-2022.horizontal {
+.horizontal .stage {
     display: flex;
     height: 100vh;
     background-image: url("./spots.svg"), url("./bg.jpg");
@@ -318,4 +321,22 @@ body::-webkit-scrollbar {
 .link .label img {
     height: calc(var(--cover-size) * 0.03);
     min-height: 20px;
+}
+
+.opening {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opening > svg {
+    max-width: 80vmin;
+    max-height: 80vmin;
+    width: 350px;
+    height: 350px;
 }
