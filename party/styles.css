@@ -25,7 +25,7 @@ body::-webkit-scrollbar {
     /*min-height: 500px;*/
     display: block;
     filter: brightness(2);
-    background-image: url("./spots.svg"), url("./bg_v.jpg");
+    background-image: url("spots.svg"), url("bg_v.jpg");
     background-position: 20px 20px, left top;
     background-size: 41px 81px, cover;
 }
@@ -33,7 +33,7 @@ body::-webkit-scrollbar {
 .horizontal .stage {
     display: flex;
     height: 100vh;
-    background-image: url("./spots.svg"), url("./bg.jpg");
+    background-image: url("spots.svg"), url("bg.jpg");
     background-position: 20px 20px, left top;
     background-size: 41px 81px, cover;
 }
@@ -290,7 +290,7 @@ body::-webkit-scrollbar {
     width: 100px;
     height: 100%;
     transform: translateX(calc(-100% - 6px));
-    background: url("./drum.svg") no-repeat right top/auto 65%;
+    background: url("drum.svg") no-repeat right top/auto 65%;
     opacity: 0;
     transition: opacity 0.3s ease-out;
 }
@@ -308,7 +308,7 @@ body::-webkit-scrollbar {
     width: 100px;
     height: 100%;
     transform: translateX(calc(100% + 6px));
-    background: url("./drum.svg") no-repeat left top/auto 65%;
+    background: url("drum.svg") no-repeat left top/auto 65%;
     opacity: 0;
     transition: opacity 0.3s ease-out;
 }
