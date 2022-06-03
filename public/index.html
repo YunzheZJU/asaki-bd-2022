@@ -73,12 +73,19 @@
 <script>
   APP.style.opacity = 1
   // window.addEventListener('dblclick', () => location.reload())
+  const skip = document.querySelector('.s0 .skip')
+  skip.style.cursor = 'pointer'
+  skip.addEventListener('click', () => {
+    location.href = `/#${Math.floor(s15_end)}`
+    location.reload()
+  })
   setTimeout(() => {
     const s15 = document.querySelector('.s15')
     s15.style.cursor = 'pointer'
     s15.addEventListener('click', () => {
       document.body.style.background = '#fff'
       document.body.style.filter = 'brightness(2)'
+      document.body.style.transition = 'all 1.0s ease-in-out'
       setTimeout(() => {
         location.href = '/party'
       }, 1200)

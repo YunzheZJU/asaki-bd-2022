@@ -47,6 +47,7 @@ appendScene(APP, 's1', `
 `)
 
 const s1_begin = s0_end
+s`.s0 .skip`.animate({ css: [{ 'z-index': 10 }, { 'z-index': 0 }] }, { begin: s1_begin, dur: 0, fill: 'both' })
 s`.s1`.align(TOP, BOTTOM, LEFT, RIGHT).align_children(CENTER, CENTER)
 s`.s1 .bg`.align(TOP, LEFT).size(FULL, FULL)
 s`.s1 .bg .frag`.align(index => ([`${20 * index}%`, LEFT, RIGHT])).size('200%', '20%').fill(RED).css({ 'border-radius': '9999px 0 0 9999px' })

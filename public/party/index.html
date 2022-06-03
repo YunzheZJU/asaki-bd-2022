@@ -890,7 +890,7 @@
   })
   s`#cat-g`.animate(FADE_IN, { begin: a.cover_in.begin + 5.2, dur: 0.1, fill: 'both' }, 'cat_in')
   s`#cat-g`.origin(CENTER, CENTER).animate({ scale: [[0.8, 0.8], [1, 1]] }, { begin: a.cat_in.begin, dur: 0.3, fill: 'both', easing: 'cubic-bezier(0.34, 1.56, 0.64, 1)' }, 'cat_scale')
-  s`#cat-g`.animate([{ scale: [1, 1] }, { scale: [0.95, 0.95], offset: 0.015 }, { scale: [1.2, 1.2], offset: 0.03 }, { scale: [0.95, 0.95], offset: 0.045 }, { scale: [1, 1], offset: 0.06 }, { scale: [1, 1] }], { begin: a.cat_scale.begin + 9, dur: 9, fill: 'forwards', iterations: 'infinite', easing: '<>' })
+  s`#cat-g`.animate([{ scale: [1, 1] }, { scale: [0.95, 0.95], offset: 0.015 }, { scale: [1.1, 1.1], offset: 0.03 }, { scale: [0.95, 0.95], offset: 0.045 }, { scale: [1, 1], offset: 0.06 }, { scale: [1, 1] }], { begin: a.cat_scale.begin + 9, dur: 9, fill: 'forwards', iterations: 'infinite', easing: '<>' })
 
   s`#star-1-star`.origin(CENTER, CENTER).animate([{ rotate_y: 0 }, { rotate_y: '180deg' }], { begin: a.cover_in.begin + 0.5, dur: 3.0, iterations: 'infinite', easing: '-' })
   s`#star-2-star`.origin(CENTER, CENTER).animate([{ rotate_y: 0 }, { rotate_y: '180deg' }], { begin: a.cover_in.begin + 1.0, dur: 2.9, iterations: 'infinite', easing: '-' })

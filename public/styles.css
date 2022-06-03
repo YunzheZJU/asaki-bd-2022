@@ -10,7 +10,6 @@ body {
   font-weight: bold;
   letter-spacing: 0.35rem;
   font-family: Tsuku, serif;
-  transition: all 1.0s ease-in-out;
 }
 
 body, body > div, body > div * {
