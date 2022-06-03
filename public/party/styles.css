@@ -337,6 +337,6 @@ body::-webkit-scrollbar {
 .opening > svg {
     max-width: 80vmin;
     max-height: 80vmin;
-    width: 350px;
-    height: 350px;
+    width: 500px;
+    height: 500px;
 }
