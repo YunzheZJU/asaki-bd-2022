@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>あさき生誕祭2022</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./site.webmanifest">
   <meta property="og:site_name" content="あさき生誕祭2022" />
   <meta property=“og:title” content=“あさき生誕祭2022" />
   <meta property="og:description" content="お誕生日おめでとう！Webの上でをPV作ってみました！" />
@@ -76,7 +76,7 @@
   const skip = document.querySelector('.s0 .skip')
   skip.style.cursor = 'pointer'
   skip.addEventListener('click', () => {
-    location.href = `/#${Math.floor(s15_end)}`
+    location.href = `https://yunzhezju.github.io/asaki-bd-2022/#${Math.floor(s15_end)}`
     location.reload()
   })
   setTimeout(() => {
@@ -87,7 +87,7 @@
       document.body.style.filter = 'brightness(2)'
       document.body.style.transition = 'all 1.0s ease-in-out'
       setTimeout(() => {
-        location.href = '/party'
+        location.href = 'https://yunzhezju.github.io/asaki-bd-2022/party'
       }, 1200)
     })
   }, Math.floor(s15_begin * 1000))
